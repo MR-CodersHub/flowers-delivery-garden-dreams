@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Dreams • Local Fresh Flower Subscription & Seasonal Bouquets</title>
+  <meta name="description" content="A local fresh flower subscription service delivering seasonal, hand-arranged bouquets directly to your door. Fresh flowers, delivered with a little joy.">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+
+    <!-- Floating Drifting Petals Container (Generated via JS) -->
+    <div class="drifting-petals-container"></div>
+  </div>
+
+  <!-- ==========================================================================
+       1. NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Minimal Floral Logo + Brand Name (Reference match) -->
+      <a href="index.html" class="brand-logo" id="brand-logo">
+        <img src="./assets/logo.png" alt="" width="50px">
+        <div class="brand-text">
+          <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
+        </div>
+      </a>
+
+      <!-- CENTER: Nav Links absolutely centred -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home<span class="nav-dot"></span></a>
+        <a href="#categories" class="nav-link">About<span class="nav-dot"></span></a>
+        <a href="#seasonal" class="nav-link">Products<span class="nav-dot"></span></a>
+        <a href="#subscriptions" class="nav-link">Subscriptions<span class="nav-dot"></span></a>
+        <a href="#gifts" class="nav-link">Gifts<span class="nav-dot"></span></a>
+        <a href="#testimonials" class="nav-link">Contact<span class="nav-dot"></span></a>
+      </nav>
+
+      <!-- Right Actions: Theme Toggle, Login, Cart, Subscribe CTA -->
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Basket Trigger -->
+        <button id="cart-btn" class="btn-icon cart-btn" aria-label="View basket">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">1</span>
+        </button>
+
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2 & 3. HERO SECTION & ARTISTIC FLORAL COMPOSITION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Center/Left Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            LOCAL • SEASONAL • HAND-ARRANGED
+          </div>
+
+          <h1 class="hero-heading">
+            Flowers<br>
+            That <span class="serif-italic">Brighten</span><br>
+            Every Week
+          </h1>
+
+          <p class="hero-subtext">
+            Fresh seasonal bouquets, thoughtfully arranged and delivered locally to your door with a little joy.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#seasonal" class="btn btn-pink">Explore Bouquets</a>
+            <a href="#subscriptions" class="btn btn-outline">Start a Subscription</a>
+          </div>
+
+          <div class="hero-features-line">
+            <span>Freshly picked</span>
+            <span class="dot"></span>
+            <span>Locally delivered</span>
+            <span class="dot"></span>
+            <span>Beautifully arranged</span>
+          </div>
+        </div>   
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. FLOWER CATEGORIES (Inspired by Reference)
+         ========================================================================== -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">CHOOSE YOUR MOMENT</span>
+          <h2 class="section-heading">FLOWERS FOR EVERY OCCASION</h2>
+          <p class="section-description">
+            From everyday joy to unforgettable celebrations, discover a bouquet for every reason to send flowers.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- 1. Everyday -->
+          <div class="category-card" data-category="everyday">
+            <div class="category-circle-wrapper">
+              <div class="category-circle-bg"></div>
+              <div class="category-circle-inner">
+                <!-- Home / Table Vase line icon -->
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4z"/>
+                  <path d="M8 15h8l-1.5 6h-5L8 15z"/>
+                  <circle cx="12" cy="6" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="category-title">Everyday</h3>
+            <p class="category-subtitle">Fresh flowers for your home.</p>
+          </div>
+
+          <!-- 2. Birthdays -->
+          <div class="category-card" data-category="birthdays">
+            <div class="category-circle-wrapper">
+              <div class="category-circle-bg"></div>
+              <div class="category-circle-inner">
+                <!-- Birthday balloons line icon matching reference -->
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="8" r="5"/>
+                  <path d="M8 13v2a2 2 0 0 1-2 2H5"/>
+                  <circle cx="16" cy="10" r="5"/>
+                  <path d="M16 15v3a2 2 0 0 0 2 2h1"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="category-title">Birthdays</h3>
+            <p class="category-subtitle">Celebrate another beautiful year.</p>
+          </div>
+
+          <!-- 3. Anniversaries -->
+          <div class="category-card" data-category="anniversaries">
+            <div class="category-circle-wrapper">
+              <div class="category-circle-bg"></div>
+              <div class="category-circle-inner">
+                <!-- Bouquet cone line icon matching reference -->
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 11L12 21L17 11"/>
+                  <circle cx="9" cy="6" r="3"/>
+                  <circle cx="15" cy="6" r="3"/>
+                  <circle cx="12" cy="8" r="3"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="category-title">Anniversaries</h3>
+            <p class="category-subtitle">Flowers for the moments you remember.</p>
+          </div>
+
+          <!-- 4. Just Because -->
+          <div class="category-card" data-category="just-because">
+            <div class="category-circle-wrapper">
+              <div class="category-circle-bg"></div>
+              <div class="category-circle-inner">
+                <!-- Single blooming rose line icon matching reference -->
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4C9 4 7 6 7 8C7 11 12 12 12 14V21"/>
+                  <path d="M12 7C14 7 16 8 16 10C16 12 13 13 12 14"/>
+                  <path d="M12 16C10 16 9 17 9 18"/>
+                  <path d="M12 14C14 14 15 15 15 16"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="category-title">Just Because</h3>
+            <p class="category-subtitle">No occasion needed.</p>
+          </div>
+
+          <!-- 5. Weddings & Events -->
+          <div class="category-card" data-category="weddings">
+            <div class="category-circle-wrapper">
+              <div class="category-circle-bg"></div>
+              <div class="category-circle-inner">
+                <!-- Intertwined rings with heart line icon matching reference -->
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="14" r="5"/>
+                  <circle cx="15" cy="14" r="5"/>
+                  <path d="M12 5C11 4 9.5 4 8.5 5C7.5 6 7.5 7.5 8.5 8.5L12 12L15.5 8.5C16.5 7.5 16.5 6 15.5 5C14.5 4 13 4 12 5Z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="category-title">Weddings & Events</h3>
+            <p class="category-subtitle">Beautiful flowers for meaningful moments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. SEASONAL COLLECTION (Bouquet Product Grid with Reference-style Organic Masks)
+         ========================================================================== -->
+    <section class="seasonal-section" id="seasonal">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">THIS SEASON</span>
+          <h2 class="section-heading">SEASONAL BOUQUETS</h2>
+          <p class="section-description">
+            Arranged with what's freshest from local growers and flower markets, our seasonal collections change with nature.
+          </p>
+
+          <!-- Filter Tabs -->
+          <div class="collection-filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Bouquets</button>
+            <button class="filter-tab" data-filter="everyday">Everyday Wildflowers</button>
+            <button class="filter-tab" data-filter="anniversaries">Garden Roses</button>
+            <button class="filter-tab" data-filter="birthdays">Celebrations</button>
+            <button class="filter-tab" data-filter="weddings">Pastel Deluxe</button>
+          </div>
+        </div>
+
+        <div class="bouquets-grid">
+          <!-- Product 1: Spring Meadow -->
+          <div class="bouquet-card" data-category="everyday">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80" alt="Spring Meadow Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Everyday Fresh</span>
+            <h3 class="bouquet-name">Spring Meadow</h3>
+            <p class="bouquet-ingredients">Wildflowers, chamomile, lavender & seasonal greens.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$55</span>
+              <span class="price-original">$70</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2: Pink Garden -->
+          <div class="bouquet-card" data-category="anniversaries">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80" alt="Pink Garden Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Anniversaries</span>
+            <h3 class="bouquet-name">Pink Garden</h3>
+            <p class="bouquet-ingredients">Roses, blush peonies, ranunculus & delicate blooms.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$65</span>
+              <span class="price-original">$85</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3: Sunlit Field -->
+          <div class="bouquet-card" data-category="birthdays">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=600&q=80" alt="Sunlit Field Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Birthdays</span>
+            <h3 class="bouquet-name">Sunlit Field</h3>
+            <p class="bouquet-ingredients">Golden daisies, yellow tulips, waxflowers & fresh greenery.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$50</span>
+              <span class="price-original">$65</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4: Floral Fantasy (From Reference) -->
+          <div class="bouquet-card" data-category="weddings">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1587556930799-8dca6aef3dc2?auto=format&fit=crop&w=600&q=80" alt="Floral Fantasy Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Wedding & Luxe</span>
+            <h3 class="bouquet-name">Floral Fantasy</h3>
+            <p class="bouquet-ingredients">Eucalyptus, spray peach roses, dusty miller & silver brunia.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$150</span>
+              <span class="price-original">$200</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 5: Spring Serenade (From Reference) -->
+          <div class="bouquet-card" data-category="birthdays">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=600&q=80" alt="Spring Serenade Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Birthday Special</span>
+            <h3 class="bouquet-name">Spring Serenade</h3>
+            <p class="bouquet-ingredients">Peach carnations, pink garden roses & misty baby's breath.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$80</span>
+              <span class="price-original">$150</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 6: Winter Whispers (From Reference) -->
+          <div class="bouquet-card" data-category="anniversaries">
+            <div class="bouquet-visual-container">
+              <div class="bouquet-orb-bg"></div>
+              <div class="bouquet-image-wrap">
+                <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80" alt="Winter Whispers Bouquet">
+              </div>
+            </div>
+            <span class="bouquet-badge-tag">Anniversaries</span>
+            <h3 class="bouquet-name">Winter Whispers</h3>
+            <p class="bouquet-ingredients">Pastel blue hydrangeas, white gardenias & blush sweetheart roses.</p>
+            <div class="bouquet-pricing">
+              <span class="price-current">$100</span>
+              <span class="price-original">$130</span>
+            </div>
+            <div class="bouquet-actions">
+              <button class="btn btn-outline btn-sm btn-quick-view">View Bouquet</button>
+              <button class="btn btn-pink btn-sm btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. SUBSCRIPTION FEATURE
+         ========================================================================== -->
+    <section class="subscription-feature" id="subscriptions">
+      <div class="container">
+        <div class="subscription-grid">
+          <!-- Left Visual: Arched Bouquet Art -->
+          <div class="subscription-visual">
+            <div class="sub-image-arch">
+              <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80" alt="Fresh flower subscription box delivered weekly">
+            </div>
+            <div class="sub-guarantee-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+              7-Day Freshness Guarantee • Skip Anytime
+            </div>
+          </div>
+
+          <!-- Right Content: Copy & Plan Frequencies -->
+          <div class="subscription-content">
+            <span class="eyebrow">FLOWERS, ON REPEAT</span>
+            <h2 class="section-heading">Your Weekly<br>Dose of Freshness</h2>
+            <p class="section-description">
+              Choose your rhythm and we'll bring a fresh seasonal bouquet to your doorstep on schedule, cut that very morning.
+            </p>
+
+            <!-- 3 Frequency Cards -->
+            <div class="sub-plan-cards">
+              <!-- Weekly -->
+              <div class="sub-plan-card active" data-frequency="Weekly" data-price="$48">
+                <span class="sub-popular-tag">Most Loved</span>
+                <div class="plan-frequency">Weekly</div>
+                <div class="plan-price-line">$48 <span>/ delivery</span></div>
+                <p class="plan-desc">A fresh bouquet every week for uninterrupted home bloom.</p>
+              </div>
+
+              <!-- Bi-weekly -->
+              <div class="sub-plan-card" data-frequency="Biweekly" data-price="$54">
+                <div class="plan-frequency">Biweekly</div>
+                <div class="plan-price-line">$54 <span>/ delivery</span></div>
+                <p class="plan-desc">A beautiful delivery every two weeks as buds mature.</p>
+              </div>
+
+              <!-- Monthly -->
+              <div class="sub-plan-card" data-frequency="Monthly" data-price="$58">
+                <div class="plan-frequency">Monthly</div>
+                <div class="plan-price-line">$58 <span>/ delivery</span></div>
+                <p class="plan-desc">A little floral joy every month to mark the seasons.</p>
+              </div>
+            </div>
+
+            <!-- Features Included -->
+            <div class="sub-included-features">
+              <div class="sub-feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span>Free zero-emissions local courier</span>
+              </div>
+              <div class="sub-feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span>Free ceramic vase with first delivery</span>
+              </div>
+              <div class="sub-feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span>Curated flower food & care booklet</span>
+              </div>
+              <div class="sub-feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span>Pause, change address or cancel anytime</span>
+              </div>
+            </div>
+
+            <button class="btn btn-pink" id="explore-subscriptions-btn">Explore Subscriptions</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. HOW THE SUBSCRIPTION WORKS (3 Steps with botanical path)
+         ========================================================================== -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">SIMPLE & SEAMLESS</span>
+          <h2 class="section-heading">FROM OUR FLOWERSHOP<br>TO YOUR DOOR</h2>
+          <p class="section-description">
+            We handle everything from morning farm cuts to your doorstep vase so you only enjoy effortless beauty.
+          </p>
+        </div>
+
+        <div class="steps-wrapper">
+          <div class="steps-connecting-line"></div>
+
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number-circle">
+              <span class="step-num">Step 01</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Choose Your Plan</h3>
+            <p class="step-desc">Pick your favorite size, preferred rhythm (weekly, bi-weekly, or monthly), and delivery day.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number-circle">
+              <span class="step-num">Step 02</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2C8 6 4 12 6 17C8 22 16 22 18 17C20 12 16 6 12 2Z"/>
+                <path d="M12 2v20"/>
+              </svg>
+            </div>
+            <h3 class="step-title">We Create Your Bouquet</h3>
+            <p class="step-desc">Our florists hand-arrange the day's freshest seasonal cuts into an artistic editorial bundle.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number-circle">
+              <span class="step-num">Step 03</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Fresh Flowers Arrive</h3>
+            <p class="step-desc">Delivered in hydration packs right to your doorstep, blooming gloriously for days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. GIFT SUBSCRIPTION FEATURE
+         ========================================================================== -->
+    <section class="gift-section" id="gifts">
+      <div class="container gift-grid">
+        <div class="gift-visual-wrap">
+          <div class="gift-lifestyle-card">
+            <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80" alt="Person receiving surprise fresh flower bouquet delivery">
+            <div class="gift-tag-overlay">The Gift That Keeps Blooming</div>
+          </div>
+        </div>
+
+        <div class="gift-text-wrap">
+          <span class="eyebrow">SHARE THE DELIGHT</span>
+          <h2 class="section-heading">A Gift That<br>Keeps Blooming</h2>
+          <p class="section-description">
+            Give someone fresh flowers today, and a reason to smile again next week. Each prepaid gift subscription includes a letterpress greeting card with your personal note.
+          </p>
+
+          <div class="gift-options-row">
+            <span class="gift-chip">3-Month Delight</span>
+            <span class="gift-chip">6-Month Seasons Pass</span>
+            <span class="gift-chip">Custom Note Included</span>
+          </div>
+
+          <p style="font-size: 0.75rem; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; color: var(--primary-pink); margin-bottom: 24px;">
+            PERFECT FOR BIRTHDAYS • ANNIVERSARIES • HOUSEWARMINGS
+          </p>
+
+          <button class="btn btn-pink" id="gift-subscription-btn">Gift a Subscription</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. WHY LOCAL (Fresher by Nature)
+         ========================================================================== -->
+    <section class="why-local-section" id="why-local">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">OUR PROMISE</span>
+          <h2 class="section-heading">FRESHER BY NATURE</h2>
+          <p class="section-description">
+            We bypass industrial long-haul supply chains to bring flowers from local soil to your table within hours.
+          </p>
+        </div>
+
+        <div class="why-local-grid">
+          <!-- Pillar 1 -->
+          <div class="why-local-card">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="why-card-title">Local Flowers</h3>
+            <p class="why-card-desc">Sourced from nearby family growers and trusted regional flower markets within 50 miles.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-local-card">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="why-card-title">Seasonal Arrangements</h3>
+            <p class="why-card-desc">We work exclusively with what's naturally blooming in peak rhythm each week.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-local-card">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="why-card-title">Hand-Arranged</h3>
+            <p class="why-card-desc">Every bouquet is thoughtfully styled by artisan florists, never by mechanized lines.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="why-local-card">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="why-card-title">Local Delivery</h3>
+            <p class="why-card-desc">Delivered in water-packs directly to your neighborhood with minimal transit stress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. CUSTOMER TESTIMONIALS (Flowers They Love)
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">COMMUNITY VOICES</span>
+          <h2 class="section-heading">FLOWERS THEY LOVE</h2>
+          <p class="section-description">
+            Read how regular morning deliveries have brightened breakfast tables, studios, and anniversaries.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row">★★★★★</div>
+              <p class="testimonial-quote">
+                "The flowers arrive looking like they were picked that morning. Every delivery feels like a little celebration when I open the door."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Elena Vance" class="author-avatar">
+              <div>
+                <div class="author-name">Elena Vance</div>
+                <div class="author-tier">Weekly Subscriber • 8 Months</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row">★★★★★</div>
+              <p class="testimonial-quote">
+                "I gifted a 6-month subscription to my mother. She sends me photos every single week; the seasonal variety has been absolutely magnificent."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marcus Thorne" class="author-avatar">
+              <div>
+                <div class="author-name">Marcus Thorne</div>
+                <div class="author-tier">Gift Subscriber • Seattle</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row">★★★★★</div>
+              <p class="testimonial-quote">
+                "The compostable wrapping and zero plastic guarantee is what convinced me. But the scent of real garden roses won my heart forever."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Chloe Davenport" class="author-avatar">
+              <div>
+                <div class="author-name">Chloe Davenport</div>
+                <div class="author-tier">Biweekly Subscriber • 1 Year</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. FINAL CLOSING CTA
+         ========================================================================== -->
+    <section class="final-cta-section">
+      <div class="container final-cta-content">
+        <span class="eyebrow">INVITE NATURE IN</span>
+        <h2 class="final-cta-heading">LET FLOWERS<br>FIND THEIR WAY TO YOU.</h2>
+        <p class="final-cta-sub">
+          Start your subscription today and make fresh flowers part of your everyday morning rhythm.
+        </p>
+        <div class="final-cta-buttons">
+          <a href="#subscriptions" class="btn btn-pink">Start My Subscription</a>
+          <a href="#gifts" class="btn btn-green-outline">Explore Gift Options</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       12. BOTANICAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-botanical-border"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+        <img src="./assets/logo.png" alt="" width="50px">
+            <div class="brand-text">
+              <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
+            </div>
+          </a>
+          <p>
+            A modern local flower studio wrapped inside a botanical editorial. Hand-cut blooms, delivered with a little joy.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: Shop -->
+        <div>
+          <h4 class="footer-heading">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="#seasonal">Bouquets</a></li>
+            <li><a href="#seasonal">Seasonal Collection</a></li>
+            <li><a href="#subscriptions">Subscriptions</a></li>
+            <li><a href="#gifts">Gift Subscriptions</a></li>
+            <li><a href="#categories">Occasion Florals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Discover -->
+        <div>
+          <h4 class="footer-heading">Discover</h4>
+          <ul class="footer-links">
+            <li><a href="#why-local">About Us</a></li>
+            <li><a href="#why-local">Our Flowers & Growers</a></li>
+            <li><a href="#hero">Delivery Areas</a></li>
+            <li><a href="#how-it-works">Subscription FAQs</a></li>
+            <li><a href="#">Vase Care Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Account -->
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="#">Subscriber Login</a></li>
+            <li><a href="#">Manage Deliveries</a></li>
+            <li><a href="#">Skip a Week</a></li>
+            <li><a href="#">Change Address</a></li>
+            <li><a href="#">Order History</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="newsletter-box">
+          <h4 class="footer-heading">Morning Journal</h4>
+          <p>Subscribe for seasonal bloom previews, flower care notes, and 10% off your initial order.</p>
+          <form class="newsletter-form" id="footer-newsletter-form">
+            <input type="email" placeholder="Your email address..." required>
+            <button type="submit" class="btn btn-pink btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Garden Dreams Studio. All blooms thoughtfully hand-arranged.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Delivery</a>
+          <a href="#">Sustainability Report</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CART DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer">
+      <div class="drawer-header">
+        <h3 class="drawer-title">Your Basket</h3>
+        <button id="cart-close-btn" class="btn-icon" aria-label="Close basket">✕</button>
+      </div>
+      <div class="drawer-body" id="cart-items-list">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="drawer-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-subtotal-val">$55</span>
+        </div>
+        <button class="btn btn-pink" style="width: 100%; margin-bottom: 8px;" onclick="showToast('🌸 Proceeding to secure checkout...');">Checkout Now</button>
+        <div style="font-size: 0.72rem; text-align: center; color: var(--text-muted);">
+          Free courier delivery & sustainable water pack included
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="quick-view-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="border-radius: var(--radius-md); overflow: hidden; height: 320px;">
+        <img id="modal-img" src="" alt="Bouquet preview" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <span id="modal-category" class="bouquet-badge-tag">Category</span>
+        <h3 id="modal-title" class="bouquet-name" style="font-size: 1.8rem;">Bouquet Name</h3>
+        <p id="modal-desc" class="bouquet-ingredients" style="margin-bottom: 20px;">Ingredients</p>
+        <div id="modal-price" class="price-current" style="margin-bottom: 24px;">$0</div>
+        <button class="btn btn-pink" id="modal-add-cart-btn">Add to Basket</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>
