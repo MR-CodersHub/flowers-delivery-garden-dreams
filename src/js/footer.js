@@ -31,25 +31,23 @@
 
             /* Shop */
             '<div>' +
-              '<h4 class="footer-heading">Shop</h4>' +
+              '<h4 class="footer-heading">Quick Links</h4>' +
               '<ul class="footer-links">' +
-                '<li><a href="' + root + 'index.html#seasonal">Seasonal Bouquets</a></li>' +
-                '<li><a href="' + root + 'index.html#subscriptions">Subscriptions</a></li>' +
-                '<li><a href="' + root + 'index.html#gifts">Gift Subscriptions</a></li>' +
-                '<li><a href="' + root + 'public/pages/services.html">All Services</a></li>' +
-                '<li><a href="' + root + 'public/pages/pricing.html">Pricing Plans</a></li>' +
+                '<li><a href="' + root + 'index.html">Home</a></li>' +
+                '<li><a href="' + root + 'public/pages/home-2.html">Home 2</a></li>' +
+                '<li><a href="' + root + 'public/pages/services.html">Services</a></li>' +
+                '<li><a href="' + root + 'public/pages/pricing.html">Pricing</a></li>' +
               '</ul>' +
             '</div>' +
 
             /* Discover */
             '<div>' +
-              '<h4 class="footer-heading">Discover</h4>' +
+              '<h4 class="footer-heading">Company</h4>' +
               '<ul class="footer-links">' +
                 '<li><a href="' + root + 'public/pages/about.html">About Us</a></li>' +
-                '<li><a href="' + root + 'public/pages/home-2.html">Wedding &amp; Events</a></li>' +
-                '<li><a href="' + root + 'public/pages/blog.html">Flower Journal</a></li>' +
+                '<li><a href="' + root + 'public/pages/blog.html">Blog</a></li>' +
                 '<li><a href="' + root + 'public/pages/FAQ.html">FAQs</a></li>' +
-                '<li><a href="' + root + 'public/pages/contact.html">Contact &amp; Delivery Map</a></li>' +
+                '<li><a href="' + root + 'public/pages/contact.html">Contact</a></li>' +
               '</ul>' +
             '</div>' +
 
@@ -59,9 +57,8 @@
               '<ul class="footer-links">' +
                 '<li><a href="' + root + 'public/auth/login.html">Subscriber Login</a></li>' +
                 '<li><a href="' + root + 'public/auth/signup.html">Create Account</a></li>' +
-                '<li><a href="' + root + 'public/auth/user/user-dashboard.html">User Dashboard</a></li>' +
-                '<li><a href="' + root + 'public/auth/admin/admin-dashboard.html">Admin Dashboard</a></li>' +
-                '<li><a href="' + root + 'public/pages/coming-soon.html">Coming Soon</a></li>' +
+                '<li><a href="' + root + 'public/pages/Privacy-policy.html">Privacy Policy</a></li>' +
+                '<li><a href="' + root + 'public/pages/Terms-of-service.html">Terms of Service</a></li>' +
               '</ul>' +
             '</div>' +
 
@@ -74,15 +71,6 @@
                 '<button type="submit" class="btn btn-pink btn-sm">Join</button>' +
               '</form>' +
               '<div class="form-success" data-success-slot style="margin-top: 12px; font-size: 0.8125rem;"></div>' +
-            '</div>' +
-          '</div>' +
-
-          '<div class="footer-bottom">' +
-            '<div>&copy; 2026 Garden Dreams Studio. All blooms thoughtfully hand-arranged.</div>' +
-            '<div class="footer-legal">' +
-              '<a href="' + root + 'public/pages/Privacy-policy.html">Privacy Policy</a>' +
-              '<a href="' + root + 'public/pages/Terms-of-service.html">Terms of Service</a>' +
-              '<a href="' + root + 'public/pages/404.html">Sitemap</a>' +
             '</div>' +
           '</div>' +
         '</div>' +

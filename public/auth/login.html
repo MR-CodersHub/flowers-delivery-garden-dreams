@@ -17,35 +17,31 @@
 
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
+  <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
-
-  <div id="site-header-slot"></div>
 
   <main>
 
     <!-- ============================ 1. LOGIN ============================ -->
     <section class="auth-section">
-      <div class="container auth-grid">
+      <div class="container">
 
-        <div class="auth-aside">
-          <div class="auth-aside-card">
-            <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=900&q=80" alt="Florist tying a fresh bouquet at the studio bench">
-            <div class="aside-overlay">
-              <h3>Welcome back to the studio</h3>
-              <p>Your next delivery, your skipped weeks and your favourite stems — all in one place.</p>
-            </div>
-          </div>
-
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Skip, pause or reschedule any delivery in two clicks</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Save the flowers you love and ban the ones you don't</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Track today's delivery live with photo confirmation</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Member pricing on weddings, workshops and gifts</span></li>
-          </ul>
+        <div class="auth-back-nav">
+          <a href="../../index.html" class="auth-back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back to Garden Dreams
+          </a>
         </div>
 
         <div class="auth-card">
+          <div class="auth-brand-header">
+            <a href="../../index.html" class="auth-brand-logo" title="Back to Garden Dreams Home">
+              <img src="../../assets/img/logo.png" alt="Garden Dreams logo" width="46" height="46">
+              <span class="auth-brand-name">Garden <span class="pink-accent">Dreams</span></span>
+            </a>
+          </div>
+
           <h1>Log in to your account</h1>
           <p class="auth-sub">New to Garden Dreams? <a href="../../public/auth/signup.html">Create a free account</a></p>
 
@@ -94,94 +90,9 @@
 
       </div>
     </section>
-
-    <!-- ============================ 2. MEMBER BENEFITS ============================ -->
-    <section class="section-pad">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">WHY AN ACCOUNT</span>
-          <h2 class="section-heading">WHAT MEMBERS GET</h2>
-          <p class="section-description">A Garden Dreams account is free, and it is the control panel for everything you order.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div><h3>Delivery control</h3><p>Skip a week while you travel, move a window, or redirect a bouquet to work instead of home.</p></div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-            <div><h3>Taste profile</h3><p>Mark stems as love or never, and every future arrangement adjusts around your taste.</p></div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg></div>
-            <div><h3>Order history</h3><p>Reorder a favourite in one click, and keep addresses for every person you gift.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 3. TRUST NUMBERS ============================ -->
-    <section class="section-pad section-alt">
-      <div class="container">
-        <div class="stat-inline">
-          <div><div class="stat-num">4,200+</div><div class="stat-label">Bouquets delivered</div></div>
-          <div><div class="stat-num">92%</div><div class="stat-label">Subscribers who stay</div></div>
-          <div><div class="stat-num">99.2%</div><div class="stat-label">On-time deliveries</div></div>
-          <div><div class="stat-num">4.9</div><div class="stat-label">Average rating</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 4. MEMBER QUOTES ============================ -->
-    <section class="section-pad">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">FROM THE MEMBERS</span>
-          <h2 class="section-heading">PEOPLE WHO LOG IN WEEKLY</h2>
-          <p class="section-description">A few words from the subscribers who manage it all from their dashboard.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>I rescheduled a delivery from a taxi queue in another city. It took about fifteen seconds.</p>
-            <span class="quote-cite">Dev P. • Member since 2024</span>
-          </div>
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>Being able to mark 'never lilies' once means I never have to explain it again.</p>
-            <span class="quote-cite">Marta L. • Member since 2023</span>
-          </div>
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>The order history made Mother's Day trivial — same bouquet, new address, one click.</p>
-            <span class="quote-cite">Hannah R. • Member since 2022</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 5. CTA ============================ -->
-    <section class="cta-band">
-      <div class="container">
-        <span class="eyebrow" style="justify-content:center">NO ACCOUNT YET?</span>
-        <h2>It takes about<br>forty seconds</h2>
-        <p>Create your account, pick a plan and choose a delivery window. Your welcome credit is already waiting.</p>
-        <div class="cta-actions">
-          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Create an account</a>
-          <a href="../../public/pages/pricing.html" class="btn btn-green-outline btn-lg">Compare plans</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <div id="site-footer-slot"></div>
-
   <script src="../../src/js/toast.js"></script>
-  <script src="../../src/js/navbar.js"></script>
-  <script src="../../src/js/footer.js"></script>
   <script src="../../src/js/form-validation.js"></script>
   <script src="../../src/js/auth.js"></script>
 </body>

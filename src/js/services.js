@@ -24,8 +24,7 @@
         '<a class="service-card-media" href="service-details.html?id=' + s.id + '">' +
           '<span class="service-card-price">' + s.price + '</span>' +
           '<img src="' + s.image + '" alt="' + s.title + '" loading="lazy">' +
-        '</a>' +
-        '<div class="service-card-icon">' + (ICONS[s.icon] || ICONS.flower) + '</div>' +
+        '</a>'  +
         '<div class="service-card-body">' +
           '<span class="service-tag">' + s.tag + '</span>' +
           '<h3><a href="service-details.html?id=' + s.id + '">' + s.title + '</a></h3>' +

@@ -18,15 +18,14 @@
 
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
+  <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
-
-  <div id="site-header-slot"></div>
 
   <main>
 
     <!-- ============================ 1. COUNTDOWN ============================ -->
-    <section class="state-page">
+    <section class="state-page" style="height: 100vh;">
       <div class="state-inner">
         <span class="eyebrow" style="justify-content:center">SOMETHING IS GROWING</span>
         <h1 style="margin-top:12px">The new Garden Dreams<br>collection opens soon</h1>
@@ -37,14 +36,6 @@
           <div class="count-box"><span class="count-num" id="cd-hours">00</span><span class="count-label">Hours</span></div>
           <div class="count-box"><span class="count-num" id="cd-mins">00</span><span class="count-label">Minutes</span></div>
           <div class="count-box"><span class="count-num" id="cd-secs">00</span><span class="count-label">Seconds</span></div>
-        </div>
-
-        <div class="launch-progress">
-          <div class="progress-meta">
-            <span>Launch preparation</span>
-            <span id="launch-pct">78% ready</span>
-          </div>
-          <div class="meter-track"><span class="meter-fill" id="launch-fill" style="width:78%"></span></div>
         </div>
 
         <form class="notify-form" data-validate="notify" novalidate>
@@ -59,168 +50,11 @@
       </div>
     </section>
 
-    <!-- ============================ 2. WHAT IS LAUNCHING ============================ -->
-    <section class="section-pad">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">ON THE WAY</span>
-          <h2 class="section-heading">WHAT IS ACTUALLY COMING</h2>
-          <p class="section-description">No vague promises — here is what we are building behind the scenes right now.</p>
-        </div>
-
-        <div class="grid-4">
-          <div class="pillar-card">
-            <div class="pillar-num">01</div>
-            <h3>Seasonal recipe boxes</h3>
-            <p>Four new arrangements a month, each built around what our growers are cutting that week.</p>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">02</div>
-            <h3>Grower profiles</h3>
-            <p>Every bouquet will show the farm, the field and the person who cut your stems.</p>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">03</div>
-            <h3>Gift subscriptions</h3>
-            <p>Buy 4, 12 or 26 weeks of flowers for somebody else, scheduled to their calendar.</p>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">04</div>
-            <h3>Workshop calendar</h3>
-            <p>Monthly hands-on classes with live seat booking, waitlists and gift vouchers.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 3. EARLY ACCESS PERKS ============================ -->
-    <section class="section-pad section-alt">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">EARLY ACCESS</span>
-          <h2 class="section-heading">WHY JOIN THE LIST</h2>
-          <p class="section-description">Subscribers on the notify list get first pick before anything goes public.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="info-card">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <div>
-              <h3>48-hour head start</h3>
-              <p>The notify list books any launch offer two full days before the public page opens.</p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/></svg>
-            </div>
-            <div>
-              <h3>Welcome credit</h3>
-              <p>Early subscribers land with a $15 credit already sitting in their new account.</p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <div>
-              <h3>Behind-the-scenes notes</h3>
-              <p>Monthly build updates with real photos of the new recipes and studio kit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 4. AVAILABLE NOW ============================ -->
-    <section class="section-pad">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">NOTHING TO WAIT FOR</span>
-          <h2 class="section-heading">AVAILABLE RIGHT NOW</h2>
-          <p class="section-description">The launch is additive — everything below is already open and blooming.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div>
-              <h3>Weekly subscriptions</h3>
-              <p>Three plans, free delivery, skip any week — start today with no waiting list.</p>
-              <a class="service-card-link" href="../../public/pages/pricing.html" style="margin-top:12px;display:inline-flex">See pricing</a>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-            <div>
-              <h3>Wedding consultations</h3>
-              <p>Peak dates for 2026 are already being booked — you do not have to wait for launch day.</p>
-              <a class="service-card-link" href="../../public/pages/service-details.html?id=wedding-florals" style="margin-top:12px;display:inline-flex">View service</a>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-            <div>
-              <h3>The Morning Journal</h3>
-              <p>New article every Thursday — seasonal guides, care rituals and studio stories.</p>
-              <a class="service-card-link" href="../../public/pages/blog.html" style="margin-top:12px;display:inline-flex">Read articles</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 5. QUOTES ============================ -->
-    <section class="section-pad section-alt">
-      <div class="container">
-        <div class="center-header">
-          <span class="eyebrow">TRUSTED ALREADY</span>
-          <h2 class="section-heading">SUBSCRIBERS WHO STAYED</h2>
-          <p class="section-description">While you wait, here is what our current members say about the flowers they already receive.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>Three years of Monday deliveries and not one boring bunch. The grower card is such a lovely touch.</p>
-            <span class="quote-cite">Hannah R. • Maison plan</span>
-          </div>
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>I skip whenever I travel and nobody makes me feel guilty about it. Billing just pauses itself.</p>
-            <span class="quote-cite">Dev P. • Jardin plan</span>
-          </div>
-          <div class="quote-card">
-            <span class="quote-mark">“</span>
-            <p>They noticed I never chose lilies and removed them from my profile after one delivery. Proper service.</p>
-            <span class="quote-cite">Marta L. • Petit plan</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 6. CTA ============================ -->
-    <section class="cta-band">
-      <div class="container">
-        <span class="eyebrow" style="justify-content:center">DO NOT WANT TO WAIT?</span>
-        <h2>Order today,<br>not on launch day</h2>
-        <p>The full service list is open — subscriptions, weddings, corporate and same-day delivery.</p>
-        <div class="cta-actions">
-          <a href="../../public/pages/services.html" class="btn btn-pink btn-lg">Explore services</a>
-          <a href="../../public/auth/signup.html" class="btn btn-green-outline btn-lg">Create an account</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <div id="site-footer-slot"></div>
 
   <script src="../../src/js/toast.js"></script>
-  <script src="../../src/js/navbar.js"></script>
-  <script src="../../src/js/footer.js"></script>
   <script src="../../src/js/form-validation.js"></script>
   <script src="../../src/js/coming-soon.js"></script>
 </body>

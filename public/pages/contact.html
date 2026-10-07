@@ -17,6 +17,7 @@
 
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
+  <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
 
@@ -26,12 +27,7 @@
 
     <!-- ============================ 1. PAGE HERO ============================ -->
     <section class="page-hero">
-      <div class="container">
-        <div class="breadcrumb">
-          <a href="../../index.html">Home</a>
-          <span class="crumb-sep">/</span>
-          <span>Contact</span>
-        </div>
+      <div class="container"> 
         <p class="eyebrow" style="justify-content:center">SAY HELLO</p>
         <h1>We answer every<br>message <span class="serif-italic">ourselves</span></h1>
         <p>No chatbots, no ticket numbers — a florist reads your note and replies within one business day. Or simply push open the studio door on Alder Lane.</p>
@@ -140,20 +136,26 @@
 
         <aside class="sidebar" id="studio-map">
           <div class="map-card">
-            <div class="map-road h1"></div>
-            <div class="map-road h2"></div>
-            <div class="map-road v1"></div>
-            <div class="map-road v2"></div>
-            <div class="map-pin">
+            <iframe 
+              class="map-iframe"
+              src="https://maps.google.com/maps?q=14+Alder+Lane+Riverside&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              title="Garden Dreams Studio Location Map"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+
+            <div class="map-pin-overlay">
               <div class="pin-dot">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
-              <strong>Garden Dreams Studio</strong>
-              <span>14 Alder Lane, Riverside</span>
-            </div>
-            <div class="map-legend">
-              <span><i class="dot pink"></i> Studio entrance</span>
-              <span><i class="dot green"></i> Free parking behind the building</span>
+              <div class="pin-info">
+                <strong>Garden Dreams Studio</strong>
+                <span>14 Alder Lane, Riverside</span>
+              </div>
+              <a href="https://maps.google.com/?q=14+Alder+Lane+Riverside" target="_blank" rel="noopener noreferrer" class="map-directions-btn" aria-label="Open directions in Google Maps">
+                <span>Directions</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
 
@@ -164,16 +166,6 @@
               <li><span>Saturday</span><strong>9:00 – 17:00</strong></li>
               <li><span>Sunday</span><strong>Delivery only</strong></li>
               <li><span>Bank holidays</span><strong>Closed</strong></li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3 class="sidebar-title">Delivery zone</h3>
-            <ul class="contact-list">
-              <li><span>City centre</span><strong>Free</strong></li>
-              <li><span>Within 10 miles</span><strong>$6</strong></li>
-              <li><span>10 – 25 miles</span><strong>$12</strong></li>
-              <li><span>Beyond 25 miles</span><strong>On request</strong></li>
             </ul>
           </div>
         </aside>
@@ -211,52 +203,6 @@
             <h3>The flowers begin</h3>
             <p>Stems are reserved with your grower and conditioned for your day.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 5. POPULAR QUESTIONS ============================ -->
-    <section class="section-pad section-alt">
-      <div class="container" style="max-width:900px">
-        <div class="center-header">
-          <span class="eyebrow">MAYBE IT IS ALREADY ANSWERED</span>
-          <h2 class="section-heading">BEFORE YOU WRITE</h2>
-          <p class="section-description">Quick answers to the questions our inbox sees most often.</p>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Do you deliver on Sundays?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer"><p>Yes — Sunday deliveries leave the studio by 11am for orders confirmed before Friday 4pm. Studio collections are not available on Sundays.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can I visit without an appointment?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer"><p>Absolutely. Walk in any day to browse bouquets. For weddings, corporate accounts or long consultations, book ahead so a designer is free for you.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>How fast can you turn around an order?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer"><p>Same-day delivery for orders placed before 2pm, seven days a week. Wedding and event work needs a minimum of two weeks' notice.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Do you offer refunds if flowers arrive damaged?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer"><p>Send us a photo within 24 hours and we will remake and redeliver the arrangement free of charge — or refund in full if you prefer.</p></div>
-          </div>
-        </div>
-
-        <div style="text-align:center;margin-top:28px">
-          <a class="btn btn-outline" href="../../public/pages/FAQ.html">Read the full FAQ</a>
         </div>
       </div>
     </section>

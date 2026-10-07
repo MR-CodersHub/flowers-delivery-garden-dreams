@@ -10,7 +10,6 @@
       title: 'Weekly Flower Subscription',
       shortTitle: 'Flower Subscription',
       tag: 'Subscriptions',
-      icon: 'calendar',
       price: 'From $48 / delivery',
       duration: 'Ongoing',
       rating: '4.9 (312 reviews)',
@@ -55,7 +54,7 @@
       price: 'From $850',
       duration: '4–8 weeks lead time',
       rating: '5.0 (96 weddings)',
-      image: 'https://images.unsplash.com/photo-1587556930799-8dca6aef3dc2?auto=format&fit=crop&w=900&q=80',
+      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80',
       gallery: [
         'https://images.unsplash.com/photo-1587556930799-8dca6aef3dc2?auto=format&fit=crop&w=900&q=80',
         'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
@@ -296,7 +295,7 @@
       authorAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
       date: 'September 14, 2026',
       readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80',
       excerpt: 'The difference between a five-day bouquet and a ten-day bouquet is almost never the flowers — it is the first ten minutes you spend on them.',
       tags: ['flower care', 'tips', 'at home'],
       content: [
@@ -320,10 +319,10 @@
       category: 'Weddings',
       author: 'Chloe Davenport',
       authorRole: 'Event Design Lead',
-      authorAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80',
+      authorAvatar: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
       date: 'August 30, 2026',
       readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1587556930799-8dca6aef3dc2?auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=900&q=80',
       excerpt: 'After a decade of identical Pinterest arches, couples are asking for flowers that look grown, not manufactured. Here is what we are installing this season.',
       tags: ['weddings', 'trends', 'event design'],
       content: [

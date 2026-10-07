@@ -17,10 +17,72 @@
 
   <link rel="stylesheet" href="../../../src/css/style.css">
   <link rel="stylesheet" href="../../../src/css/components.css">
+  <link rel="icon" href="../../../assets/img/logo.png">
 </head>
 <body data-root="../../../">
 
-  <div id="site-header-slot"></div>
+  <!-- ==========================================================================
+       DASHBOARD NAVIGATION (Unique portal bar without marketing navlinks)
+       ========================================================================== -->
+  <header class="dash-navbar" id="dash-navbar">
+    <div class="dash-nav-left">
+      <button class="dash-menu-btn" id="dash-sidebar-toggle" type="button" aria-label="Toggle dashboard sidebar" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <a href="../../../index.html" class="dash-brand-logo" title="Back to Garden Dreams Home">
+        <img src="../../../assets/img/logo.png" alt="Garden Dreams logo" width="36" height="36">
+        <div class="dash-brand-text">
+          <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
+        </div>
+      </a>
+
+      <div class="dash-portal-tag admin-portal-tag">
+        <span class="portal-dot"></span>
+        <span>Studio Admin</span>
+      </div>
+    </div>
+
+    <div class="dash-nav-right">
+      <a href="../../../index.html" class="dash-storefront-btn" title="View store homepage">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Storefront</span>
+      </a>
+
+      <button id="dash-theme-toggle" class="theme-toggle-btn" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+
+      <button id="dash-rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle layout direction" title="Toggle RTL layout">RTL</button>
+
+      <div class="dash-user-menu" id="dash-user-menu">
+        <button class="dash-user-btn" id="dash-user-btn" aria-label="Account options" aria-expanded="false">
+          <div class="dash-avatar">MO</div>
+          <div class="dash-user-meta">
+            <span class="dash-user-name">Maya Okafor</span>
+            <span class="dash-user-role">Studio Lead / Admin</span>
+          </div>
+          <svg class="dash-user-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+
+        <div class="dash-user-dropdown" id="dash-user-dropdown">
+          <div class="dash-dd-head">
+            <div class="dash-avatar lg">MO</div>
+            <div>
+              <strong>Maya Okafor</strong>
+              <span>maya@gardendreams.studio</span>
+            </div>
+          </div>
+          <div class="dash-dd-divider"></div>
+          <a href="#settings" class="dash-dd-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Studio Settings</a>
+          <a href="../../../public/auth/user/user-dashboard.html" class="dash-dd-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Customer Portal</a>
+          <div class="dash-dd-divider"></div>
+          <a href="../../../public/auth/login.html" class="dash-dd-item logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Log out</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main class="dash-shell">
 
@@ -29,44 +91,36 @@
       <div class="dash-side-label">Studio admin</div>
 
       <nav class="dash-nav" aria-label="Admin sections">
-        <a href="admin-dashboard.html" class="active">
+        <a href="#overview" class="active">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
           Overview
         </a>
-        <a href="#" data-nav-toast>
+        <a href="#orders">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           Orders
-          <span class="nav-badge">12</span>
         </a>
-        <a href="#" data-nav-toast>
+        <a href="#services">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
           Services
         </a>
-        <a href="#" data-nav-toast>
+        <a href="#subscribers">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           Subscribers
-          <span class="nav-badge">348</span>
         </a>
-        <a href="#" data-nav-toast>
+        <a href="#deliveries">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           Deliveries
         </a>
-        <a href="#" data-nav-toast>
+        <a href="#messages">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Messages
-          <span class="nav-badge">3</span>
         </a>
-        <a href="#" data-nav-toast>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <a href="#settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           Settings
         </a>
       </nav>
 
-      <div class="dash-side-card">
-        <h4>Studio support</h4>
-        <p>Florist on call until 6pm — critical issues get a reply within 15 minutes.</p>
-        <button class="btn btn-pink btn-sm btn-block" type="button" data-toast="Support thread opened — a florist will reply shortly.">Contact support</button>
-      </div>
 
       <nav class="dash-nav" aria-label="Account">
         <a href="../../../public/auth/login.html">
@@ -80,7 +134,7 @@
     <div class="dash-main">
 
       <!-- 1. TOP BAR -->
-      <div class="dash-topbar">
+      <div class="dash-topbar" id="overview">
         <div class="dash-title">
           <h1>Studio overview</h1>
           <p>Tuesday, 6 October 2026 • 12 orders need attention today</p>
@@ -91,7 +145,6 @@
           </button>
           <button class="btn btn-outline btn-sm" type="button" data-toast="Daily report exported as CSV.">Export report</button>
           <button class="btn btn-pink btn-sm" type="button" data-toast="New order form opened — add a customer to continue.">New order</button>
-          <div class="dash-avatar" title="Maya Okafor — Lead designer">MO</div>
         </div>
       </div>
 
@@ -201,7 +254,7 @@
           </div>
         </section>
 
-        <section class="dash-panel">
+        <section class="dash-panel" id="deliveries">
           <div class="dash-panel-head">
             <div>
               <h3>Today's route</h3>
@@ -249,7 +302,7 @@
       </div>
 
       <!-- 5. ORDERS TABLE -->
-      <section class="dash-panel" style="margin-bottom:24px">
+      <section class="dash-panel" id="orders" style="margin-bottom:24px">
         <div class="dash-panel-head">
           <div>
             <h3>Recent orders</h3>
@@ -328,6 +381,84 @@
         </div>
       </section>
 
+      <!-- 6. SERVICES MANAGEMENT -->
+      <section class="dash-panel" id="services" style="margin-bottom:24px">
+        <div class="dash-panel-head">
+          <div>
+            <h3>Studio services &amp; catalog</h3>
+            <span class="panel-sub">Active plans, bespoke bookings and workshops</span>
+          </div>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Service editor opened — add a new bouquet or package.">+ Add service</button>
+        </div>
+        <div class="dash-panel-body">
+          <div class="dash-grid-4">
+            <div class="service-dash-card">
+              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active tier</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Weekly Bouquets</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">16–20 stems • $64 / mo</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">142 active subscribers</div>
+            </div>
+            <div class="service-dash-card">
+              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active tier</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Corporate Styling</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Vase arrangements • $180 / mo</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">24 corporate offices</div>
+            </div>
+            <div class="service-dash-card">
+              <span class="status-pill scheduled" style="margin-bottom:8px; display:inline-block;">Booking</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Weddings &amp; Events</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Custom florals • from $1,500</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">8 events this quarter</div>
+            </div>
+            <div class="service-dash-card">
+              <span class="status-pill scheduled" style="margin-bottom:8px; display:inline-block;">Workshop</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Seasonal Masterclass</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Hands-on studio • $65 / seat</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Next class: 18 Oct (sold out)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. SUBSCRIBERS OVERVIEW -->
+      <section class="dash-panel" id="subscribers" style="margin-bottom:24px">
+        <div class="dash-panel-head">
+          <div>
+            <h3>Subscriber health &amp; tiers</h3>
+            <span class="panel-sub">142 total members • 96.4% retention rate</span>
+          </div>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Exported subscriber roster to CSV.">Export roster</button>
+        </div>
+        <div class="dash-panel-body">
+          <div class="dash-grid-3">
+            <div class="service-dash-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Maison Plan</strong>
+                <span class="status-pill delivered">Weekly</span>
+              </div>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">68 active members • $4,352 / mo</p>
+              <div class="meter-track"><span class="meter-fill" data-width="48%"></span></div>
+            </div>
+            <div class="service-dash-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Jardin Plan</strong>
+                <span class="status-pill delivered">Bi-weekly</span>
+              </div>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">54 active members • $2,052 / mo</p>
+              <div class="meter-track"><span class="meter-fill" data-width="38%"></span></div>
+            </div>
+            <div class="service-dash-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Petit Plan</strong>
+                <span class="status-pill delivered">Monthly</span>
+              </div>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">20 active members • $560 / mo</p>
+              <div class="meter-track"><span class="meter-fill" data-width="14%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 6. STOCK + MESSAGES -->
       <div class="dash-grid-2" style="margin-bottom:24px">
         <section class="dash-panel">
@@ -360,7 +491,7 @@
           </div>
         </section>
 
-        <section class="dash-panel">
+        <section class="dash-panel" id="messages">
           <div class="dash-panel-head">
             <div>
               <h3>Latest messages</h3>
@@ -397,7 +528,7 @@
       </div>
 
       <!-- 7. SETTINGS -->
-      <section class="dash-panel">
+      <section class="dash-panel" id="settings">
         <div class="dash-panel-head">
           <div>
             <h3>Studio preferences</h3>
@@ -505,11 +636,8 @@
     </div>
   </main>
 
-  <div id="site-footer-slot"></div>
 
   <script src="../../../src/js/toast.js"></script>
-  <script src="../../../src/js/navbar.js"></script>
-  <script src="../../../src/js/footer.js"></script>
   <script src="../../../src/js/dashboard.js"></script>
 </body>
 </html>
