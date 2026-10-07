@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account • Garden Dreams</title>
+  <meta name="description" content="Create a free Garden Dreams account for member pricing, delivery control and a welcome bouquet credit on your first order.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. SIGN UP ============================ -->
+    <section class="auth-section">
+      <div class="container auth-grid">
+
+        <div class="auth-aside">
+          <div class="auth-aside-card">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Bouquet of freshly cut seasonal flowers">
+            <div class="aside-overlay">
+              <h3>Your welcome credit is waiting</h3>
+              <p>$15 toward your first order, plus 10% off everything while you are subscribed.</p>
+            </div>
+          </div>
+
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free account — no card needed until you order</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>$15 welcome credit on your first delivery</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Skip, pause or cancel any subscription, any time</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Thursday bloom guide straight to your inbox</span></li>
+          </ul>
+        </div>
+
+        <div class="auth-card">
+          <h1>Create your account</h1>
+          <p class="auth-sub">Already a member? <a href="../../public/auth/login.html">Log in instead</a></p>
+
+          <form class="auth-form" data-validate="signup" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="signup-name">Full name <span class="req">*</span></label>
+              <input class="form-control" type="text" id="signup-name" name="name" placeholder="Jordan Blake" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signup-email">Email address <span class="req">*</span></label>
+              <input class="form-control" type="email" id="signup-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signup-password">Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input class="form-control" type="password" id="signup-password" name="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+                <button class="password-toggle" type="button" data-target="signup-password" aria-label="Show password"></button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signup-confirm">Confirm password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input class="form-control" type="password" id="signup-confirm" name="confirm" placeholder="Repeat your password" autocomplete="new-password" minlength="8" data-confirm="#signup-password" required>
+                <button class="password-toggle" type="button" data-target="signup-confirm" aria-label="Show password"></button>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="signup-terms" name="terms" required>
+              <label for="signup-terms">I agree to the <a href="../../public/pages/Terms-of-service.html">Terms of Service</a> and <a href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="signup-news" name="news">
+              <label for="signup-news">Send me the Thursday bloom guide and studio offers.</label>
+            </div>
+
+            <button type="submit" class="btn btn-pink btn-block btn-lg">Create account</button>
+          </form>
+
+          <div class="auth-divider">or sign up with</div>
+
+          <div class="social-auth-row">
+            <button class="social-auth-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v2.9h5.35c-.25 1.4-1.75 4.1-5.35 4.1-3.2 0-5.8-2.65-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3.05.77 3.75 1.44l2.55-2.46C16.7 3.5 14.6 2.6 12 2.6 6.9 2.6 2.8 6.7 2.8 11.8S6.9 21 12 21c5.25 0 8.75-3.7 8.75-8.9 0-.6-.07-1.05-.15-1.5z"/></svg>
+              Google
+            </button>
+            <button class="social-auth-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 12.78c.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.87-.76-1.48.02-2.84.86-3.6 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.83-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.1 5.4c.6-.74 1.01-1.76.9-2.78-.87.04-1.93.58-2.56 1.31-.56.65-1.05 1.7-.92 2.7.97.08 1.97-.49 2.58-1.23z"/></svg>
+              Apple
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 2. HOW IT WORKS ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">AFTER SIGN UP</span>
+          <h2 class="section-heading">THREE STEPS TO YOUR FIRST BUNCH</h2>
+          <p class="section-description">No sales call, no hidden forms — you are three short steps from flowers at the door.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>Pick your plan</h3>
+            <p>Petit, Maison or Jardin — weekly or fortnightly, monthly or annual billing.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>Set your taste</h3>
+            <p>Tell us the colours, the stems you never want and the address we should visit.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>Choose a window</h3>
+            <p>Pick a delivery day and slot. Your first bunch is cut the morning it leaves us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. WHAT YOU SAVE ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">MEMBER PERKS</span>
+          <h2 class="section-heading">WHAT YOUR ACCOUNT SAVES</h2>
+          <p class="section-description">Real numbers from the last twelve months of membership.</p>
+        </div>
+
+        <div class="stat-inline">
+          <div><div class="stat-num">$15</div><div class="stat-label">Welcome credit</div></div>
+          <div><div class="stat-num">10%</div><div class="stat-label">Off weddings &amp; gifts</div></div>
+          <div><div class="stat-num">2</div><div class="stat-label">Months free, annually</div></div>
+          <div><div class="stat-num">$0</div><div class="stat-label">Cancellation fees</div></div>
+        </div>
+
+        <div class="grid-3" style="margin-top:38px">
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <div><h3>One card, everything</h3><p>Subscriptions, one-off gifts and event balances all settle on a single payment method.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div><h3>Priority support</h3><p>Members jump the queue — messages from your dashboard are answered first, every time.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div><h3>Early workshop seats</h3><p>Members book class seats 72 hours before they open to the public.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. QUOTES ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">JOINED RECENTLY</span>
+          <h2 class="section-heading">NEW MEMBERS, IN THEIR WORDS</h2>
+          <p class="section-description">What people say after their first month on the inside.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>The welcome credit covered my first bunch, and I have not bought supermarket flowers since.</p>
+            <span class="quote-cite">Yusuf A. • Joined January</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>Forty seconds to sign up, ten minutes to pick a plan, flowers the next morning.</p>
+            <span class="quote-cite">Claire B. • Joined March</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>Annual billing genuinely saved me two months — I did the maths before I committed.</p>
+            <span class="quote-cite">Ravi S. • Joined November</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. FAQ TEASER ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container" style="max-width:900px">
+        <div class="center-header">
+          <span class="eyebrow">BEFORE YOU COMMIT</span>
+          <h2 class="section-heading">SIGN-UP QUESTIONS</h2>
+          <p class="section-description">The things people check before creating an account.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>Do I need a card to sign up?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" style="max-height:600px"><div class="faq-answer-inner">No. An account is completely free and only needs a name, email and password. Payment details are requested only when you place an order or start a subscription.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Is there any contract?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">None. You can cancel any subscription in two clicks from your dashboard, with no fee, and your final scheduled delivery still arrives.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can I delete my account later?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes — close it from your dashboard or send a request through our privacy page. Personal data is removed within 30 days, keeping only what tax law requires.</div></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:28px">
+          <a class="btn btn-outline" href="../../public/pages/FAQ.html">Read all FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">STILL DECIDING?</span>
+        <h2>Compare the plans<br>side by side</h2>
+        <p>Three subscription tiers, plain pricing and everything included — no account needed to read them.</p>
+        <div class="cta-actions">
+          <a href="../../public/pages/pricing.html" class="btn btn-pink btn-lg">See pricing</a>
+          <a href="../../public/pages/services.html" class="btn btn-green-outline btn-lg">Explore services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/auth.js"></script>
+</body>
+</html>

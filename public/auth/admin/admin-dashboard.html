@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard • Garden Dreams</title>
+  <meta name="description" content="Garden Dreams studio admin — orders, deliveries, subscribers and revenue at a glance.">
+
+  <script src="../../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../../src/css/style.css">
+  <link rel="stylesheet" href="../../../src/css/components.css">
+</head>
+<body data-root="../../../">
+
+  <div id="site-header-slot"></div>
+
+  <main class="dash-shell">
+
+    <!-- ============================ SIDEBAR ============================ -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+      <div class="dash-side-label">Studio admin</div>
+
+      <nav class="dash-nav" aria-label="Admin sections">
+        <a href="admin-dashboard.html" class="active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          Overview
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Orders
+          <span class="nav-badge">12</span>
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          Services
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Subscribers
+          <span class="nav-badge">348</span>
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Deliveries
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Messages
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="#" data-nav-toast>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="dash-side-card">
+        <h4>Studio support</h4>
+        <p>Florist on call until 6pm — critical issues get a reply within 15 minutes.</p>
+        <button class="btn btn-pink btn-sm btn-block" type="button" data-toast="Support thread opened — a florist will reply shortly.">Contact support</button>
+      </div>
+
+      <nav class="dash-nav" aria-label="Account">
+        <a href="../../../public/auth/login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Log out
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ============================ MAIN ============================ -->
+    <div class="dash-main">
+
+      <!-- 1. TOP BAR -->
+      <div class="dash-topbar">
+        <div class="dash-title">
+          <h1>Studio overview</h1>
+          <p>Tuesday, 6 October 2026 • 12 orders need attention today</p>
+        </div>
+        <div class="dash-top-actions">
+          <button class="dash-menu-btn" id="dash-menu-toggle" type="button" aria-label="Open dashboard menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Daily report exported as CSV.">Export report</button>
+          <button class="btn btn-pink btn-sm" type="button" data-toast="New order form opened — add a customer to continue.">New order</button>
+          <div class="dash-avatar" title="Maya Okafor — Lead designer">MO</div>
+        </div>
+      </div>
+
+      <!-- 2. WELCOME BANNER -->
+      <div class="welcome-banner">
+        <div>
+          <h2>Good morning, Maya — the studio is buzzing</h2>
+          <p>18 bunches are conditioned and ready, 12 orders are in processing and the Riverside van leaves at 10:30.</p>
+        </div>
+        <div class="cta-actions" style="margin:0">
+          <button class="btn btn-pink" type="button" data-toast="Delivery manifest opened for today's route.">View today's route</button>
+          <button class="btn btn-green-outline" type="button" data-toast="Inventory sheet opened — 4 stems flagged low.">Check inventory</button>
+        </div>
+      </div>
+
+      <!-- 3. KEY STATS -->
+      <div class="dash-grid-4" style="margin-bottom:24px">
+        <div class="stat-card">
+          <div>
+            <span class="stat-label">Revenue this month</span>
+            <div class="stat-value" data-count="24850" data-prefix="$">$0</div>
+            <span class="stat-trend up">+12.4% vs last month</span>
+          </div>
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <span class="stat-label">Orders in progress</span>
+            <div class="stat-value" data-count="146">0</div>
+            <span class="stat-trend up">12 need attention</span>
+          </div>
+          <div class="stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <span class="stat-label">Active subscribers</span>
+            <div class="stat-value" data-count="348">0</div>
+            <span class="stat-trend up">+21 this week</span>
+          </div>
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <span class="stat-label">On-time delivery rate</span>
+            <div class="stat-value" data-count="99.2" data-decimals="1" data-suffix="%">0%</div>
+            <span class="stat-trend down">-0.3% vs last week</span>
+          </div>
+          <div class="stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. REVENUE CHART + TODAY'S ROUTE -->
+      <div class="dash-grid-2" style="margin-bottom:24px">
+        <section class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <h3>Weekly revenue</h3>
+              <span class="panel-sub">Last 7 days, paid orders only</span>
+            </div>
+            <div class="chart-legend">
+              <span><i class="dot-pink"></i> Orders</span>
+              <span><i class="dot-green"></i> Subscriptions</span>
+            </div>
+          </div>
+          <div class="dash-panel-body">
+            <div class="chart-bars">
+              <div class="chart-col">
+                <div class="chart-bar" data-height="52%"><span class="bar-tip">$2.1k</span></div>
+                <span class="chart-label">Mon</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar alt" data-height="74%"><span class="bar-tip">$3.4k</span></div>
+                <span class="chart-label">Tue</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar" data-height="46%"><span class="bar-tip">$1.8k</span></div>
+                <span class="chart-label">Wed</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar alt" data-height="88%"><span class="bar-tip">$4.2k</span></div>
+                <span class="chart-label">Thu</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar" data-height="64%"><span class="bar-tip">$2.9k</span></div>
+                <span class="chart-label">Fri</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar alt" data-height="96%"><span class="bar-tip">$4.8k</span></div>
+                <span class="chart-label">Sat</span>
+              </div>
+              <div class="chart-col">
+                <div class="chart-bar" data-height="38%"><span class="bar-tip">$1.5k</span></div>
+                <span class="chart-label">Sun</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <h3>Today's route</h3>
+              <span class="panel-sub">Van 1 • Sam driving</span>
+            </div>
+            <button class="btn btn-outline btn-sm" type="button" data-toast="Full route manifest opened.">Manifest</button>
+          </div>
+          <div class="dash-panel-body">
+            <div class="dash-list">
+              <div class="dash-list-item">
+                <img class="thumb" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=120&q=80" alt="Seasonal bouquet" loading="lazy">
+                <div class="item-main">
+                  <strong>#GD-4821 • H. Reyes</strong>
+                  <span>9:15 – Riverside Court 4</span>
+                </div>
+                <span class="status-pill processing">processing</span>
+              </div>
+              <div class="dash-list-item">
+                <img class="thumb" src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=120&q=80" alt="Blush bouquet" loading="lazy">
+                <div class="item-main">
+                  <strong>#GD-4822 • Northline Co.</strong>
+                  <span>10:00 – 88 Harbour St</span>
+                </div>
+                <span class="status-pill scheduled">scheduled</span>
+              </div>
+              <div class="dash-list-item">
+                <img class="thumb" src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&w=120&q=80" alt="Dried arrangement" loading="lazy">
+                <div class="item-main">
+                  <strong>#GD-4823 • D. Okafor</strong>
+                  <span>11:30 – 12 Larch Way</span>
+                </div>
+                <span class="status-pill scheduled">scheduled</span>
+              </div>
+              <div class="dash-list-item">
+                <img class="thumb" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=120&q=80" alt="Table florals" loading="lazy">
+                <div class="item-main">
+                  <strong>#GD-4817 • Amara &amp; Lewis</strong>
+                  <span>Delivered 8:40 • photo sent</span>
+                </div>
+                <span class="status-pill delivered">delivered</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 5. ORDERS TABLE -->
+      <section class="dash-panel" style="margin-bottom:24px">
+        <div class="dash-panel-head">
+          <div>
+            <h3>Recent orders</h3>
+            <span class="panel-sub" id="table-search-note">6 rows shown</span>
+          </div>
+          <div class="dash-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="table-search" placeholder="Search orders…" aria-label="Search orders">
+          </div>
+        </div>
+        <div class="dash-panel-body flush">
+          <div class="table-wrap">
+            <table class="data-table" id="filter-table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Service</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">#GD-4821</td>
+                  <td>Hannah Reyes</td>
+                  <td>Weekly subscription</td>
+                  <td>$64</td>
+                  <td><span class="status-pill processing">processing</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#GD-4822</td>
+                  <td>Northline Co.</td>
+                  <td>Corporate display</td>
+                  <td>$180</td>
+                  <td><span class="status-pill scheduled">scheduled</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#GD-4823</td>
+                  <td>Daniel Okafor</td>
+                  <td>Gift bouquet</td>
+                  <td>$85</td>
+                  <td><span class="status-pill pending">pending</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#GD-4817</td>
+                  <td>Amara &amp; Lewis</td>
+                  <td>Wedding package</td>
+                  <td>$2,400</td>
+                  <td><span class="status-pill delivered">delivered</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#GD-4814</td>
+                  <td>Priya Shah</td>
+                  <td>Workshop seat</td>
+                  <td>$65</td>
+                  <td><span class="status-pill paid">paid</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#GD-4809</td>
+                  <td>Jonah Meyer</td>
+                  <td>Fortnightly subscription</td>
+                  <td>$38</td>
+                  <td><span class="status-pill cancelled">cancelled</span></td>
+                  <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. STOCK + MESSAGES -->
+      <div class="dash-grid-2" style="margin-bottom:24px">
+        <section class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <h3>Stem stock this week</h3>
+              <span class="panel-sub">Against planned usage</span>
+            </div>
+            <button class="btn btn-outline btn-sm" type="button" data-toast="Purchase order drafted with 3 partner farms.">Reorder</button>
+          </div>
+          <div class="dash-panel-body">
+            <div class="meter-list">
+              <div>
+                <div class="meter-head"><strong>Garden roses</strong><span>82% allocated</span></div>
+                <div class="meter-track"><span class="meter-fill" data-width="82%"></span></div>
+              </div>
+              <div>
+                <div class="meter-head"><strong>Ranunculus</strong><span>64% allocated</span></div>
+                <div class="meter-track"><span class="meter-fill" data-width="64%"></span></div>
+              </div>
+              <div>
+                <div class="meter-head"><strong>Eucalyptus</strong><span>47% allocated</span></div>
+                <div class="meter-track"><span class="meter-fill" data-width="47%"></span></div>
+              </div>
+              <div>
+                <div class="meter-head"><strong>Seasonal wildflowers</strong><span>31% allocated</span></div>
+                <div class="meter-track"><span class="meter-fill" data-width="31%"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <h3>Latest messages</h3>
+              <span class="panel-sub">3 unread</span>
+            </div>
+            <button class="btn btn-outline btn-sm" type="button" data-toast="Inbox opened — 3 unread messages.">Open inbox</button>
+          </div>
+          <div class="dash-panel-body">
+            <div class="dash-list">
+              <div class="dash-list-item">
+                <div class="item-main">
+                  <strong>Sofia Marchetti</strong>
+                  <span>Can we add 20 more centrepieces to the June booking?</span>
+                </div>
+                <span class="item-amount">4m</span>
+              </div>
+              <div class="dash-list-item">
+                <div class="item-main">
+                  <strong>Northline Co.</strong>
+                  <span>Please move our weekly slot to Thursday mornings.</span>
+                </div>
+                <span class="item-amount">1h</span>
+              </div>
+              <div class="dash-list-item">
+                <div class="item-main">
+                  <strong>Dev Patel</strong>
+                  <span>Skip next week — travelling. Thank you!</span>
+                </div>
+                <span class="item-amount">3h</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 7. SETTINGS -->
+      <section class="dash-panel">
+        <div class="dash-panel-head">
+          <div>
+            <h3>Studio preferences</h3>
+            <span class="panel-sub">Applies to every order leaving Alder Lane</span>
+          </div>
+          <div class="tab-row" data-tab-group=".settings-panels">
+            <button type="button" class="active" data-tab="general">General</button>
+            <button type="button" data-tab="notifications">Notifications</button>
+            <button type="button" data-tab="delivery">Delivery</button>
+          </div>
+        </div>
+        <div class="dash-panel-body settings-panels">
+          <div data-panel="general">
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Seasonal substitutions by default</strong>
+                <span>Allow florists to swap unavailable stems without asking each customer.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Seasonal substitutions enabled" data-off="Seasonal substitutions disabled"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Grower cards on every delivery</strong>
+                <span>Print the farm and cut date on the delivery note.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Grower cards printing" data-off="Grower cards switched off"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Plastic-free packaging audit</strong>
+                <span>Block dispatch if non-compostable materials are detected.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Packaging audit enforced" data-off="Packaging audit relaxed"><span class="track" role="switch"></span></label>
+            </div>
+          </div>
+
+          <div data-panel="notifications" hidden>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Instant order alerts</strong>
+                <span>Notify the studio floor the moment a new order is paid.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Instant order alerts on" data-off="Instant order alerts off"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Failed payment warnings</strong>
+                <span>Email admin when a renewal payment fails twice.</span>
+              </div>
+              <label><input type="checkbox" data-on="Payment warnings on" data-off="Payment warnings off"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Weekly digest every Monday</strong>
+                <span>Revenue, retention and delivery stats in one email.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Weekly digest on" data-off="Weekly digest off"><span class="track" role="switch"></span></label>
+            </div>
+          </div>
+
+          <div data-panel="delivery" hidden>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Same-day cutoff at 2pm</strong>
+                <span>Automatically push late orders to the next morning slot.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="2pm cutoff active" data-off="Cutoff disabled"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Photo confirmation required</strong>
+                <span>Couriers cannot close a stop without uploading a photo.</span>
+              </div>
+              <label><input type="checkbox" checked data-on="Photo proof required" data-off="Photo proof optional"><span class="track" role="switch"></span></label>
+            </div>
+            <div class="switch">
+              <div class="switch-copy">
+                <strong>Weekend surcharge</strong>
+                <span>Add $6 to Sunday deliveries outside the city ring.</span>
+              </div>
+              <label><input type="checkbox" data-on="Weekend surcharge on" data-off="Weekend surcharge off"><span class="track" role="switch"></span></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUICK ACTIONS -->
+      <section class="dash-panel" style="margin-top:24px">
+        <div class="dash-panel-head">
+          <div>
+            <h3>Quick actions</h3>
+            <span class="panel-sub">Common studio jobs, one click away</span>
+          </div>
+        </div>
+        <div class="dash-panel-body">
+          <div class="dash-grid-4">
+            <button class="btn btn-outline btn-block" type="button" data-toast="Subscription plan editor opened.">Edit plans</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Delivery zones map opened.">Delivery zones</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Blog composer opened — new draft created.">Write article</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Team roster opened — 6 florists active.">Manage team</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../../src/js/toast.js"></script>
+  <script src="../../../src/js/navbar.js"></script>
+  <script src="../../../src/js/footer.js"></script>
+  <script src="../../../src/js/dashboard.js"></script>
+</body>
+</html>

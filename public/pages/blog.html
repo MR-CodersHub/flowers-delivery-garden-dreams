@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog • Garden Dreams</title>
+  <meta name="description" content="The Garden Dreams journal — seasonal bloom guides, flower care tips, wedding floristry trends and notes on sustainable local floristry.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. PAGE HERO ============================ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span>Blog</span>
+        </div>
+        <p class="eyebrow" style="justify-content:center">THE MORNING JOURNAL</p>
+        <h1>Notes from the<br>florist's <span class="serif-italic">bench</span></h1>
+        <p>Seasonal bloom guides, care rituals, wedding trends and honest talk about where flowers come from — written by the people who cut them.</p>
+        <div class="cta-actions" style="margin-top:30px">
+          <a href="#blog-list" class="btn btn-pink btn-lg">Browse articles</a>
+          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Suggest a topic</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. FEATURED ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="featured-post" id="featured-post"></div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. BLOG GRID ============================ -->
+    <section class="section-pad section-alt" id="blog-list">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">ALL ARTICLES</span>
+          <h2 class="section-heading">BROWSE THE JOURNAL</h2>
+          <p class="section-description">Search by keyword, filter by category, and open any article on its own detail page.</p>
+        </div>
+
+        <div class="blog-tools">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="blog-search" placeholder="Search articles, e.g. roses, subscription, care…" aria-label="Search articles">
+          </div>
+          <button class="btn btn-outline btn-sm" id="blog-clear" type="button">Clear filters</button>
+        </div>
+
+        <div class="filter-bar" id="blog-filters" style="justify-content:center"></div>
+        <p class="result-count" id="blog-result-count" style="text-align:center"></p>
+
+        <div class="grid-3" id="blog-grid" style="margin-top:28px"></div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. TOPICS ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">EXPLORE BY THEME</span>
+          <h2 class="section-heading">FIVE THINGS WE WRITE ABOUT</h2>
+          <p class="section-description">Every article belongs to one of these ongoing series — follow the one that suits your season.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><h3>Seasonal bloom guides</h3><p>What is actually flowering this month, and how to make the most of it while it lasts.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
+            <div><h3>Flower care rituals</h3><p>Trimming, feeding, water changes and the small habits that double vase life.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div><h3>Wedding floristry</h3><p>Trends, budgets and behind-the-scenes lessons from real installations.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div><h3>Subscription life</h3><p>How to plan around a weekly delivery, and why skipping weeks is encouraged.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg></div>
+            <div><h3>Sustainable floristry</h3><p>Named growers, zero plastic, compostable packs — the arithmetic behind our claims.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/></svg></div>
+            <div><h3>Gifting etiquette</h3><p>Which flowers say what, when to send them, and what to write on the card.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. EDITORIAL BAND ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">FROM THE ARCHIVE</span>
+          <h2 class="section-heading">WORDS OUR READERS KEEP</h2>
+          <p class="section-description">Three of the most shared pieces from the journal.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>A seasonal bloom guide should change every month. Ours does — which is exactly why our bouquets never look like last month's.</p>
+            <span class="quote-cite">Seasonal Bloom Guide</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>Trim at an angle, change the water, keep it out of the sun. Three rules, twice the vase life. That is the whole secret.</p>
+            <span class="quote-cite">Flower Care Tips</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>Repurposing is not a compromise — it is usually the smarter design. The aisle meadow becomes the head table by sunset.</p>
+            <span class="quote-cite">Wedding Floral Trends 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">STAY IN THE LOOP</span>
+        <h2>New article every<br>Thursday morning</h2>
+        <p>Join the Morning Journal and get the week's bloom guide, care note and studio story in one short email.</p>
+        <div class="cta-actions">
+          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Create a free account</a>
+          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Write to the editor</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/blog.js"></script>
+</body>
+</html>

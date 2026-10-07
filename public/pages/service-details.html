@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details • Garden Dreams</title>
+  <meta name="description" content="Full service details, pricing tiers, galleries and FAQs — loaded dynamically for the Garden Dreams floral service you selected.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main id="service-detail-root">
+
+    <!-- ============================ 1. SERVICE HERO ============================ -->
+    <section class="page-hero service-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <a href="../../public/pages/services.html">Services</a>
+          <span class="crumb-sep">/</span>
+          <span id="crumb-current">Service</span>
+        </div>
+
+        <span class="service-tag" id="svc-tag">Category</span>
+        <h1 id="svc-title">Loading service…</h1>
+        <p id="svc-excerpt">Fetching the latest details for this service.</p>
+
+        <div class="hero-meta-row">
+          <span class="hero-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span id="svc-duration">—</span></span>
+          <span class="hero-meta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> <span id="svc-rating">—</span> rating</span>
+          <span class="hero-meta price-current" id="svc-price">—</span>
+        </div>
+
+        <div class="cta-actions" style="margin-top:28px">
+          <a href="#svc-pricing-section" class="btn btn-pink btn-lg">See pricing</a>
+          <a href="#svc-enquire" class="btn btn-green-outline btn-lg">Request a proposal</a>
+        </div>
+
+        <div class="media-frame" id="svc-hero-frame" style="height:420px;margin-top:38px">
+          <img id="svc-hero-image" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=80" alt="Service preview">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. OVERVIEW + ENQUIRY ============================ -->
+    <section class="section-pad">
+      <div class="container split-layout">
+        <div>
+          <span class="eyebrow">OVERVIEW</span>
+          <h2 class="section-heading">What this service includes</h2>
+          <div class="prose" id="svc-description">
+            <p>Loading description…</p>
+          </div>
+
+          <h3 class="sub-heading" style="margin-top:34px">Highlights</h3>
+          <ul class="check-list" id="svc-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Loading features…</span></li>
+          </ul>
+
+          <h3 class="sub-heading" style="margin-top:34px">Gallery</h3>
+          <div class="svc-gallery" id="svc-gallery"></div>
+        </div>
+
+        <aside class="sidebar" id="svc-enquire">
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">Request a proposal</h3>
+            <p class="sidebar-lead">Tell us your date and we will reply within one business day with availability and a fixed quote.</p>
+
+            <form class="auth-form" data-validate="contact" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="svc-name">Full name <span class="req">*</span></label>
+                <input class="form-control" type="text" id="svc-name" name="name" placeholder="Jordan Blake" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="svc-email">Email address <span class="req">*</span></label>
+                <input class="form-control" type="email" id="svc-email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="svc-date">Preferred date <span class="req">*</span></label>
+                <input class="form-control" type="date" id="svc-date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="svc-message">Tell us about the occasion <span class="req">*</span></label>
+                <textarea class="form-control" id="svc-message" name="message" rows="4" placeholder="Guest count, venue, palette, budget range…" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-pink btn-block">Send enquiry</button>
+            </form>
+
+            <div class="sidebar-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>No deposit required to receive a quote.</span>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">Studio details</h3>
+            <ul class="contact-list">
+              <li><span>Studio</span><strong>14 Alder Lane, Riverside</strong></li>
+              <li><span>Phone</span><strong>+1 (555) 018-4420</strong></li>
+              <li><span>Hours</span><strong>Mon–Sat, 8am–6pm</strong></li>
+              <li><span>Response</span><strong>Within 1 business day</strong></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================ 3. PRICING ============================ -->
+    <section class="section-pad section-alt" id="svc-pricing-section">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">TRANSPARENT PRICING</span>
+          <h2 class="section-heading">PACKAGE TIERS</h2>
+          <p class="section-description">Fixed prices, fixed scope. Every tier is confirmed in writing before anything is cut.</p>
+        </div>
+
+        <div class="price-grid" id="svc-pricing">
+          <div class="price-card"><div class="plan-name">Loading…</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. FAQ ============================ -->
+    <section class="section-pad">
+      <div class="container" style="max-width:900px">
+        <div class="center-header">
+          <span class="eyebrow">GOOD TO KNOW</span>
+          <h2 class="section-heading">FREQUENTLY ASKED</h2>
+          <p class="section-description">Everything clients usually ask before booking this service.</p>
+        </div>
+
+        <div class="faq-list" id="svc-faq">
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true"><span>Loading questions…</span><span class="faq-q-icon"></span></button>
+            <div class="faq-answer" style="max-height:600px"><div class="faq-answer-inner">Please wait while we fetch the latest answers.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. RELATED ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">YOU MAY ALSO LIKE</span>
+          <h2 class="section-heading">RELATED SERVICES</h2>
+          <p class="section-description">Other ways we can help — each with its own detail page.</p>
+        </div>
+
+        <div class="grid-3" id="svc-related"></div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">NEXT STEP</span>
+        <h2 id="svc-cta-title">Ready to get started?</h2>
+        <p>Send us your date, your budget and the feeling you are after — we will take it from there.</p>
+        <div class="cta-actions">
+          <a href="#svc-enquire" class="btn btn-pink btn-lg">Request a proposal</a>
+          <a href="../../public/pages/services.html" class="btn btn-green-outline btn-lg">Back to all services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/services.js"></script>
+  <script src="../../src/js/service-details.js"></script>
+  <script src="../../src/js/accordion.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article • Garden Dreams Journal</title>
+  <meta name="description" content="A Garden Dreams journal article — loaded dynamically with related reads, categories and author notes.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main id="article-root">
+
+    <!-- ============================ 1. BREADCRUMB HERO ============================ -->
+    <section class="page-hero" style="padding-bottom:44px">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <a href="../../public/pages/blog.html">Blog</a>
+          <span class="crumb-sep">/</span>
+          <span id="crumb-current">Article</span>
+        </div>
+        <p class="eyebrow" style="justify-content:center">THE MORNING JOURNAL</p>
+        <h1 style="font-size:clamp(1.9rem,4vw,3rem)">Notes from the<br>florist's <span class="serif-italic">bench</span></h1>
+      </div>
+    </section>
+
+    <!-- ============================ 2. ARTICLE + SIDEBAR ============================ -->
+    <section class="section-pad">
+      <div class="container article-layout">
+
+        <article class="article-column" id="article-content">
+          <p style="color:var(--text-muted)">Loading article…</p>
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Categories</h3>
+            <div class="widget-cat-list" id="widget-categories"></div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Popular reads</h3>
+            <div id="widget-popular"></div>
+          </div>
+
+          <div class="sidebar-widget widget-newsletter">
+            <h3 class="widget-title">Morning Journal</h3>
+            <p>One email each Thursday: what is blooming, how to keep it, and a studio story.</p>
+            <form class="newsletter-form" data-validate="newsletter" novalidate>
+              <input type="email" name="email" placeholder="Your email address…" required aria-label="Email address">
+              <button type="submit" class="btn btn-pink btn-sm">Join</button>
+            </form>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============================ 3. AUTHOR ============================ -->
+    <section class="section-pad-sm section-alt">
+      <div class="container" style="max-width:960px">
+        <div class="author-box" id="author-box">
+          <p style="color:var(--text-muted)">Loading author…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. RELATED ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">KEEP READING</span>
+          <h2 class="section-heading">RELATED ARTICLES</h2>
+          <p class="section-description">More from the journal — each one opens on its own detail page.</p>
+        </div>
+
+        <div class="grid-3" id="related-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">FRESH CUT WEEKLY</span>
+        <h2>Want the bloom guide<br>before anyone else?</h2>
+        <p>Subscribers get the seasonal guide, care notes and early access to workshop seats every Thursday morning.</p>
+        <div class="cta-actions">
+          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Create a free account</a>
+          <a href="../../public/pages/blog.html" class="btn btn-green-outline btn-lg">Back to the journal</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/blog-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing • Garden Dreams</title>
+  <meta name="description" content="Transparent subscription and floral service pricing — weekly and monthly flower plans with two months free on annual billing.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. PAGE HERO ============================ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span>Pricing</span>
+        </div>
+        <p class="eyebrow" style="justify-content:center">PLAIN PRICING</p>
+        <h1>Honest prices,<br>no <span class="serif-italic">surprise stems</span></h1>
+        <p>Every plan includes delivery, flower food and the freedom to skip a week. Switch to annual billing and get two months free on everything.</p>
+
+        <div class="billing-toggle" id="billing-toggle" style="margin-top:32px">
+          <span class="billing-pill"></span>
+          <button type="button" class="active" data-period="monthly">Monthly</button>
+          <button type="button" data-period="annual">Annual <em>2 months free</em></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. PLANS ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">SUBSCRIPTION PLANS</span>
+          <h2 class="section-heading">CHOOSE YOUR RHYTHM</h2>
+          <p class="section-description">Downgrade, upgrade, pause or skip any time from your dashboard — no phone calls required.</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card" data-monthly="$38" data-annual="$380" data-monthly-note="Billed monthly • cancel any time" data-annual-note="Billed yearly • two months free">
+            <div class="plan-name">Petit</div>
+            <div class="plan-blurb">A small seasonal bunch for a desk, a bedside table or a quiet kitchen windowsill.</div>
+            <div class="price-amount"><span class="amount">$38</span><span class="period">/ month</span></div>
+            <div class="price-billed">Billed monthly • cancel any time</div>
+            <ul class="plan-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>8–10 stems, hand-tied</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered every fortnight</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free city delivery</span></li>
+              <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Vase not included</span></li>
+            </ul>
+            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Petit">Choose Petit</button>
+          </div>
+
+          <div class="price-card popular">
+            <span class="popular-ribbon">Most popular</span>
+            <div class="plan-name">Maison</div>
+            <div class="plan-blurb">Our signature weekly bunch — the right size for a dining table and a hallway console.</div>
+            <div class="price-amount"><span class="amount">$64</span><span class="period">/ month</span></div>
+            <div class="price-billed">Billed monthly • cancel any time</div>
+            <ul class="plan-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>16–20 stems, hand-tied</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered weekly</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free delivery + priority slots</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Skip or pause any week</span></li>
+            </ul>
+            <button class="btn btn-pink btn-block js-choose-plan" data-plan="Maison">Choose Maison</button>
+          </div>
+
+          <div class="price-card" data-monthly="$112" data-annual="$1,120" data-monthly-note="Billed monthly • cancel any time" data-annual-note="Billed yearly • two months free">
+            <div class="plan-name">Jardin</div>
+            <div class="plan-blurb">A generous arrangement for open-plan homes, reception desks and small offices.</div>
+            <div class="price-amount"><span class="amount">$112</span><span class="period">/ month</span></div>
+            <div class="price-billed">Billed monthly • cancel any time</div>
+            <ul class="plan-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>30+ stems, full arrangement</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered weekly or fortnightly</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Studio vase on first delivery</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free seasonal upgrade stems</span></li>
+            </ul>
+            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Jardin">Choose Jardin</button>
+          </div>
+        </div>
+
+        <p class="result-count" style="text-align:center;margin-top:22px">All prices include tax. Delivery is free inside the city ring road.</p>
+      </div>
+    </section>
+
+    <!-- ============================ 3. ONE-OFF SERVICES ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">NOT A SUBSCRIBER?</span>
+          <h2 class="section-heading">ONE-OFF SERVICES</h2>
+          <p class="section-description">Prefer to order as you go? These are our standard starting prices.</p>
+        </div>
+
+        <div class="addon-list">
+          <div class="addon-row">
+            <div class="addon-info">
+              <strong>Seasonal hand-tied bouquet</strong>
+              <span>Medium • 14–16 stems • same-day available</span>
+            </div>
+            <span class="addon-price">from $55</span>
+          </div>
+          <div class="addon-row">
+            <div class="addon-info">
+              <strong>Luxury arrangement in studio vase</strong>
+              <span>Large • 28+ stems • hand-blown glass included</span>
+            </div>
+            <span class="addon-price">from $120</span>
+          </div>
+          <div class="addon-row">
+            <div class="addon-info">
+              <strong>Wedding &amp; event florals</strong>
+              <span>Ceremony, reception and installation • fixed quote</span>
+            </div>
+            <span class="addon-price">from $850</span>
+          </div>
+          <div class="addon-row">
+            <div class="addon-info">
+              <strong>Corporate weekly display</strong>
+              <span>Reception, meeting rooms and hospitality • invoiced monthly</span>
+            </div>
+            <span class="addon-price">from $180/wk</span>
+          </div>
+          <div class="addon-row">
+            <div class="addon-info">
+              <strong>Floral workshop seat</strong>
+              <span>Two hours, all materials, glass of something cold</span>
+            </div>
+            <span class="addon-price">$65 / seat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. WHAT IS INCLUDED ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">INCLUDED WITH EVERY PLAN</span>
+          <h2 class="section-heading">THE SMALL PRINT, IN PLAIN ENGLISH</h2>
+          <p class="section-description">Nothing here is an upsell — this is simply what every subscriber gets.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>Free delivery</h3>
+            <p>Inside the city ring road, seven days a week, with photo confirmation.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>Skip any week</h3>
+            <p>Going away? Skip from your dashboard before Sunday — no fee, no guilt.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>Seasonal swap</h3>
+            <p>Dislike a stem? Mark it once and we will never include it again.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">04</div>
+            <h3>Freshness promise</h3>
+            <p>Seven days or we remake the arrangement free of charge.</p>
+          </div>
+        </div>
+
+        <div class="grid-4" style="margin-top:22px">
+          <div class="pillar-card">
+            <div class="pillar-num">05</div>
+            <h3>No contracts</h3>
+            <p>Cancel entirely in two clicks. Your final delivery always arrives first.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">06</div>
+            <h3>Named grower</h3>
+            <p>Each delivery card tells you which farm your stems were cut from.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">07</div>
+            <h3>Zero plastic</h3>
+            <p>Kraft wrap, compostable water packs and recycled cardboard only.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">08</div>
+            <h3>Member pricing</h3>
+            <p>10% off weddings, workshops and one-off gifts while subscribed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. PRICING FAQ ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container" style="max-width:900px">
+        <div class="center-header">
+          <span class="eyebrow">MONEY QUESTIONS</span>
+          <h2 class="section-heading">PRICING FAQ</h2>
+          <p class="section-description">The honest answers about billing, skipping and cancelling.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>When am I actually charged?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>On the first of each month for the month ahead — or once a year if you chose annual billing. We never charge before your first delivery is confirmed.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What happens if I skip a week?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Nothing — your billing simply pauses for that delivery and resumes automatically. Skipping is free and unlimited on every plan.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can I change plans later?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes, upgrade or downgrade at any time from your dashboard. Changes apply from the next billing cycle and we prorate the difference.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Is there a cancellation fee?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>None, ever. Cancel two clicks from your dashboard and your final scheduled delivery still arrives as normal.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do you invoice businesses separately?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Corporate accounts are invoiced monthly with a single consolidated statement. Contact us and we will set up a tailored scope.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">START TODAY</span>
+        <h2>Your first bunch could<br>arrive tomorrow</h2>
+        <p>Create an account, pick a plan and choose a delivery window — the rest is our job.</p>
+        <div class="cta-actions">
+          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Start a subscription</a>
+          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Talk to us first</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/accordion.js"></script>
+  <script src="../../src/js/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found • Garden Dreams</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="This page has wilted — but the rest of the Garden Dreams site is right where you left it.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. 404 STATE ============================ -->
+    <section class="state-page">
+      <div class="state-inner">
+        <div class="state-code">404</div>
+        <h1>This page has wilted away</h1>
+        <p>The link you followed points to something we have moved, renamed or never grew in the first place. The good news: everything else is still blooming.</p>
+        <div class="state-actions">
+          <a href="../../index.html" class="btn btn-pink btn-lg">Back to home</a>
+          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Report a broken link</a>
+        </div>
+        <div class="search-box" style="max-width:440px;margin:0 auto">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="site-search" data-site-search placeholder="Search articles &amp; services…" aria-label="Search the site">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. QUICK ROUTES ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">TRY ONE OF THESE</span>
+          <h2 class="section-heading">THE PAGES PEOPLE LOOK FOR</h2>
+          <p class="section-description">Four routes that cover most of what you were probably looking for.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>Bouquets &amp; services</h3>
+            <p>Subscriptions, weddings, corporate flowers and same-day delivery.</p>
+            <a class="service-card-link" href="../../public/pages/services.html" style="margin-top:12px;display:inline-flex">View services</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>Plans &amp; pricing</h3>
+            <p>Every subscription tier, one-off service and what is included.</p>
+            <a class="service-card-link" href="../../public/pages/pricing.html" style="margin-top:12px;display:inline-flex">See pricing</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>The journal</h3>
+            <p>Seasonal bloom guides, care rituals and wedding floristry notes.</p>
+            <a class="service-card-link" href="../../public/pages/blog.html" style="margin-top:12px;display:inline-flex">Read articles</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">04</div>
+            <h3>Help centre</h3>
+            <p>Delivery, billing, skipping weeks and everything in between.</p>
+            <a class="service-card-link" href="../../public/pages/FAQ.html" style="margin-top:12px;display:inline-flex">Read FAQs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. POPULAR ARTICLES ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">WHILE YOU ARE HERE</span>
+          <h2 class="section-heading">THREE GOOD READS</h2>
+          <p class="section-description">The journal articles our visitors open most often.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="blog-card">
+            <a class="blog-card-media" href="../../public/pages/blog-details.html?id=seasonal-bloom-guide">
+              <span class="blog-cat-badge">Seasonal</span>
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="Seasonal blooms" loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <div class="blog-card-meta"><span>Mar 14, 2026</span><span>6 min read</span></div>
+              <h3><a href="../../public/pages/blog-details.html?id=seasonal-bloom-guide">The seasonal bloom guide for spring</a></h3>
+              <p>What is actually flowering this month, and how to make the most of it while it lasts.</p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card-media" href="../../public/pages/blog-details.html?id=flower-care-tips">
+              <span class="blog-cat-badge">Care</span>
+              <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=800&q=80" alt="Trimming flower stems" loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <div class="blog-card-meta"><span>Feb 28, 2026</span><span>4 min read</span></div>
+              <h3><a href="../../public/pages/blog-details.html?id=flower-care-tips">Five habits that double vase life</a></h3>
+              <p>Trim at an angle, change the water, keep it out of the sun — the whole secret in five steps.</p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card-media" href="../../public/pages/blog-details.html?id=wedding-floral-trends">
+              <span class="blog-cat-badge">Weddings</span>
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Wedding floral installation" loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <div class="blog-card-meta"><span>Feb 10, 2026</span><span>8 min read</span></div>
+              <h3><a href="../../public/pages/blog-details.html?id=wedding-floral-trends">Wedding floral trends shaping 2026</a></h3>
+              <p>Meadow aisles, dried textures and repurposing that saves you real money.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. EARLY ACCESS ============================ -->
+    <section class="section-pad">
+      <div class="container" style="max-width:760px;text-align:center">
+        <span class="eyebrow" style="justify-content:center">STAY CLOSE</span>
+        <h2 class="section-heading">Never miss a bloom drop</h2>
+        <p class="section-description">Join the Morning Journal for seasonal previews, care notes and 10% off your first order.</p>
+
+        <form class="notify-form" data-validate="newsletter" novalidate style="margin-top:26px">
+          <input type="email" name="email" placeholder="Your email address…" aria-label="Email address" required>
+          <button type="submit" class="btn btn-pink">Join</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================ 5. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">LOST NO MORE</span>
+        <h2>Fresh flowers are<br>two clicks away</h2>
+        <p>Start with the bouquet of the season, or set up a subscription and let the flowers find you.</p>
+        <div class="cta-actions">
+          <a href="../../public/pages/services.html" class="btn btn-pink btn-lg">Explore services</a>
+          <a href="../../public/auth/signup.html" class="btn btn-green-outline btn-lg">Create an account</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/search.js"></script>
+</body>
+</html>

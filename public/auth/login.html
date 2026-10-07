@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In • Garden Dreams</title>
+  <meta name="description" content="Sign in to your Garden Dreams account to manage deliveries, skip a week, update your flowers and view order history.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. LOGIN ============================ -->
+    <section class="auth-section">
+      <div class="container auth-grid">
+
+        <div class="auth-aside">
+          <div class="auth-aside-card">
+            <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=900&q=80" alt="Florist tying a fresh bouquet at the studio bench">
+            <div class="aside-overlay">
+              <h3>Welcome back to the studio</h3>
+              <p>Your next delivery, your skipped weeks and your favourite stems — all in one place.</p>
+            </div>
+          </div>
+
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Skip, pause or reschedule any delivery in two clicks</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Save the flowers you love and ban the ones you don't</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Track today's delivery live with photo confirmation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Member pricing on weddings, workshops and gifts</span></li>
+          </ul>
+        </div>
+
+        <div class="auth-card">
+          <h1>Log in to your account</h1>
+          <p class="auth-sub">New to Garden Dreams? <a href="../../public/auth/signup.html">Create a free account</a></p>
+
+          <form class="auth-form" data-validate="login" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="login-email">Email address <span class="req">*</span></label>
+              <input class="form-control" type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="login-password">Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input class="form-control" type="password" id="login-password" name="password" placeholder="Your password" autocomplete="current-password" minlength="8" required>
+                <button class="password-toggle" type="button" data-target="login-password" aria-label="Show password"></button>
+              </div>
+            </div>
+
+            <div class="auth-row">
+              <div class="form-check" style="margin:0">
+                <input type="checkbox" id="login-remember" name="remember">
+                <label for="login-remember">Keep me signed in</label>
+              </div>
+              <a href="../../public/pages/contact.html">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-pink btn-block btn-lg">Log in</button>
+          </form>
+
+          <div class="auth-divider">or continue with</div>
+
+          <div class="social-auth-row">
+            <button class="social-auth-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v2.9h5.35c-.25 1.4-1.75 4.1-5.35 4.1-3.2 0-5.8-2.65-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3.05.77 3.75 1.44l2.55-2.46C16.7 3.5 14.6 2.6 12 2.6 6.9 2.6 2.8 6.7 2.8 11.8S6.9 21 12 21c5.25 0 8.75-3.7 8.75-8.9 0-.6-.07-1.05-.15-1.5z"/></svg>
+              Google
+            </button>
+            <button class="social-auth-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 12.78c.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.87-.76-1.48.02-2.84.86-3.6 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.83-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.1 5.4c.6-.74 1.01-1.76.9-2.78-.87.04-1.93.58-2.56 1.31-.56.65-1.05 1.7-.92 2.7.97.08 1.97-.49 2.58-1.23z"/></svg>
+              Apple
+            </button>
+          </div>
+
+          <p class="auth-sub" style="text-align:center;margin-top:22px;font-size:.82rem">
+            By logging in you agree to our <a href="../../public/pages/Terms-of-service.html">Terms</a> and <a href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 2. MEMBER BENEFITS ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">WHY AN ACCOUNT</span>
+          <h2 class="section-heading">WHAT MEMBERS GET</h2>
+          <p class="section-description">A Garden Dreams account is free, and it is the control panel for everything you order.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><h3>Delivery control</h3><p>Skip a week while you travel, move a window, or redirect a bouquet to work instead of home.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div><h3>Taste profile</h3><p>Mark stems as love or never, and every future arrangement adjusts around your taste.</p></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg></div>
+            <div><h3>Order history</h3><p>Reorder a favourite in one click, and keep addresses for every person you gift.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. TRUST NUMBERS ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="stat-inline">
+          <div><div class="stat-num">4,200+</div><div class="stat-label">Bouquets delivered</div></div>
+          <div><div class="stat-num">92%</div><div class="stat-label">Subscribers who stay</div></div>
+          <div><div class="stat-num">99.2%</div><div class="stat-label">On-time deliveries</div></div>
+          <div><div class="stat-num">4.9</div><div class="stat-label">Average rating</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. MEMBER QUOTES ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">FROM THE MEMBERS</span>
+          <h2 class="section-heading">PEOPLE WHO LOG IN WEEKLY</h2>
+          <p class="section-description">A few words from the subscribers who manage it all from their dashboard.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>I rescheduled a delivery from a taxi queue in another city. It took about fifteen seconds.</p>
+            <span class="quote-cite">Dev P. • Member since 2024</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>Being able to mark 'never lilies' once means I never have to explain it again.</p>
+            <span class="quote-cite">Marta L. • Member since 2023</span>
+          </div>
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>The order history made Mother's Day trivial — same bouquet, new address, one click.</p>
+            <span class="quote-cite">Hannah R. • Member since 2022</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">NO ACCOUNT YET?</span>
+        <h2>It takes about<br>forty seconds</h2>
+        <p>Create your account, pick a plan and choose a delivery window. Your welcome credit is already waiting.</p>
+        <div class="cta-actions">
+          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Create an account</a>
+          <a href="../../public/pages/pricing.html" class="btn btn-green-outline btn-lg">Compare plans</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/auth.js"></script>
+</body>
+</html>

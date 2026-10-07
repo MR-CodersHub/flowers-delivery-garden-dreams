@@ -4,8 +4,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initHeader();
   initPetals();
   initZipChecker();
   initCategoryFilters();
@@ -14,74 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCartDrawer();
   initQuickViewModal();
   initGiftPreview();
-  initNewsletter();
   initScrollReveal();
 });
-
-/* ==========================================================================
-   1. Light / Dark Theme Engine
-   ========================================================================== */
-function initTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
-  if (!themeToggle) return;
-
-  // Check saved preference or system preference
-  const savedTheme = localStorage.getItem('garden_dreams_theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-
-  applyTheme(initialTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    applyTheme(newTheme);
-    localStorage.setItem('garden_dreams_theme', newTheme);
-    showToast(`Switched to ${newTheme === 'dark' ? 'Evening Garden (Dark)' : 'Morning Light'} theme`);
-  });
-}
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
-  }
-}
-
-/* ==========================================================================
-   2. Header & Mobile Navigation
-   ========================================================================== */
-function initHeader() {
-  const header = document.querySelector('.site-header');
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  // Sticky header scroll effect
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-  });
-
-  // Mobile menu toggle
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-open');
-      mobileToggle.classList.toggle('active');
-    });
-
-    // Close when clicking nav link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
-        mobileToggle.classList.remove('active');
-      });
-    });
-  }
-}
 
 /* ==========================================================================
    3. Floating Drifting Petals Generator
@@ -406,47 +338,6 @@ function initGiftPreview() {
 }
 
 /* ==========================================================================
-   11. Newsletter Form
-   ========================================================================== */
-function initNewsletter() {
-  const form = document.getElementById('footer-newsletter-form');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = form.querySelector('input');
-    if (input && input.value) {
-      showToast(`💐 Thank you! 10% off welcome code sent to ${input.value}`);
-      input.value = '';
-    }
-  });
-}
-
-/* ==========================================================================
-   12. Toast Feedback System
-   ========================================================================== */
-function showToast(message) {
-  let toast = document.getElementById('app-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'app-toast';
-    toast.className = 'toast-notification';
-    toast.innerHTML = `
-      <div class="toast-icon">🌸</div>
-      <div class="toast-message"></div>
-    `;
-    document.body.appendChild(toast);
-  }
-
-  const msgEl = toast.querySelector('.toast-message');
-  if (msgEl) msgEl.textContent = message;
-
-  toast.classList.add('show');
-  clearTimeout(window.toastTimer);
-  window.toastTimer = setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3500);
-}
-
-/* ==========================================================================
    13. Scroll-Reveal IntersectionObserver
    ========================================================================== */
 function initScrollReveal() {
@@ -497,24 +388,4 @@ function initScrollReveal() {
   });
 
   revealTargets.forEach(el => observer.observe(el));
-}
-
-/* ==========================================================================
-   14. Suppress Transition Flash During Theme Switch
-   ========================================================================== */
-function applyTheme(theme) {
-  // Brief no-transition window to prevent color flicker
-  document.body.classList.add('no-transition');
-  document.documentElement.setAttribute('data-theme', theme);
-
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
-  }
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      document.body.classList.remove('no-transition');
-    });
-  });
 }

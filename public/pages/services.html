@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services • Garden Dreams</title>
+  <meta name="description" content="Seasonal subscriptions, wedding florals, corporate arrangements, same-day delivery, gift bouquets and hands-on floral workshops from Garden Dreams.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. PAGE HERO ============================ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span>Services</span>
+        </div>
+        <p class="eyebrow" style="justify-content:center">WHAT WE DO</p>
+        <h1>Flowers for ordinary<br>Tuesdays and <span class="serif-italic">unforgettable</span> Saturdays</h1>
+        <p>Six services, one standard: stems cut that morning, arranged by hand and delivered without drama. Browse below — every card opens its own detail page.</p>
+        <div class="cta-actions" style="margin-top:30px">
+          <a href="#services-list" class="btn btn-pink btn-lg">Browse all services</a>
+          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Ask a question</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 2. SERVICE GRID ======================= -->
+    <section class="section-pad" id="services-list">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">THE MENU</span>
+          <h2 class="section-heading">SERVICES &amp; SPECIALITIES</h2>
+          <p class="section-description">Filter by category, then open any service for pricing, timelines, FAQs and gallery images.</p>
+        </div>
+
+        <div class="filter-bar" id="services-filters" style="justify-content:center"></div>
+        <p class="result-count" id="services-count" style="text-align:center"></p>
+        <div class="grid-3" id="services-grid" style="margin-top:28px"></div>
+      </div>
+    </section>
+
+    <!-- ======================= 3. HOW WE WORK ======================= -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">THE STANDARD</span>
+          <h2 class="section-heading">HOW EVERY ORDER WORKS</h2>
+          <p class="section-description">Whether it is a $45 bunch or a $4,800 wedding, the same four steps apply.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>Tell us the occasion</h3>
+            <p>Send a date, a budget and any must-have blooms. We reply within one business day.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>We design in season</h3>
+            <p>Your florist proposes the best stems actually growing this week — never a fixed recipe.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>Cut &amp; arranged fresh</h3>
+            <p>Stems are cut at dawn, conditioned overnight and hand-tied on the studio bench.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">04</div>
+            <h3>Delivered with care</h3>
+            <p>Water packs, upright crates, photo confirmation and a message when it lands.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 4. EXTRAS & ADD-ONS ======================= -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">MAKE IT YOURS</span>
+          <h2 class="section-heading">EXTRAS &amp; ADD-ONS</h2>
+          <p class="section-description">Small additions that turn a nice bouquet into somebody's favourite memory.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13"/><path d="M3 12h18"/><path d="M12 8c-2-4-6-4-6-1s4 1 6 1z"/></svg>
+            </div>
+            <h3>Gift wrap &amp; card</h3>
+            <p>Hand-written note on recycled card, wrapped in kraft and dried ribbon.</p>
+            <span class="addon-price">+ $6</span>
+          </div>
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 2h8"/><path d="M9 2v4a3 3 0 0 0 6 0V2"/><path d="M7 9h10v13H7z"/><line x1="10" y1="13" x2="14" y2="13"/></svg>
+            </div>
+            <h3>Studio glass vase</h3>
+            <p>Hand-blown ribbed vase, sized to your bouquet, delivered pre-filled.</p>
+            <span class="addon-price">+ $24</span>
+          </div>
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Priority time slot</h3>
+            <p>Guaranteed 8–10am or 5–7pm delivery window on the day you choose.</p>
+            <span class="addon-price">+ $9</span>
+          </div>
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Longer-life treatment</h3>
+            <p>Flower food sachet plus conditioning that typically adds 4–6 days.</p>
+            <span class="addon-price">+ $4</span>
+          </div>
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>Care card booklet</h3>
+            <p>A pocket guide to trimming, feeding and re-styling your blooms at home.</p>
+            <span class="addon-price">+ $3</span>
+          </div>
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+            </div>
+            <h3>Dried stem upgrade</h3>
+            <p>Add lunaria or bunny tails so the arrangement outlives the fresh blooms.</p>
+            <span class="addon-price">+ $12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 5. PROMISE STATS ======================= -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">OUR PROMISE</span>
+          <h2 class="section-heading">MEASURED, NOT PROMISED</h2>
+          <p class="section-description">Numbers we publish every quarter — because "fresh" and "reliable" should be verifiable.</p>
+        </div>
+        <div class="stat-inline">
+          <div><div class="stat-num">99.2%</div><div class="stat-label">On-time deliveries</div></div>
+          <div><div class="stat-num">48h</div><div class="stat-label">Max stem age on arrival</div></div>
+          <div><div class="stat-num">0%</div><div class="stat-label">Plastic in packaging</div></div>
+          <div><div class="stat-num">4.9</div><div class="stat-label">Average order rating</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 6. FAQ TEASER ======================= -->
+    <section class="section-pad">
+      <div class="container" style="max-width:900px">
+        <div class="center-header">
+          <span class="eyebrow">BEFORE YOU ORDER</span>
+          <h2 class="section-heading">QUICK QUESTIONS</h2>
+          <p class="section-description">The three things people ask us most — the full list lives in the help centre.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How far in advance should I book?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Gift bouquets need just 24 hours; subscriptions a week. For weddings we recommend 8–12 months for peak dates and at least 4 months for everything else.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What if the recipient is not home?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>We call the recipient first, then leave the bouquet with a neighbour or in a safe shaded spot with a note — always in water. You get a photo either way.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can I request specific flowers?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Absolutely. Tell us your must-haves and we will use them when in season, or suggest the closest local alternative that keeps your palette and budget intact.</p></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:28px">
+          <a class="btn btn-outline" href="../../public/pages/FAQ.html">Read all FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 7. CTA ======================= -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">READY WHEN YOU ARE</span>
+        <h2>Tell us the date.<br>We will handle the flowers.</h2>
+        <p>Send a brief and get a tailored proposal within one business day — no obligation, no automated quote bots.</p>
+        <div class="cta-actions">
+          <a href="../../public/pages/contact.html" class="btn btn-pink btn-lg">Request a proposal</a>
+          <a href="../../public/auth/signup.html" class="btn btn-green-outline btn-lg">Create an account</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/services.js"></script>
+  <script src="../../src/js/accordion.js"></script>
+</body>
+</html>

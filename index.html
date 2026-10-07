@@ -5,84 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garden Dreams • Local Fresh Flower Subscription & Seasonal Bouquets</title>
   <meta name="description" content="A local fresh flower subscription service delivering seasonal, hand-arranged bouquets directly to your door. Fresh flowers, delivered with a little joy.">
-  
+
+  <!-- Early theme/RTL boot (prevents flash of wrong theme) -->
+  <script src="src/js/theme.js"></script>
+
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
+  <!-- Tailwind (utilities only — preflight disabled so the design system wins) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { corePlugins: { preflight: false }, theme: { extend: {} } };
+  </script>
+
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/components.css">
 </head>
-<body>
+<body data-root="./">
 
-
-    <!-- Floating Drifting Petals Container (Generated via JS) -->
-    <div class="drifting-petals-container"></div>
-  </div>
+  <!-- Floating Drifting Petals Container (Generated via JS) -->
+  <div class="drifting-petals-container"></div>
 
   <!-- ==========================================================================
-       1. NAVIGATION
+       1. SHARED NAVIGATION (rendered by src/js/navbar.js)
        ========================================================================== -->
-  <header class="site-header">
-    <div class="nav-container">
-      <!-- Minimal Floral Logo + Brand Name (Reference match) -->
-      <a href="index.html" class="brand-logo" id="brand-logo">
-        <img src="./assets/logo.png" alt="" width="50px">
-        <div class="brand-text">
-          <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
-        </div>
-      </a>
+  <div id="site-header-slot"></div>
 
-      <!-- CENTER: Nav Links absolutely centred -->
-      <nav class="nav-links" id="nav-links">
-        <a href="#hero" class="nav-link active">Home<span class="nav-dot"></span></a>
-        <a href="#categories" class="nav-link">About<span class="nav-dot"></span></a>
-        <a href="#seasonal" class="nav-link">Products<span class="nav-dot"></span></a>
-        <a href="#subscriptions" class="nav-link">Subscriptions<span class="nav-dot"></span></a>
-        <a href="#gifts" class="nav-link">Gifts<span class="nav-dot"></span></a>
-        <a href="#testimonials" class="nav-link">Contact<span class="nav-dot"></span></a>
-      </nav>
-
-      <!-- Right Actions: Theme Toggle, Login, Cart, Subscribe CTA -->
-      <div class="nav-actions">
-        <!-- Light / Dark Mode Toggle Button -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-
-        <!-- Basket Trigger -->
-        <button id="cart-btn" class="btn-icon cart-btn" aria-label="View basket">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <span class="cart-count">1</span>
-        </button>
-
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
 
   <main>
     <!-- ==========================================================================
@@ -92,13 +42,6 @@
       <div class="container hero-grid">
         <!-- Center/Left Content -->
         <div class="hero-content">
-          <div class="hero-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-            </svg>
-            LOCAL • SEASONAL • HAND-ARRANGED
-          </div>
-
           <h1 class="hero-heading">
             Flowers<br>
             That <span class="serif-italic">Brighten</span><br>
@@ -706,93 +649,9 @@
   </main>
 
   <!-- ==========================================================================
-       12. BOTANICAL FOOTER
+       12. SHARED BOTANICAL FOOTER (rendered by src/js/footer.js)
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="footer-botanical-border"></div>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand Summary -->
-        <div class="footer-brand">
-          <a href="#" class="brand-logo">
-        <img src="./assets/logo.png" alt="" width="50px">
-            <div class="brand-text">
-              <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
-            </div>
-          </a>
-          <p>
-            A modern local flower studio wrapped inside a botanical editorial. Hand-cut blooms, delivered with a little joy.
-          </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Pinterest">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Col 1: Shop -->
-        <div>
-          <h4 class="footer-heading">Shop</h4>
-          <ul class="footer-links">
-            <li><a href="#seasonal">Bouquets</a></li>
-            <li><a href="#seasonal">Seasonal Collection</a></li>
-            <li><a href="#subscriptions">Subscriptions</a></li>
-            <li><a href="#gifts">Gift Subscriptions</a></li>
-            <li><a href="#categories">Occasion Florals</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 2: Discover -->
-        <div>
-          <h4 class="footer-heading">Discover</h4>
-          <ul class="footer-links">
-            <li><a href="#why-local">About Us</a></li>
-            <li><a href="#why-local">Our Flowers & Growers</a></li>
-            <li><a href="#hero">Delivery Areas</a></li>
-            <li><a href="#how-it-works">Subscription FAQs</a></li>
-            <li><a href="#">Vase Care Guide</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Account -->
-        <div>
-          <h4 class="footer-heading">Account</h4>
-          <ul class="footer-links">
-            <li><a href="#">Subscriber Login</a></li>
-            <li><a href="#">Manage Deliveries</a></li>
-            <li><a href="#">Skip a Week</a></li>
-            <li><a href="#">Change Address</a></li>
-            <li><a href="#">Order History</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Newsletter -->
-        <div class="newsletter-box">
-          <h4 class="footer-heading">Morning Journal</h4>
-          <p>Subscribe for seasonal bloom previews, flower care notes, and 10% off your initial order.</p>
-          <form class="newsletter-form" id="footer-newsletter-form">
-            <input type="email" placeholder="Your email address..." required>
-            <button type="submit" class="btn btn-pink btn-sm">Join</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 Garden Dreams Studio. All blooms thoughtfully hand-arranged.</div>
-        <div style="display: flex; gap: 18px;">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Delivery</a>
-          <a href="#">Sustainability Report</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer-slot"></div>
 
   <!-- ==========================================================================
        CART DRAWER
@@ -838,6 +697,12 @@
     </div>
   </div>
 
+  <!-- Shared behaviour modules (order matters) -->
+  <script src="src/js/toast.js"></script>
+  <script src="src/js/navbar.js"></script>
+  <script src="src/js/footer.js"></script>
+  <script src="src/js/form-validation.js"></script>
+  <!-- Home page specific behaviour -->
   <script src="src/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact • Garden Dreams</title>
+  <meta name="description" content="Visit the Garden Dreams studio, call the florists, or send a message — we reply to every enquiry within one business day.">
+
+  <script src="../../src/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/components.css">
+</head>
+<body data-root="../../">
+
+  <div id="site-header-slot"></div>
+
+  <main>
+
+    <!-- ============================ 1. PAGE HERO ============================ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span>Contact</span>
+        </div>
+        <p class="eyebrow" style="justify-content:center">SAY HELLO</p>
+        <h1>We answer every<br>message <span class="serif-italic">ourselves</span></h1>
+        <p>No chatbots, no ticket numbers — a florist reads your note and replies within one business day. Or simply push open the studio door on Alder Lane.</p>
+        <div class="cta-actions" style="margin-top:30px">
+          <a href="#contact-form" class="btn btn-pink btn-lg">Send a message</a>
+          <a href="#studio-map" class="btn btn-green-outline btn-lg">Find the studio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. QUICK CONTACT CARDS ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">QUICK ROUTES</span>
+          <h2 class="section-heading">REACH US DIRECTLY</h2>
+          <p class="section-description">Three ways to get a fast answer, depending on what you need.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3>Visit the studio</h3>
+              <p>14 Alder Lane, Riverside District. Walk-ins welcome Mon–Sat; consultations by appointment.</p>
+              <span class="info-hours">Mon–Sat • 8:00am – 6:00pm</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h3>Call the florists</h3>
+              <p>For same-day orders, delivery chasing or anything urgent before 2pm — phone is fastest.</p>
+              <span class="info-hours">+1 (555) 018-4420</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h3>Email the studio</h3>
+              <p>Wedding briefs, corporate contracts and press requests — attach photos, we love photos.</p>
+              <span class="info-hours">hello@gardendreams.studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. FORM + MAP ============================ -->
+    <section class="section-pad section-alt" id="contact-form">
+      <div class="container split-layout">
+
+        <div>
+          <span class="eyebrow">WRITE TO US</span>
+          <h2 class="section-heading">Tell us what you need</h2>
+          <p class="lead">Fill in the form and a florist will reply by email within one business day — usually much sooner.</p>
+
+          <form class="auth-form" data-validate="contact" novalidate style="margin-top:26px">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full name <span class="req">*</span></label>
+                <input class="form-control" type="text" id="contact-name" name="name" placeholder="Jordan Blake" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email address <span class="req">*</span></label>
+                <input class="form-control" type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone (optional)</label>
+                <input class="form-control" type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-topic">What is it about? <span class="req">*</span></label>
+                <select class="form-control" id="contact-topic" name="topic" required>
+                  <option value="">Choose a topic…</option>
+                  <option>Order &amp; delivery</option>
+                  <option>Wedding florals</option>
+                  <option>Corporate account</option>
+                  <option>Subscription support</option>
+                  <option>Workshops &amp; events</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="contact-message">Your message <span class="req">*</span></label>
+                <textarea class="form-control" id="contact-message" name="message" rows="6" placeholder="Dates, budget, colours you love — anything that helps us help you." required></textarea>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="contact-consent" name="consent" required>
+              <label for="contact-consent">I agree to Garden Dreams storing my details in order to reply to this enquiry.</label>
+            </div>
+
+            <button type="submit" class="btn btn-pink btn-lg">Send message</button>
+          </form>
+        </div>
+
+        <aside class="sidebar" id="studio-map">
+          <div class="map-card">
+            <div class="map-road h1"></div>
+            <div class="map-road h2"></div>
+            <div class="map-road v1"></div>
+            <div class="map-road v2"></div>
+            <div class="map-pin">
+              <div class="pin-dot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <strong>Garden Dreams Studio</strong>
+              <span>14 Alder Lane, Riverside</span>
+            </div>
+            <div class="map-legend">
+              <span><i class="dot pink"></i> Studio entrance</span>
+              <span><i class="dot green"></i> Free parking behind the building</span>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">Opening hours</h3>
+            <ul class="contact-list">
+              <li><span>Monday – Friday</span><strong>8:00 – 18:00</strong></li>
+              <li><span>Saturday</span><strong>9:00 – 17:00</strong></li>
+              <li><span>Sunday</span><strong>Delivery only</strong></li>
+              <li><span>Bank holidays</span><strong>Closed</strong></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">Delivery zone</h3>
+            <ul class="contact-list">
+              <li><span>City centre</span><strong>Free</strong></li>
+              <li><span>Within 10 miles</span><strong>$6</strong></li>
+              <li><span>10 – 25 miles</span><strong>$12</strong></li>
+              <li><span>Beyond 25 miles</span><strong>On request</strong></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============================ 4. WHAT HAPPENS NEXT ============================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="center-header">
+          <span class="eyebrow">AFTER YOU HIT SEND</span>
+          <h2 class="section-heading">WHAT HAPPENS NEXT</h2>
+          <p class="section-description">A simple, human process — here is exactly what to expect.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>We read it properly</h3>
+            <p>Your message goes straight to a florist, not a support queue.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>You get a real reply</h3>
+            <p>Within one business day, with answers, ideas and honest pricing.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>We confirm the details</h3>
+            <p>Dates, palette and budget are agreed in writing before we design.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">04</div>
+            <h3>The flowers begin</h3>
+            <p>Stems are reserved with your grower and conditioned for your day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. POPULAR QUESTIONS ============================ -->
+    <section class="section-pad section-alt">
+      <div class="container" style="max-width:900px">
+        <div class="center-header">
+          <span class="eyebrow">MAYBE IT IS ALREADY ANSWERED</span>
+          <h2 class="section-heading">BEFORE YOU WRITE</h2>
+          <p class="section-description">Quick answers to the questions our inbox sees most often.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do you deliver on Sundays?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — Sunday deliveries leave the studio by 11am for orders confirmed before Friday 4pm. Studio collections are not available on Sundays.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can I visit without an appointment?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Absolutely. Walk in any day to browse bouquets. For weddings, corporate accounts or long consultations, book ahead so a designer is free for you.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How fast can you turn around an order?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Same-day delivery for orders placed before 2pm, seven days a week. Wedding and event work needs a minimum of two weeks' notice.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do you offer refunds if flowers arrive damaged?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Send us a photo within 24 hours and we will remake and redeliver the arrangement free of charge — or refund in full if you prefer.</p></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:28px">
+          <a class="btn btn-outline" href="../../public/pages/FAQ.html">Read the full FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. CTA ============================ -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">PREFER TO BROWSE FIRST?</span>
+        <h2>See what is in season<br>before you decide</h2>
+        <p>Our services, packages and journal are all open to explore — no account needed.</p>
+        <div class="cta-actions">
+          <a href="../../public/pages/services.html" class="btn btn-pink btn-lg">Explore services</a>
+          <a href="../../public/pages/blog.html" class="btn btn-green-outline btn-lg">Read the journal</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/accordion.js"></script>
+</body>
+</html>
