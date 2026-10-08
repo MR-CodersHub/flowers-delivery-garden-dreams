@@ -12,7 +12,6 @@
     { label: 'About',    href: 'public/pages/about.html',    match: ['about.html'] },
     { label: 'Services', href: 'public/pages/services.html', match: ['services.html', 'service-details.html'] },
     { label: 'Blog',     href: 'public/pages/blog.html',     match: ['blog.html', 'blog-details.html'] },
-    { label: 'Pricing',  href: 'public/pages/pricing.html',  match: ['pricing.html'] },
     { label: 'Contact',  href: 'public/pages/contact.html',  match: ['contact.html'] }
   ];
 
@@ -68,7 +67,7 @@
       '<header class="site-header" id="site-header">' +
         '<div class="nav-container">' +
           '<a href="' + root + 'index.html" class="brand-logo">' +
-            '<img src="' + root + 'assets/img/logo.png" alt="Garden Dreams logo" width="46" height="46">' +
+            '<img src="' + root + 'assets/img/logo.png" alt="Garden Dreams logo" width="30" height="30">' +
             '<div class="brand-text">' +
               '<span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>' +
             '</div>' +
