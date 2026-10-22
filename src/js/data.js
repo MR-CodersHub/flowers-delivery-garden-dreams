@@ -6,419 +6,404 @@
 (function () {
   var SERVICES = [
     {
-      id: 'seasonal-subscription',
-      title: 'Weekly Flower Subscription',
-      shortTitle: 'Flower Subscription',
-      tag: 'Subscriptions',
-      price: 'From $48 / delivery',
-      duration: 'Ongoing',
-      rating: '4.9 (312 reviews)',
-      image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=900&q=80',
+      id: 'garden-design-planning',
+      title: 'Garden Design & Planning',
+      shortTitle: 'Design & Planning',
+      tag: 'Design',
+      icon: 'compass',
+      price: 'Quoted per site',
+      duration: '2–6 weeks',
+      highlight: 'Since 2019',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'A fresh, hand-arranged seasonal bouquet delivered to your door on the rhythm you choose — cut from local growers that very morning.',
+      excerpt: 'A surveyed layout, planting plan and material schedule drawn around your light, your soil and the way you actually live in the garden.',
       description: [
-        'Our Weekly Flower Subscription is the heart of Garden Dreams. Every delivery is designed around what is naturally blooming this week — never cold-stored imports, never the same arrangement twice.',
-        'You pick the size, the rhythm and your delivery day. Our florists handle the rest: sourcing from family growers within 50 miles, arranging by hand in our studio, and delivering in hydration packs so your flowers open slowly and stay glorious for 7–10 days.'
+        'Every project starts on paper before a single plant is lifted. We survey the plot — light, drainage, soil, existing trees and the sightlines you care about — then draw a plan that shows how the garden will work in each season.',
+        'You get one drawing to react to, not a wall of options: a scaled layout, a planting schedule with the exact cultivars we intend to use, and a materials list with quantities. Changes are made in the drawing, where they are cheap, rather than on site, where they are not.'
       ],
       features: [
-        'Hand-arranged every delivery — never pre-packed',
-        'Locally sourced seasonal stems from trusted growers',
-        'Free zero-emissions neighbourhood courier',
-        'Free ceramic vase with your very first delivery',
-        'Pause, skip a week or change your address anytime',
-        '7-day freshness guarantee or we replace it free'
+        'Full site survey covering light, slope, drainage and soil',
+        'Scaled layout drawn for the way you use the space',
+        'Planting schedule with named cultivars and quantities',
+        'Materials list with quantities and finish options',
+        'One revision round before anything is quoted',
+        'Seasonal planting window confirmed before you sign'
       ],
       pricing: [
-        { name: 'Petite', price: '$48', period: '/ delivery', blurb: 'A charming small arrangement for desks and bedside tables.', features: ['12–15 stem arrangement', 'Best for small spaces', 'Free local delivery', 'Flower food + care card'], cta: 'Start Petite' },
-        { name: 'Classic', price: '$72', period: '/ delivery', blurb: 'Our most-loved size — generous enough for a dining table centrepiece.', features: ['20–24 stem arrangement', 'Most popular size', 'Free local delivery', 'Free ceramic vase (first box)', 'Priority seasonal picks'], cta: 'Start Classic', popular: true },
-        { name: 'Grand', price: '$110', period: '/ delivery', blurb: 'A statement arrangement for entryways, studios and open-plan living.', features: ['32–40 stem arrangement', 'Premium focal blooms', 'Free local delivery', 'Free vase + care booklet', 'Dedicated florist notes'], cta: 'Start Grand' }
+        { name: 'Site survey', price: 'Quote', period: 'per site', blurb: 'A measured visit with notes on light, soil and what is worth keeping.', features: ['On-site measurement', 'Light and drainage notes', 'Existing tree survey', 'Written summary'], cta: 'Book a survey' },
+        { name: 'Design package', price: 'Quote', period: 'per site', blurb: 'The full drawn plan, ready to build from.', features: ['Everything in the site survey', 'Scaled layout drawing', 'Planting schedule', 'Materials list', 'One revision round'], cta: 'Request a design', popular: true },
+        { name: 'Design & build', price: 'Quote', period: 'per site', blurb: 'Design, build and planting handled end to end by one team.', features: ['Everything in the design package', 'Groundworks and hardscape', 'Planting and aftercare', 'Seasonal check-ins for a year'], cta: 'Scope a project' }
       ],
       faqs: [
-        { q: 'Can I skip a delivery or pause my subscription?', a: 'Absolutely. You can skip, pause or reschedule any delivery up to 48 hours before your dispatch day from your user dashboard — no emails, no phone calls, no penalty.' },
-        { q: 'What if I am not home for the delivery?', a: 'Our couriers leave your bouquet in its hydration pack in a shaded, safe spot and send you a photo confirmation by text. If you would rather hand it over, leave a note with a safe-place instruction.' },
-        { q: 'Do you cater to allergies or flower preferences?', a: 'Yes. Add your dislikes and must-haves to your profile — for example "no lilies" or "extra eucalyptus" — and your florist will design around them for every delivery.' },
-        { q: 'Which days do you deliver?', a: 'We deliver Tuesday through Saturday across the metro area. Choose your preferred day at checkout and change it whenever your week changes.' }
+        { q: 'How long does a design take?', a: 'Most garden plans are issued within two to six weeks of the survey, depending on the size of the site and how much hard landscaping it involves. Planting-only projects move faster.' },
+        { q: 'Do you work from my existing plans?', a: 'Yes. If you already have a layout from a landscape architect or a previous project, we can build from it, price it and advise where the planting could be improved.' },
+        { q: 'What happens if I only want planting?', a: 'That is a perfectly normal project. We can design a planting plan for the beds and borders you already have, without touching paths or structures.' },
+        { q: 'Do you include planting for a year?', a: 'Every build includes a settling period where we return to check establishment, replace anything that has not taken and adjust irrigation for the season.' }
       ],
-      related: ['gift-bouquets', 'same-day-delivery', 'corporate-flowers']
+      related: ['landscape-build', 'planting-soft-landscaping', 'hardscape-outdoor-living']
     },
     {
-      id: 'wedding-florals',
-      title: 'Wedding & Event Florals',
-      shortTitle: 'Wedding & Events',
-      icon: 'heart',
-      tag: 'Events',
-      price: 'From $850',
-      duration: '4–8 weeks lead time',
-      rating: '5.0 (96 weddings)',
-      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80',
+      id: 'landscape-build',
+      title: 'Landscape Installation & Build',
+      shortTitle: 'Landscape Build',
+      tag: 'Build',
+      icon: 'tools',
+      price: 'Quoted per site',
+      duration: '1–6 weeks on site',
+      highlight: '12 partner nurseries',
+      image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1587556930799-8dca6aef3dc2?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'Designer-led ceremony and reception florals — from bridal bouquets to full venue installations — built around your story and the season.',
+      excerpt: 'Groundworks, structures and planting put in by the same crew that drew the plan — with the site kept clean and the schedule kept honest.',
       description: [
-        'Your flowers should feel like they grew exactly where you are standing. We design wedding and event florals as one cohesive botanical story: ceremony, reception, wearable flowers and every small detail in between.',
-        'Each project begins with a consultation and a mood board built from real seasonal stems. You see your palette, your vessels and your budget before anything is ordered — then our team installs on-site and refreshes everything right before your guests arrive.'
+        'A build is where a drawing becomes a place. Our own crew handles the groundworks, drainage, structures, edging and planting rather than subcontracting each trade and hoping they talk to each other.',
+        'You get a written schedule before we start, a single point of contact on site, and the same crew returning for the settling visits. Materials arrive from our partner nurseries, sorted by the plan, and the site is cleared as we go.'
       ],
       features: [
-        'One-to-one consultation and custom mood board',
-        'Bridal party bouquets, boutonnieres and corsages',
-        'Ceremony arches, aisle and altar installations',
-        'Reception centrepieces, bud vases and signage florals',
-        'On-day installation and pack-down crew',
-        'Local, seasonal and dried-material sourcing'
+        'Groundworks, levels and drainage prepared in-house',
+        'Structures, edging and paving laid by our own crew',
+        'Materials sourced directly from 12 partner nurseries',
+        'Written build schedule issued before we start',
+        'Site cleared and levelled as each phase completes',
+        'Settling visits and replacement planting included'
       ],
       pricing: [
-        { name: 'Intimate', price: '$850', period: 'starting', blurb: 'Elopements and micro-weddings up to 30 guests.', features: ['Bridal + 2 bouquets', '6 boutonnieres', 'Simple ceremony focal piece', 'Delivery & setup'], cta: 'Enquire' },
-        { name: 'Signature', price: '$2,400', period: 'starting', blurb: 'Full ceremony and reception florals for ~100 guests.', features: ['All Intimate inclusions', 'Ceremony arch installation', '12 reception centrepieces', 'Aisle & signing-table styling', 'On-day refresh visit'], cta: 'Enquire', popular: true },
-        { name: 'Editorial', price: '$4,800+', period: 'starting', blurb: 'Large-scale venue transformations and multi-day events.', features: ['All Signature inclusions', 'Full venue floral concept', 'Hanging & structural installs', 'Dedicated design lead', 'Two rehearsal/setup days'], cta: 'Enquire' }
+        { name: 'Groundworks', price: 'Quote', period: 'per site', blurb: 'Preparation, levels and drainage ready for planting.', features: ['Site clearance', 'Levels and drainage', 'Sub-base preparation', 'Edge preparation'], cta: 'Scope groundworks' },
+        { name: 'Full build', price: 'Quote', period: 'per site', blurb: 'The complete build from bare ground to planted garden.', features: ['Everything in groundworks', 'Structures and hardscape', 'Planting and mulching', 'Settling visits', 'Written schedule'], cta: 'Scope a build', popular: true },
+        { name: 'Build & care', price: 'Quote', period: 'per site', blurb: 'The build plus a year of seasonal care and pruning.', features: ['Everything in the full build', 'Seasonal visits', 'Pruning and cut-back', 'Irrigation checks', 'Plant replacements'], cta: 'Discuss ongoing care' }
       ],
       faqs: [
-        { q: 'How far in advance should we book?', a: 'We recommend enquiring 4–8 months ahead for full weddings. Peak Saturdays in May, June, September and October fill a year ahead; micro-weddings can often be accommodated within 4 weeks.' },
-        { q: 'Do you have a minimum spend?', a: 'Our floral minimum for weddings is $850 including delivery and installation within the metro area. Travel beyond 40 km is quoted separately.' },
-        { q: 'Can you work with our venue\'s restrictions?', a: 'Yes — we regularly work with candle rules, hanging-point limits and heritage surfaces. We confirm every fixing method with your venue before the day.' },
-        { q: 'What happens to the flowers after the event?', a: 'We can repurpose ceremony flowers into reception pieces the same day, donate unbranded arrangements to local care homes, or package bouquets for guests to take home.' }
+        { q: 'How long does a build take?', a: 'A small planting-only build is usually a matter of days. A full garden with terraces, retaining work and irrigation typically runs one to six weeks on site.' },
+        { q: 'Can we stay in the property while you work?', a: 'Yes. We work around occupied homes and keep noisy operations to agreed hours, with access arranged with you in advance.' },
+        { q: 'Who buys the plants and materials?', a: 'We do, through our partner nurseries. That means the cultivars in the plan are the cultivars that arrive, and any substitution is agreed with you first.' },
+        { q: 'Do you handle waste removal?', a: 'Yes. Green waste and packaging are removed from site as part of the build, and the site is left swept and level.' }
       ],
-      related: ['floral-workshops', 'seasonal-subscription', 'gift-bouquets']
+      related: ['garden-design-planning', 'planting-soft-landscaping', 'seasonal-care-maintenance']
     },
     {
-      id: 'corporate-flowers',
-      title: 'Corporate & Office Flowers',
-      shortTitle: 'Corporate Flowers',
-      tag: 'Business',
-      icon: 'briefcase',
-      price: 'From $220 / month',
-      duration: 'Weekly or fortnightly',
-      rating: '4.8 (74 offices)',
-      image: 'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&w=900&q=80',
+      id: 'planting-soft-landscaping',
+      title: 'Planting & Soft Landscaping',
+      shortTitle: 'Planting',
+      tag: 'Planting',
+      icon: 'leaf',
+      price: 'Quoted per site',
+      duration: 'Seasonal',
+      highlight: 'Grown within 90 miles',
+      image: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1464982326199-86f32f81b211?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'Recurring lobby, reception and workspace arrangements that make your brand feel alive — installed, rotated and collected by us.',
+      excerpt: 'Beds, borders and meadow planting built around the local climate, the soil you actually have and the hours of sun the garden really gets.',
       description: [
-        'First impressions bloom at reception. Our corporate programme places seasonal arrangements where they matter most: the welcome desk, meeting rooms, breakout spaces and executive floors.',
-        'We install in hydration vessels, rotate stems on your schedule, and take every spent arrangement away for composting. One monthly invoice, one point of contact, zero admin for your team.'
+        'Soft landscaping is where a plan becomes a garden that changes through the year. We choose plants that suit your soil type, your aspect and the amount of watering you are willing to do — then set them out at the spacing they need to look full in three seasons, not one.',
+        'Everything is grown within 90 miles of the studio, which means species that already handle your winters and pests. We plant in the right window for each species, mulch properly, and water in the plants that need it until they are established.'
       ],
       features: [
-        'Site visit and placement plan before you commit',
-        'Weekly, fortnightly or monthly rotation',
-        'Brand-matched palettes and vessel selection',
-        'Event and boardroom flowers on request',
-        'Compostable breakdown of all spent stems',
-        'Single consolidated monthly invoice'
+        'Plants matched to soil type, aspect and sun hours',
+        'Species grown within 90 miles of the studio',
+        'Spacing set for maturity, so beds fill in properly',
+        'Planted in the correct seasonal window',
+        'Mulched, watered-in and staked where needed',
+        'Replacement guarantee on establishment failure'
       ],
       pricing: [
-        { name: 'Reception', price: '$220', period: '/ month', blurb: 'A statement arrangement for one welcome area.', features: ['1 large arrangement', 'Fortnightly rotation', 'Delivery & collection', 'Vessel included'], cta: 'Request quote' },
-        { name: 'Workspace', price: '$460', period: '/ month', blurb: 'Reception plus meeting rooms and breakout zones.', features: ['3–4 arrangements', 'Weekly rotation', 'Event flowers 10% off', 'Vessels included'], cta: 'Request quote', popular: true },
-        { name: 'Campus', price: '$980+', period: '/ month', blurb: 'Multi-floor and multi-site programmes.', features: ['Custom arrangement count', 'Weekly rotation', 'Dedicated account florist', 'Quarterly styling review', 'Priority event support'], cta: 'Request quote' }
+        { name: 'Border refresh', price: 'Quote', period: 'per site', blurb: 'One or two beds replanted with the season in mind.', features: ['Bed preparation', 'Seasonal species', 'Mulching and feeding', 'Watering-in'], cta: 'Plan a refresh' },
+        { name: 'Whole-garden planting', price: 'Quote', period: 'per site', blurb: 'Every bed and border replanted from the drawing.', features: ['Soil improvement', 'Full planting schedule', 'Groundcover and shrubs', 'Mulching', 'Settling visits'], cta: 'Scope planting', popular: true },
+        { name: 'Planting & meadow', price: 'Quote', period: 'per site', blurb: 'Formal planting with long-grass meadow edges.', features: ['Everything in whole-garden planting', 'Meadow strip design', 'Native wildflower plug planting', 'First-year mowing plan'], cta: 'Discuss meadow' }
       ],
       faqs: [
-        { q: 'Is there a contract lock-in?', a: 'No. Corporate programmes run on a rolling 30-day agreement — we simply ask for notice before your next scheduled rotation.' },
-        { q: 'Do you handle installation and removal?', a: 'Yes. Our team installs, rotates and removes every vessel. Nothing is left for your facilities team to manage.' },
-        { q: 'Can you match our brand colours?', a: 'We build palettes around your brand guidelines using seasonal stems — including dried and preserved material for longer-lasting installations.' },
-        { q: 'Do you invoice monthly?', a: 'All arrangements on a site are consolidated into one monthly invoice with a detailed placement schedule attached.' }
+        { q: 'Will the garden look good straight away?', a: 'Planting reads thin for the first season and then fills properly. We space plants for maturity, so the space between them closes over as they establish rather than leaving gaps you have to fill later.' },
+        { q: 'Do you guarantee the plants?', a: 'Yes. We replace anything that fails to establish within the first growing season at no extra cost, provided the site has been watered as advised.' },
+        { q: 'Can you plant low-maintenance varieties?', a: 'Yes, and we recommend them where the site allows. Meadow-style planting, groundcover and drought-tolerant species cut the watering and mowing load considerably.' },
+        { q: 'What about existing plants I want to keep?', a: 'We mark and protect them during the survey and work around mature trees and shrubs wherever it is safe to do so.' }
       ],
-      related: ['seasonal-subscription', 'same-day-delivery', 'floral-workshops']
+      related: ['garden-design-planning', 'seasonal-care-maintenance', 'irrigation-drainage']
     },
     {
-      id: 'same-day-delivery',
-      title: 'Same-Day Local Delivery',
-      shortTitle: 'Same-Day Delivery',
-      tag: 'Logistics',
-      icon: 'truck',
-      price: 'From $15',
-      duration: 'Order before 1:00 PM',
-      rating: '4.9 (540 drops)',
-      image: 'https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=900&q=80',
+      id: 'hardscape-outdoor-living',
+      title: 'Hardscape & Outdoor Living',
+      shortTitle: 'Hardscape',
+      tag: 'Hardscape',
+      icon: 'patio',
+      price: 'Quoted per site',
+      duration: '2–8 weeks on site',
+      highlight: 'Paths, decks & terraces',
+      image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1617098591651-dd95032bc8bb?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'Forgot an anniversary? Order before 1 PM and your bouquet arrives the same afternoon — packed in water, never in a box.',
+      excerpt: 'Paths, terraces, decks and retaining work built to the land — with drainage designed in from the start, not patched on afterwards.',
       description: [
-        'Our same-day service is built for the moments that cannot wait. Order any bouquet before 1:00 PM and our couriers deliver it across the metro area the same afternoon, Monday to Saturday.',
-        'Every same-day bouquet travels upright in a hydration pack with a hand-written card, a photo confirmation on arrival, and the same 7-day freshness guarantee as our subscriptions.'
+        'Hardscape is the part of a garden you feel every single day, and the part that fails most often when it is treated as an afterthought. We design levels, falls and drainage before a single stone is ordered.',
+        'Paths are set to the width you actually walk, terraces are built on levels that suit the ground rather than fighting it, and retaining work is engineered for the soil you have. Materials are chosen for how they weather in your climate, not how they look on a sample board.'
       ],
       features: [
-        'Order cut-off 1:00 PM for afternoon delivery',
-        'Live delivery window confirmation by SMS',
-        'Hydration-pack travel — flowers never boxed dry',
-        'Hand-written note card included free',
-        'Photo confirmation once delivered',
-        '7-day freshness guarantee'
+        'Levels, falls and drainage designed before build',
+        'Paths sized for real foot traffic',
+        'Retaining and terracing built for local soil',
+        'Materials selected for how they weather locally',
+        'Edging detail that stops the lawn wandering',
+        'Surfaced and jointed to shed water properly'
       ],
       pricing: [
-        { name: 'Standard', price: '$15', period: 'per drop', blurb: 'Afternoon delivery anywhere in the metro area.', features: ['2–5 PM window', 'SMS confirmation', 'Hydration pack', 'Note card included'], cta: 'Send flowers' },
-        { name: 'Express', price: '$29', period: 'per drop', blurb: 'Two-hour window of your choice, priority dispatch.', features: ['Choose a 2-hour slot', 'Priority in the courier queue', 'Live courier tracking', 'Photo + signature on arrival'], cta: 'Send flowers', popular: true },
-        { name: 'Scheduled', price: '$12', period: 'per drop', blurb: 'Lock in a future date months ahead at the lowest rate.', features: ['Any future date', 'Same care & packaging', 'Free date changes', 'Best value for planned gifting'], cta: 'Schedule delivery' }
+        { name: 'Path & edging', price: 'Quote', period: 'per site', blurb: 'The circulation that makes a garden usable.', features: ['Route survey', 'Sub-base and drainage', 'Paving or gravel finish', 'Edging detail'], cta: 'Plan paths' },
+        { name: 'Terrace & deck', price: 'Quote', period: 'per site', blurb: 'An outdoor room built on the land you have.', features: ['Structural design', 'Levels and retaining', 'Surface finish', 'Integrated drainage', 'Access steps'], cta: 'Scope a terrace', popular: true },
+        { name: 'Full hardscape', price: 'Quote', period: 'per site', blurb: 'Paths, terrace, retaining and access planned as one scheme.', features: ['Everything in terrace & deck', 'Full circulation plan', 'Retaining throughout', 'Lighting groundwork', 'Planting handover'], cta: 'Scope hardscape' }
       ],
       faqs: [
-        { q: 'What areas do you deliver to?', a: 'We cover the entire metro area plus surrounding suburbs within 40 km of the studio. Enter your postcode on the contact page and we will confirm coverage instantly.' },
-        { q: 'Can I choose an exact delivery time?', a: 'Standard deliveries arrive in a 2–5 PM window. Express upgrades let you pick any two-hour slot between 9 AM and 7 PM.' },
-        { q: 'What if nobody is home?', a: 'We call the recipient first, then follow your safe-place instruction. If no instruction exists, we leave the bouquet in its hydration pack in a shaded spot and text a photo.' },
-        { q: 'Do you deliver on Sundays?', a: 'Sunday and public-holiday deliveries are available as an add-on for Express orders placed before 6 PM the day before.' }
+        { q: 'Do you do building work as well as landscaping?', a: 'We handle landscape-scale hardscape — paths, terraces, decks, steps, low retaining walls and edging. Anything that needs a structural engineer or building regulation sign-off is planned with you and handed to a partner contractor we can brief.' },
+        { q: 'How long does a terrace take?', a: 'Two to eight weeks depending on the ground, the levels involved and the weather window. We book earthworks and drainage around dry spells so the ground can actually take the load.' },
+        { q: 'Can you work with existing paving?', a: 'Often, yes. We can lift and relay existing stone or brick, which usually looks better and costs less than starting again.' },
+        { q: 'Will the surface stay level?', a: 'We set falls deliberately so water moves away from the house, and we compact and joint surfaces to stop them rocking. No surface is dead flat unless the design requires it.' }
       ],
-      related: ['gift-bouquets', 'seasonal-subscription', 'wedding-florals']
+      related: ['garden-design-planning', 'landscape-build', 'irrigation-drainage']
     },
     {
-      id: 'gift-bouquets',
-      title: 'Gift Bouquets & Hampers',
-      shortTitle: 'Gift Bouquets',
-      tag: 'Gifting',
-      icon: 'gift',
-      price: 'From $55',
-      duration: 'Same-day available',
-      rating: '4.9 (268 gifts)',
-      image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=80',
+      id: 'seasonal-care-maintenance',
+      title: 'Seasonal Care & Maintenance',
+      shortTitle: 'Seasonal Care',
+      tag: 'Care',
+      icon: 'calendar',
+      price: 'Quoted per season',
+      duration: 'Visits through the year',
+      highlight: 'Visits through all four seasons',
+      image: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'Ready-to-give bouquets, chocolate-and-bloom hampers and letterpress gift cards — wrapped in compostable paper, never plastic.',
+      excerpt: 'Pruning, cut-back, feeding, weeding and irrigation checks on a seasonal rhythm — so the garden keeps doing its job after we leave.',
       description: [
-        'Gifting flowers should feel effortless. Our gift collection pairs hand-tied bouquets with local treats — single-origin chocolate, wildflower honey, small-batch candles — packed in reusable boxes with a letterpress card carrying your words.',
-        'Choose a signature design or ask us to build something bespoke around a colour, a memory or a shared joke. Everything ships plastic-free in compostable wrap and recycled tissue.'
+        'A garden is not finished on handover. Left alone, most planted schemes need a day of attention every few weeks and a proper cut-back twice a year to stay the shape you paid for.',
+        'We offer care on a seasonal rhythm: a spring clear and feed, a summer tidy and irrigation check, an autumn cut-back and leaf clearance, and a winter prune. The same people who built the garden come back to keep it.'
       ],
       features: [
-        'Hand-tied bouquets from $55',
-        'Bloom + treat hampers from $95',
-        'Free letterpress gift message card',
-        'Plastic-free, compostable wrapping',
-        'Anonymous or scheduled gifting options',
-        'Same-day dispatch before 1:00 PM'
+        'Four seasonal visits as standard',
+        'Pruning and cut-back to the agreed scheme',
+        'Feeding and mulching on the right cycle',
+        'Irrigation checks and adjustments',
+        'Weeding and leaf clearance',
+        'Same crew who built the garden'
       ],
       pricing: [
-        { name: 'Hand-Tied', price: '$55', period: 'from', blurb: 'A joyful seasonal bunch, ready to give.', features: ['12–16 seasonal stems', 'Compostable wrap', 'Gift message card', 'Same-day available'], cta: 'Choose bouquet' },
-        { name: 'Bloom Box', price: '$95', period: 'from', blurb: 'Bouquet paired with local chocolate or honey.', features: ['Full-size bouquet', 'Local treat pairing', 'Keepsake box', 'Priority same-day dispatch'], cta: 'Choose box', popular: true },
-        { name: 'Bespoke Hamper', price: '$160+', period: 'from', blurb: 'A curated gift built around your person.', features: ['Custom bouquet design', '3 curated extras', 'Handwritten letterpress note', 'Photo of the finished gift'], cta: 'Brief our florist' }
+        { name: 'Seasonal tidy', price: 'Quote', period: 'per visit', blurb: 'One visit to bring the garden back to standard.', features: ['Weeding and deadheading', 'Cut-back and pruning', 'Mulch top-up', 'Irrigation check'], cta: 'Book a visit' },
+        { name: 'Full year care', price: 'Quote', period: 'per year', blurb: 'All four seasons, planned around the garden.', features: ['Four seasonal visits', 'Feeding and mulching', 'Pruning and cut-back', 'Plant replacements', 'Written garden report'], cta: 'Enquire about care', popular: true },
+        { name: 'Full year & planting', price: 'Quote', period: 'per year', blurb: 'Year-round care with seasonal planting refreshed each year.', features: ['Everything in full year care', 'Seasonal replanting', 'Container refresh', 'Bulb and seed sowing'], cta: 'Enquire about planting' }
       ],
       faqs: [
-        { q: 'Can I send flowers anonymously?', a: 'Yes. Leave the sender field blank and we will deliver without revealing who they are from — the card will only contain your message.' },
-        { q: 'Do you include a price on the delivery?', a: 'Never. Recipients only see the bouquet, the wrap and your card. All invoices go to the buyer by email.' },
-        { q: 'Can I schedule a future gifting date?', a: 'Absolutely — pick any date up to six months ahead. We will confirm the design with you 48 hours before dispatch.' },
-        { q: 'Are the hampers dietary-friendly?', a: 'Treats are available in vegetarian, vegan, nut-free and gluten-free versions — note your requirement at checkout.' }
+        { q: 'Do you care for gardens you did not build?', a: 'Yes. We take on existing gardens, starting with a condition assessment and a maintenance plan so the visits are spent where they matter.' },
+        { q: 'How often do you visit?', a: 'Four seasonal visits are standard, with additional visits through the growing season if the garden needs them. We agree the rhythm at the start and change it if the garden asks for it.' },
+        { q: 'Do you remove the clippings?', a: 'Yes. Green waste is chipped and removed unless you would rather it were used as mulch on site.' },
+        { q: 'Can you look after irrigation too?', a: 'Yes — irrigation checks are part of every visit, and controllers can be programmed and maintained as part of the care plan.' }
       ],
-      related: ['same-day-delivery', 'seasonal-subscription', 'wedding-florals']
+      related: ['planting-soft-landscaping', 'garden-design-planning', 'irrigation-drainage']
     },
     {
-      id: 'floral-workshops',
-      title: 'Floral Arrangement Workshops',
-      shortTitle: 'Workshops',
-      tag: 'Experience',
-      icon: 'sparkles',
-      price: 'From $65 / person',
-      duration: '2 hour sessions',
-      rating: '4.9 (188 students)',
-      image: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
+      id: 'irrigation-drainage',
+      title: 'Irrigation & Drainage',
+      shortTitle: 'Irrigation & Drainage',
+      tag: 'Water',
+      icon: 'droplet',
+      price: 'Quoted per site',
+      duration: '1–3 weeks on site',
+      highlight: 'Water-wise by design',
+      image: 'https://images.unsplash.com/photo-1444392061186-9fc38f84f726?auto=format&fit=crop&w=900&q=80',
       gallery: [
-        'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1464982326199-86f32f81b211?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1444392061186-9fc38f84f726?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80'
       ],
-      excerpt: 'Two-hour hands-on sessions in our studio where you build a professional arrangement and take it home — all stems and tools included.',
+      excerpt: 'Drainage that moves water away and irrigation that puts it where plants need it — planned together, so the garden is never fighting the weather.',
       description: [
-        'Learn the mechanics behind the bouquets you see on our pages. In each two-hour workshop our florists teach conditioning, spiral hand-tying, colour balancing and finishing — then you build your own arrangement to take home.',
-        'Sessions are capped at ten students so everyone gets individual guidance. Materials, tools, aprons and a glass of something sparkling are all included.'
+        'Water is the reason so many gardens fail. Waterlogged soil in winter, bone-dry beds in August, and irrigation that runs whether the plants need it or not — all of it is a planning problem before it is an installation problem.',
+        'We survey how water moves across your site, design falls, swales and soakaways where they are needed, and then match an irrigation layout to the planting. Zones are set by need rather than by convenience, and the whole system is set up to be adjusted as the garden changes.'
       ],
       features: [
-        'Small classes capped at 10 students',
-        'All stems, tools and vessels included',
-        'Take your finished arrangement home',
-        'Beginner-friendly, no experience needed',
-        'Private group and corporate sessions',
-        '10% off any bouquet purchased on the day'
+        'Site drainage surveyed before anything is installed',
+        'Falls, swales and soakaways designed into levels',
+        'Zones matched to planting needs, not to guesswork',
+        'Controllers programmed and handed over with a schedule',
+        'Rain and moisture sensors fitted where useful',
+        'Annual check included with care plans'
       ],
       pricing: [
-        { name: 'Single Seat', price: '$65', period: '/ person', blurb: 'One seat in a public weekend workshop.', features: ['2-hour guided session', 'All materials included', 'Arrangement to take home', 'Refreshments'], cta: 'Book a seat' },
-        { name: 'Duo', price: '$120', period: '/ 2 people', blurb: 'Two seats together — our most popular gift.', features: ['2 seats in one session', 'All materials included', 'Gift voucher available', 'Refreshments'], cta: 'Book duo', popular: true },
-        { name: 'Private Group', price: '$420', period: '/ up to 8', blurb: 'Book the studio for your team or celebration.', features: ['Up to 8 participants', 'Choose your date & theme', 'All materials included', 'Optional add-on grazing board'], cta: 'Enquire' }
+        { name: 'Drainage survey', price: 'Quote', period: 'per site', blurb: 'A diagnosis of where the water goes and why.', features: ['Site visit', 'Levels and percolation checks', 'Written findings', 'Recommended fixes'], cta: 'Book a survey' },
+        { name: 'Irrigation install', price: 'Quote', period: 'per site', blurb: 'A zoned system that waters the right beds the right amount.', features: ['Zone design', 'Dripline and sprinkler layout', 'Controller programming', 'Moisture sensor', 'Seasonal schedule'], cta: 'Scope irrigation', popular: true },
+        { name: 'Water management', price: 'Quote', period: 'per site', blurb: 'Drainage and irrigation designed together as one scheme.', features: ['Everything in irrigation install', 'Ground shaping and swales', 'Soakaway or basin', 'Testing and commissioning', 'First-year checks'], cta: 'Scope water works' }
       ],
       faqs: [
-        { q: 'Do I need any experience?', a: 'None at all. Over half of our students have never held floral shears before — the session starts with the absolute basics.' },
-        { q: 'What should I bring?', a: 'Just yourself. We provide aprons, tools, stems and vessels. Wear closed shoes if you can, as studio floors stay cool.' },
-        { q: 'Can I buy a workshop as a gift?', a: 'Yes — our vouchers are letterpress printed, valid for twelve months and can be sent digitally or posted in a gift envelope.' },
-        { q: 'Are workshops suitable for children?', a: 'Our teen sessions (13+) run monthly with adjusted tools. Children under 13 are welcome in private family sessions with a participating adult.' }
+        { q: 'Do I need irrigation if I have a planting plan?', a: 'Some gardens do not. Where the soil holds water and the species suit the site, we will tell you that irrigation is optional rather than selling you a system you do not need.' },
+        { q: 'Can you fix a garden that already floods?', a: 'Often, yes. Waterlogging is usually a levels and percolation problem, and both can usually be addressed with regrading, drainage or soil improvement.' },
+        { q: 'Who installs it?', a: 'Our own crew, with the controller programmed and handed over with a written schedule showing how to change it through the year.' },
+        { q: 'Is it possible to run this on a timer?', a: 'Yes. We can set it to run on a timer, but we usually recommend a moisture or rain sensor so the system stops watering when it is not needed.' }
       ],
-      related: ['wedding-florals', 'seasonal-subscription', 'gift-bouquets']
+      related: ['garden-design-planning', 'hardscape-outdoor-living', 'seasonal-care-maintenance']
     }
   ];
 
   var POSTS = [
     {
-      id: 'seasonal-bloom-guide',
-      title: "What's Blooming: A Month-by-Month Seasonal Flower Guide",
-      category: 'Seasonal',
-      author: 'Elara Whitfield',
-      authorRole: 'Head Florist, Garden Dreams',
-      authorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-      date: 'September 28, 2026',
-      readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
-      excerpt: 'Seasonality is the difference between flowers that last a week and flowers that last ten days. Here is what we can actually grow — month by month.',
-      tags: ['seasonality', 'local growers', 'bouquets', 'sustainability'],
-      content: [
-        { t: 'p', v: 'Most bouquets you buy in a supermarket travelled 8,000 kilometres to reach you. Ours travelled less than 50 miles. That single number explains almost everything about how long your flowers last, how they smell, and why they look slightly different every week.' },
-        { t: 'h2', v: 'Why seasonality beats a fixed menu' },
-        { t: 'p', v: 'A fixed "roses always, tulips always" menu requires cold storage, long-haul freight and chemical ripening. A seasonal menu requires a calendar. When we design around what local growers are actually cutting this week, the stems arrive already adapted to our climate — which is exactly why they open slowly and hold their shape.' },
-        { t: 'quote', v: 'A seasonal bouquet is never the same twice — and that is the point. It is a photograph of one week in one place.' },
-        { t: 'h2', v: 'What we cut, month by month' },
-        { t: 'h3', v: 'Spring (March – May)' },
-        { t: 'p', v: 'Tulips, ranunculus, anemones, narcissus and the first sweet peas. Spring stems are thirsty and dynamic — tulips keep growing in the vase, so we design with a little extra headroom.' },
-        { t: 'h3', v: 'Summer (June – August)' },
-        { t: 'p', v: 'The generosity season: garden roses, dahlias, cosmos, zinnia, scabiosa, cornflowers and trails of jasmine. This is when our arrangements look most like a meadow.' },
-        { t: 'h3', v: 'Autumn (September – November)' },
-        { t: 'p', v: 'Dahlias reach their peak, joined by chrysanthemums, amaranth, seed pods, wheat and warm-toned roses. Autumn is the most under-rated bouquet season in floristry.' },
-        { t: 'h3', v: 'Winter (December – February)' },
-        { t: 'p', v: 'Hellebores, paperwhites, amaryllis, evergreen foliage, dried lunaria and preserved ferns. Winter arrangements trade colour for texture — and they last almost twice as long.' },
-        { t: 'list', v: ['Buy from a grower or a florist who names their farms', 'Expect the palette to shift weekly in high season', 'Ask for "what cut beautifully this morning?"', 'Let the florist substitute — it usually means fresher'] },
-        { t: 'h2', v: 'How to read a bouquet label' },
-        { t: 'p', v: 'Ask two questions: where were these grown, and when were they cut? If the answer is "a farm two hours away, yesterday morning", you are holding flowers that will outlast anything flown in. If the answer is vague, they probably travelled in a refrigerated box for a week before they reached the bucket.' },
-        { t: 'note', v: 'In our subscription, every delivery includes a small card naming the growers whose stems are in your bouquet that week.' }
-      ],
-      related: ['flower-care-tips', 'subscription-benefits', 'sustainable-floristry']
-    },
-    {
-      id: 'flower-care-tips',
-      title: '10 Expert Tips to Make Your Fresh Bouquets Last Twice as Long',
-      category: 'Care',
-      author: 'Marcus Thorne',
-      authorRole: 'Studio Manager',
-      authorAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      date: 'September 14, 2026',
-      readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80',
-      excerpt: 'The difference between a five-day bouquet and a ten-day bouquet is almost never the flowers — it is the first ten minutes you spend on them.',
-      tags: ['flower care', 'tips', 'at home'],
-      content: [
-        { t: 'p', v: 'Every bouquet we deliver carries a 7-day freshness guarantee. But our customers routinely keep arrangements for ten to fourteen days. The gap is technique, not luck — and almost all of it happens in the first ten minutes.' },
-        { t: 'h2', v: 'The first ten minutes' },
-        { t: 'list', v: ['Unwrap immediately — never leave flowers in paper overnight', 'Fill a clean vase with cool water and the flower food provided', 'Cut 2 cm off every stem at a 45° angle, under running water or submerged', 'Remove every leaf that will sit below the waterline', 'Let the bouquet drink for an hour before you style it'] },
-        { t: 'h2', v: 'Placement matters more than you think' },
-        { t: 'p', v: 'Heat, fruit and direct sun are the three things that age a bouquet fastest. Ripening fruit releases ethylene gas, which tells flowers to open and drop. Keep your vase on the opposite side of the room from the fruit bowl.' },
-        { t: 'quote', v: 'Cool nights, indirect light, and no bananas. That is the whole secret.' },
-        { t: 'h2', v: 'The weekly refresh' },
-        { t: 'p', v: 'Every three days, tip out the water, rinse the vase, re-cut the stems and refill with fresh water. You do not need to add more flower food — a clean vase does more than any powder.' },
-        { t: 'h3', v: 'Flower-by-flower notes' },
-        { t: 'list', v: ['Tulips keep growing — trim them shorter each refresh', 'Garden roses drink heavily; check the water level daily', 'Woody stems like eucalyptus need a fresh vertical split', 'Dried and preserved stems never go in water at all'] },
-        { t: 'note', v: 'Subscribers get a printed care booklet with their first delivery — and a WhatsApp line to our florists if anything looks off.' }
-      ],
-      related: ['seasonal-bloom-guide', 'gifting-flowers-etiquette', 'subscription-benefits']
-    },
-    {
-      id: 'wedding-floral-trends',
-      title: '2026 Wedding Floral Trends: Dried Textures & Wild Meadows',
-      category: 'Weddings',
-      author: 'Chloe Davenport',
-      authorRole: 'Event Design Lead',
-      authorAvatar: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80',
-      date: 'August 30, 2026',
-      readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=900&q=80',
-      excerpt: 'After a decade of identical Pinterest arches, couples are asking for flowers that look grown, not manufactured. Here is what we are installing this season.',
-      tags: ['weddings', 'trends', 'event design'],
-      content: [
-        { t: 'p', v: 'We design around 96 weddings a year, which gives us an unusual read on where wedding floristry is heading. In 2026, three shifts are unmistakable.' },
-        { t: 'h2', v: '1. The meadow aisle' },
-        { t: 'p', v: 'Rather than a perfectly symmetrical arch, couples are grounding flowers at the base of the aisle and letting them climb — as though the ceremony is happening in a field that happened to bloom that week. It photographs better, costs less in structure, and ages beautifully across a long ceremony.' },
-        { t: 'h2', v: '2. Dried and fresh, together' },
-        { t: 'p', v: 'Preserved lunaria, bunny tails and bleached ferns now sit beside fresh garden roses. The contrast of textures does the work that colour used to — and dried elements can be prepared weeks ahead, protecting the budget from last-minute price spikes.' },
-        { t: 'quote', v: 'The most beautiful 2026 arrangements look slightly unruly, entirely intentional, and impossible to reproduce exactly.' },
-        { t: 'h2', v: '3. One vessel, many lives' },
-        { t: 'p', v: 'Ceremony flowers are being repurposed into reception pieces the same day instead of being bought twice. Aisle meadows become table runners; the signing arrangement becomes the cake table. It is the single easiest way to cut 20% from a floral budget.' },
-        { t: 'list', v: ['Ask your florist for a repurposing plan at the first meeting', 'Budget for installation, not just flowers', 'Choose local seasonal focal blooms for the hero pieces', 'Reserve 5% of budget for day-of substitutions'] },
-        { t: 'note', v: 'Our 2026 lookbook is available as a printed booklet — request one through the contact page.' }
-      ],
-      related: ['seasonal-bloom-guide', 'sustainable-floristry', 'gifting-flowers-etiquette']
-    },
-    {
-      id: 'subscription-benefits',
-      title: 'Why a Flower Subscription Beats Occasional Buying',
-      category: 'Subscriptions',
-      author: 'Elena Vance',
-      authorRole: 'Subscriber Experience',
+      id: 'planning-year-round-interest',
+      title: 'Planning for Year-Round Interest',
+      category: 'Design',
+      author: 'Maya Okafor',
+      authorRole: 'Founder & Lead Designer',
       authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-      date: 'August 12, 2026',
-      readTime: '4 min read',
-      image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1200&q=80',
-      excerpt: 'A bouquet bought in a panic on the way home is a different object from one that arrives every Thursday morning, designed while you slept.',
-      tags: ['subscription', 'value', 'routine'],
+      date: 'September 12, 2026',
+      readTime: '7 min read',
+      image: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'A garden does not have to be beautiful in July to be worth building. Here is how we plan for the months nobody photographs.',
+      tags: ['planting design', 'structure', 'seasons'],
       content: [
-        { t: 'p', v: 'The honest case for a flower subscription is not financial, although it usually works out cheaper per stem. It is about removing the decision entirely.' },
-        { t: 'h2', v: '1. The freshest cut, automatically' },
-        { t: 'p', v: 'Subscribers are served first from each morning\'s farm deliveries. Occasional buyers see whatever is left after the standing orders are filled — which on a busy Friday can be a lot less interesting.' },
-        { t: 'h2', v: '2. Design that changes with you' },
-        { t: 'list', v: ['Your florist learns your palette over time', 'Seasonal variety arrives without you choosing it', 'Arrangement size adapts to your vase and space', 'Occasion flowers can be added to any delivery'] },
-        { t: 'h2', v: '3. It costs less per stem' },
-        { t: 'p', v: 'Standing deliveries let us plan purchases with growers weeks ahead, which is why a Classic subscription at $72 consistently contains more stems than a $90 retail bouquet of the same quality.' },
-        { t: 'quote', v: 'I stopped buying flowers "for a treat" — now every week is the treat.' },
-        { t: 'h2', v: '4. Perfectly flexible' },
-        { t: 'p', v: 'Skip while you travel, double a delivery for a dinner party, switch from weekly to monthly when the season changes. Nothing is locked in, and there is no fee for changing your mind.' },
-        { t: 'note', v: 'Try four deliveries with no commitment — cancel any time before your fifth.' }
+        { t: 'p', v: 'Most planting schemes are designed in the mind of whoever is selling them, at the time of year that makes them look best. That is how you end up with a garden that peaks for six weeks and then flattens out for the other ten months of the year.' },
+        { t: 'h2', v: 'Start with structure, not flowers' },
+        { t: 'p', v: 'Structure comes first: evergreens, multi-stem trees, grasses and shrubs that hold a shape. These are the bones of the planting, and they carry the garden through winter when everything else has gone over.' },
+        { t: 'list', v: ['One evergreen for every three deciduous plants, as a starting point', 'At least two multi-stem specimens for winter silhouette', 'Grasses left standing through February, cut back in March', 'A tree that gives shade in summer and admits light in winter'] },
+        { t: 'h2', v: 'Then layer the seasons' },
+        { t: 'p', v: 'With the structure in place, the flowering layer becomes a sequence rather than a single moment. Early bulbs, late spring perennials, summer meadow, autumn seed heads, winter bark and berries. Each takes the stage briefly and hands it on.' },
+        { t: 'quote', v: 'A garden with a peak is a photograph. A garden with a sequence is a place.' },
+        { t: 'h2', v: 'Plant for the garden you will have' },
+        { t: 'p', v: 'The most common mistake we see is designing for a garden that no longer exists — the one before the children arrived, the one before the extension, the one at the weekend. Design for the household that is actually here, and for the amount of time you are genuinely willing to spend in the garden.' },
+        { t: 'note', v: 'When we plan with clients we write the maintenance time down on the drawing. A scheme that needs a day a week is a different garden from one that needs an hour, and both can be beautiful — but they are not interchangeable.' }
       ],
-      related: ['seasonal-bloom-guide', 'flower-care-tips', 'gifting-flowers-etiquette']
+      related: ['soil-first', 'planting-for-small-spaces']
     },
     {
-      id: 'gifting-flowers-etiquette',
-      title: 'The Art of Gifting Flowers: A Modern Etiquette Guide',
-      category: 'Gifting',
-      author: 'Priya Anand',
-      authorRole: 'Client Care Lead',
-      authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
-      date: 'July 26, 2026',
-      readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1200&q=80',
-      excerpt: 'Red roses to a first date? Lilies to a hospital room? We answer the questions our clients actually ask us every week.',
-      tags: ['gifting', 'etiquette', 'occasions'],
-      content: [
-        { t: 'p', v: 'Flower etiquette used to be a book of rigid rules. In 2026 it is simpler: be thoughtful about the person, the place and the moment — and when in doubt, ask the person who is making the bouquet.' },
-        { t: 'h2', v: 'Matching flowers to the relationship' },
-        { t: 'list', v: ['New acquaintance: bright, cheerful, unfussy — sunflowers, tulips, gerberas', 'Close friend: their favourite colour, whatever is in season', 'Partner: meaningful over expensive — the flower from your first date', 'Colleague: compact arrangements that fit a desk', 'Sympathy: white, green and soft tones; always confirm funeral customs'] },
-        { t: 'h2', v: 'Occasion timing' },
-        { t: 'p', v: 'Flowers for a birthday should arrive in the morning. Flowers for an apology should arrive before the conversation, not after. Flowers "just because" are the only category with no rules at all.' },
-        { t: 'quote', v: 'The best-timed bouquet arrives while the recipient still believes the day is ordinary.' },
-        { t: 'h2', v: 'Things worth avoiding' },
-        { t: 'list', v: ['Strongly scented lilies in hospital — they trigger migraines', 'Flowers the recipient is known to be allergic to', 'Price tags, receipts or anything in the box that reveals cost', 'Red roses for someone you have just met — the message is louder than you intend'] },
-        { t: 'h2', v: 'Writing the card' },
-        { t: 'p', v: 'Two lines beat two paragraphs. Say the specific thing — "for the presentation you nailed on Tuesday" lands far harder than "congratulations on everything".' },
-        { t: 'note', v: 'Our letterpress cards fit about 40 words comfortably. If you need more space, we will happily include a folded note.' }
-      ],
-      related: ['flower-care-tips', 'subscription-benefits', 'wedding-floral-trends']
-    },
-    {
-      id: 'sustainable-floristry',
-      title: 'Behind the Wrap: Our Sustainable Floristry Practice',
-      category: 'Sustainability',
-      author: 'Jonah Reyes',
-      authorRole: 'Sourcing & Operations',
-      authorAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-      date: 'July 5, 2026',
+      id: 'soil-first',
+      title: 'Soil First: The Part Everyone Skips',
+      category: 'Planting',
+      author: 'Elias Brandt',
+      authorRole: 'Head Grower Relations',
+      authorAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      date: 'August 28, 2026',
       readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1464982326199-86f32f81b211?auto=format&fit=crop&w=1200&q=80',
-      excerpt: 'Floristry has a waste problem. Here is exactly how we source, wrap, deliver and compost — including the parts we have not solved yet.',
-      tags: ['sustainability', 'local sourcing', 'zero waste'],
+      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'You can buy any plant you like. Fixing the soil is what decides whether it stays. A practical guide to what to do before planting.',
+      tags: ['soil', 'planting', 'maintenance'],
       content: [
-        { t: 'p', v: 'Cut flowers are one of the few products where the environmental cost is almost invisible to the buyer. Nobody sees the refrigerated freight, the pesticide residue or the plastic sleeve. We think you should.' },
-        { t: 'h2', v: 'Sourcing: 50 miles, mostly' },
-        { t: 'p', v: 'Roughly 80% of our stems come from family growers within 50 miles of the studio. The rest are specialty blooms we cannot grow locally — ranunculus in April, for instance — and we name the farm on every delivery card.' },
-        { t: 'h2', v: 'Wrapping: no plastic, ever' },
-        { t: 'list', v: ['Compostable kraft and recycled tissue only', 'Twine and seed-paper tags instead of tape', 'Reusable hydration boxes for courier runs', 'Vases lent for events, collected and re-used'] },
-        { t: 'h2', v: 'Delivery: one van, one loop' },
-        { t: 'p', v: 'Our couriers run a single consolidated loop per zone each afternoon rather than individual point-to-point trips, and the final mile is covered by e-bike riders inside the ring road.' },
-        { t: 'quote', v: 'We are not a zero-waste business yet. We are a measured-waste business that publishes its numbers.' },
-        { t: 'h2', v: 'What we have not solved' },
-        { t: 'p', v: 'Refrigeration still uses grid electricity, and some specialty stems still arrive by air freight. We offset both through a regional tree-planting partner, but offsetting is a compensation, not a fix — and we say so.' },
-        { t: 'note', v: 'Spent stems from the studio and every office account are composted at our partner farm — around 4 tonnes a year.' }
+        { t: 'p', v: 'Planting is the cheap, visible part of a garden. The expensive, invisible part is the soil preparation underneath it — and it is the part that decides whether the planting you paid for is still there in year three.' },
+        { t: 'h2', v: 'What to check before you plant' },
+        { t: 'list', v: ['Dig a hole 30cm deep and feel the bottom — if it is hard pan, roots will not get through it', 'Squeeze a handful of moist soil: if it stays in a solid ball, it is too wet; if it crumbles to dust, it is too dry', 'Look at what is growing nearby — weeds tell you a lot about the soil they are tolerating', 'Check whether water sits after rain; standing water means drainage, not soil, is your first problem'] },
+        { t: 'h2', v: 'Improving what is there' },
+        { t: 'p', v: 'Most garden soils are neither terrible nor wonderful — they are simply compacted, low in organic matter and starved of air. A layer of well-rotted organic matter worked into the top 30cm of the bed changes more than any fertiliser you can buy afterwards.' },
+        { t: 'h2', v: 'Do not dig when it is wet' },
+        { t: 'p', v: 'This is the single most common error. Digging wet soil destroys its structure and compacts it further, turning a workable bed into concrete. Wait for the soil to crumble in your hand before you break it open.' },
+        { t: 'quote', v: 'Improve the soil and the plants do half the work. Improve the planting and nothing else will save it.' },
+        { t: 'note', v: 'We carry our own composted bark and soil improver from local suppliers, and we tell clients honestly when a site needs a full rebuild rather than a mulch on top.' }
       ],
-      related: ['seasonal-bloom-guide', 'wedding-floral-trends', 'subscription-benefits']
+      related: ['planning-year-round-interest', 'watering-well']
+    },
+    {
+      id: 'watering-well',
+      title: 'Watering Well: Less Water, Better Garden',
+      category: 'Care',
+      author: 'Sam Oyelaran',
+      authorRole: 'Site & Operations Lead',
+      authorAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+      date: 'July 17, 2026',
+      readTime: '5 min read',
+      image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'Drip lines beat sprinklers, mulch beats both, and a little attention beats a timer on a fortnightly cycle.',
+      tags: ['irrigation', 'water', 'maintenance'],
+      content: [
+        { t: 'p', v: 'Most gardens are over-watered and under-watered at the same time: the lawn gets a quick sprinkle twice a week while the beds, which actually need it, dry out between visits.' },
+        { t: 'h2', v: 'Water the soil, not the leaves' },
+        { t: 'p', v: 'Drip and soaker lines put water where the roots are, slowly enough that the soil absorbs it instead of running off. Overhead sprinklers evaporate a meaningful share of what they deliver and waste more on paths than on plants.' },
+        { t: 'list', v: ['Water deeply and less often, rather than shallowly and often', 'Group plants with similar needs into the same irrigation zone', 'Add 50–70mm of organic mulch to slow evaporation', 'Water early in the morning, not in the middle of the afternoon'] },
+        { t: 'h2', v: 'Let the soil tell you' },
+        { t: 'p', v: 'Push a finger two knuckles into the soil. If it is cool and damp below the surface, the bed does not need water yet, whatever the schedule says.' },
+        { t: 'quote', v: 'A schedule tells the garden when to water. The soil tells you when it actually needs it.' },
+        { t: 'note', v: 'New planting needs water for its first season, often more than anyone expects. That is why we water in every plant we install and check it through the settling period.' }
+      ],
+      related: ['soil-first', 'seasonal-care']
+    },
+    {
+      id: 'designing-small-spaces',
+      title: 'Designing Small Spaces Without Shrinking Them',
+      category: 'Design',
+      author: 'Priya Raman',
+      authorRole: 'Landscape Architect',
+      authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
+      date: 'June 2, 2026',
+      readTime: '6 min read',
+      image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'Small gardens fail when everything is pushed to the edges. Height, layering and one confident focal point do the work instead.',
+      tags: ['small gardens', 'design', 'planting'],
+      content: [
+        { t: 'p', v: 'The instinct in a small garden is to leave room — for people, for furniture, for the mower. It is understandable and it is usually wrong. Small gardens feel spacious when they are full, layered and framed, and cramped when every edge is bare.' },
+        { t: 'h2', v: 'Use height instead of area' },
+        { t: 'p', v: 'A small tree, a wall of climbers, tall grasses at the back of a border — all of these add volume without taking any ground. The trick is to keep the lower planting simple so the eye can travel through it.' },
+        { t: 'list', v: ['Keep the middle of the garden open and let the planting frame it', 'Use climbers and wall plants to make vertical surfaces count', 'One strong focal point beats three average features', 'Choose a small tree for the canopy rather than a large shrub for the flower'] },
+        { t: 'h2', v: 'Detail beats quantity' },
+        { t: 'p', v: 'In a small space, materials are read closely. A good edge detail or a well-made path is visible in a way that a whole bed of similar plants is not.' },
+        { t: 'quote', v: 'Small gardens do not need less garden. They need more decision.' },
+        { t: 'note', v: 'The most common request we get on small plots is for a seating area. We often push back — a narrow path with a bench at the end usually serves a small garden better than a patio that eats it.' }
+      ],
+      related: ['planning-year-round-interest', 'hardscape-materials']
+    },
+    {
+      id: 'hardscape-materials',
+      title: 'Choosing Materials That Age Well',
+      category: 'Build',
+      author: 'Elias Brandt',
+      authorRole: 'Head Grower Relations',
+      authorAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      date: 'May 9, 2026',
+      readTime: '6 min read',
+      image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'Stone, brick and gravel all weather differently. How to pick surfaces for your climate, your soil and your maintenance tolerance.',
+      tags: ['hardscape', 'materials', 'build'],
+      content: [
+        { t: 'p', v: 'A paving sample and a laid path are different products. Colour changes with wet and dry, joints silt up, and the surface that looked flat in the yard is anything but once it is walked on for a year.' },
+        { t: 'h2', v: 'Natural stone' },
+        { t: 'p', v: 'Stone moves with the seasons and settles where it is laid. It suits traditional gardens and cold climates, and it rewards a little patience in the first year while the bedding settles.' },
+        { t: 'h2', v: 'Brick and clay pavers' },
+        { t: 'p', v: 'Consistent in colour and easy to lift and relay, which makes brick the pragmatic choice where the ground may move or the layout may change.' },
+        { t: 'h2', v: 'Gravel and resin-bound aggregate' },
+        { t: 'p', v: 'The cheapest surface per square metre and the easiest to drain. It also needs a proper sub-base and an edging detail, or it migrates into the beds within a season or two.' },
+        { t: 'list', v: ['Lay on a compacted sub-base, not on sand alone', 'Specify an edging detail — it is what keeps the surface where you put it', 'Think about how you will weed the beds next to it', 'Ask how the surface behaves in frost and heavy rain'] },
+        { t: 'quote', v: 'Every material is a maintenance decision as much as a design decision.' },
+        { t: 'note', v: 'We are happy to lay a material you have chosen yourself. We will tell you honestly if we think it is the wrong choice for the site, and why.' }
+      ],
+      related: ['designing-small-spaces', 'watering-well']
+    },
+    {
+      id: 'seasonal-care',
+      title: 'The Garden Year: Four Visits That Do the Work',
+      category: 'Care',
+      author: 'Maya Okafor',
+      authorRole: 'Founder & Lead Designer',
+      authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+      date: 'March 21, 2026',
+      readTime: '5 min read',
+      image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'A year of maintenance compressed into four visits — what happens in each season and why the timing matters.',
+      tags: ['maintenance', 'seasons', 'pruning'],
+      content: [
+        { t: 'p', v: 'Care plans look expensive until you compare them with the alternative: hiring a mower and a hedge cutter, buying plants to replace what died, and watching the shape of the garden disappear over three summers.' },
+        { t: 'h2', v: 'Spring — clear, cut and feed' },
+        { t: 'p', v: 'We remove the winter debris, cut back the late-flowering perennials and grasses, mulch the beds with well-rotted organic matter, and feed the soil rather than the plant. March is the right month because the ground is moist and the growth has not yet started.' },
+        { t: 'h2', v: 'Summer — tidy and irrigate' },
+        { t: 'p', v: 'Deadheading, weeding and a check on the irrigation system. We also watch for pests and disease early, because a problem caught in June is a job of an hour and a problem caught in August is a job of a day.' },
+        { t: 'h2', v: 'Autumn — cut back and clear' },
+        { t: 'p', v: 'This is the big one. We cut back the perennials, plant the ground cover, plant bulbs for spring and clear the leaves. Leaving the stems standing through winter is a choice, not neglect — it is how the garden holds its structure until March.' },
+        { t: 'h2', v: 'Winter — prune and plan' },
+        { t: 'p', v: 'Structural pruning while the plants are dormant and the shape is visible, plus a written plan for what changes in the coming year.' },
+        { t: 'quote', v: 'Maintenance is not a bill for keeping the garden alive. It is the thing that keeps the garden being what you designed.' }
+      ],
+      related: ['watering-well', 'soil-first']
     }
   ];
 

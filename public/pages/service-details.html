@@ -4,16 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Details • Garden Dreams</title>
-  <meta name="description" content="Full service details, pricing tiers, galleries and FAQs — loaded dynamically for the Garden Dreams floral service you selected.">
+  <meta name="description" content="Full service details, scope, options and FAQs — loaded dynamically for the Garden Dreams garden service you selected.">
 
   <script src="../../src/js/theme.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
 
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
@@ -23,7 +20,7 @@
 
   <div id="site-header-slot"></div>
 
-  <main id="service-detail-root">
+  <main id="main-content">
 
     <!-- ============================ 1. SERVICE HERO ============================ -->
     <section class="page-hero service-hero">
@@ -34,17 +31,17 @@
 
         <div class="hero-meta-row">
           <span class="hero-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span id="svc-duration">—</span></span>
-          <span class="hero-meta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> <span id="svc-rating">—</span> rating</span>
+          <span class="hero-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8"></path><path d="M12 14c0-4 3-7 8-7 0 5-3 8-8 8z"></path><path d="M12 14C12 10 9 7 4 7c0 5 3 8 8 7z"></path></svg> <span id="svc-highlight">—</span></span>
           <span class="hero-meta price-current" id="svc-price">—</span>
         </div>
 
         <div class="cta-actions" style="margin-top:28px">
-          <a href="#svc-pricing-section" class="btn btn-pink btn-lg">See pricing</a>
-          <a href="#svc-enquire" class="btn btn-green-outline btn-lg">Request a proposal</a>
+          <a href="#svc-pricing-section" class="btn btn-primary btn-lg">See the options</a>
+          <a href="#svc-enquire" class="btn btn-outline btn-lg">Request a proposal</a>
         </div>
 
         <div class="media-frame" id="svc-hero-frame" style="height:420px;margin-top:38px">
-          <img id="svc-hero-image" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=80" alt="Service preview">
+          <img id="svc-hero-image" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=80" alt="Service preview">
         </div>
       </div>
     </section>
@@ -71,7 +68,7 @@
         <aside class="sidebar" id="svc-enquire">
           <div class="sidebar-card">
             <h3 class="sidebar-title">Request a proposal</h3>
-            <p class="sidebar-lead">Tell us your date and we will reply within one business day with availability and a fixed quote.</p>
+            <p class="sidebar-lead">Tell us about the space and we will reply within one business day with next steps and an honest view of the work involved.</p>
 
             <form class="auth-form" data-validate="contact" novalidate>
               <div class="form-group">
@@ -83,19 +80,19 @@
                 <input class="form-control" type="email" id="svc-email" name="email" placeholder="you@example.com" required>
               </div>
               <div class="form-group">
-                <label class="form-label" for="svc-date">Preferred date <span class="req">*</span></label>
+                <label class="form-label" for="svc-date">Preferred start date <span class="req">*</span></label>
                 <input class="form-control" type="date" id="svc-date" name="date" required>
               </div>
               <div class="form-group">
-                <label class="form-label" for="svc-message">Tell us about the occasion <span class="req">*</span></label>
-                <textarea class="form-control" id="svc-message" name="message" rows="4" placeholder="Guest count, venue, palette, budget range…" required></textarea>
+                <label class="form-label" for="svc-message">Tell us about the garden <span class="req">*</span></label>
+                <textarea class="form-control" id="svc-message" name="message" rows="4" placeholder="Size of the space, light, what you want to grow or sit in, any drawings you already have…" required></textarea>
               </div>
-              <button type="submit" class="btn btn-pink btn-block">Send enquiry</button>
+              <button type="submit" class="btn btn-primary btn-block">Send enquiry</button>
             </form>
 
             <div class="sidebar-note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-              <span>No deposit required to receive a quote.</span>
+              <span>No deposit required to receive a written proposal.</span>
             </div>
           </div>
 
@@ -107,8 +104,7 @@
               <li><span>Hours</span><strong>Mon–Sat, 8am–6pm</strong></li>
               <li><span>Response</span><strong>Within 1 business day</strong></li>
             </ul>
-          </div>
-        </aside>
+          </div>        </aside>
       </div>
     </section>
 
@@ -116,9 +112,9 @@
     <section class="section-pad section-alt" id="svc-pricing-section">
       <div class="container">
         <div class="center-header">
-          <span class="eyebrow">TRANSPARENT PRICING</span>
-          <h2 class="section-heading">PACKAGE TIERS</h2>
-          <p class="section-description">Fixed prices, fixed scope. Every tier is confirmed in writing before anything is cut.</p>
+          <span class="eyebrow">OPTIONS &amp; SCOPE</span>
+          <h2 class="section-heading">PACKAGE OPTIONS</h2>
+          <p class="section-description">Every option is confirmed in writing after a survey, with the scope and the quantities named before anything is scheduled.</p>
         </div>
 
         <div class="price-grid" id="svc-pricing">
@@ -163,10 +159,10 @@
       <div class="container">
         <span class="eyebrow" style="justify-content:center">NEXT STEP</span>
         <h2 id="svc-cta-title">Ready to get started?</h2>
-        <p>Send us your date, your budget and the feeling you are after — we will take it from there.</p>
+        <p>Send us the space, the light and what you want from it — we will take it from there.</p>
         <div class="cta-actions">
-          <a href="#svc-enquire" class="btn btn-pink btn-lg">Request a proposal</a>
-          <a href="../../public/pages/services.html" class="btn btn-green-outline btn-lg">Back to all services</a>
+          <a href="#svc-enquire" class="btn btn-primary btn-lg">Request a proposal</a>
+          <a href="services.html" class="btn btn-outline btn-lg">Back to all services</a>
         </div>
       </div>
     </section>

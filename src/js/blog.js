@@ -12,7 +12,7 @@
       user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
       arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>',
       search: '<svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
-      flower: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/></svg>'
+      sprout: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4 3-7 8-7 0 5-3 8-8 8z"/><path d="M12 13C12 9 9 6 4 6c0 5 3 8 8 7z"/></svg>'
     };
     return i[name] || '';
   }
@@ -55,7 +55,7 @@
     if (results.length === 0) {
       grid.innerHTML =
         '<div class="empty-state">' +
-          icon('flower') +
+          icon('sprout') +
           '<h3>No articles match your search</h3>' +
           '<p>Try a different keyword, or clear the filters to browse the whole journal.</p>' +
         '</div>';
@@ -104,7 +104,7 @@
         '<div class="blog-card-meta"><span>' + icon('calendar') + ' ' + p.date + '</span><span>' + icon('clock') + ' ' + p.readTime + '</span><span>' + icon('user') + ' ' + p.author + '</span></div>' +
         '<h2>' + p.title + '</h2>' +
         '<p>' + p.excerpt + '</p>' +
-        '<div><a class="btn btn-pink" href="blog-details.html?id=' + p.id + '">Read the article</a></div>' +
+        '<div><a class="btn btn-primary" href="blog-details.html?id=' + p.id + '">Read the article</a></div>' +
       '</div>';
   }
 

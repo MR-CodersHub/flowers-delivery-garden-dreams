@@ -18,9 +18,9 @@
             '<div class="footer-brand">' +
               '<a href="' + root + 'index.html" class="brand-logo">' +
                 '<img src="' + root + 'assets/img/logo.png" alt="Garden Dreams logo" width="50" height="50">' +
-                '<div class="brand-text"><span class="brand-name">Garden <span class="pink-accent">Dreams</span></span></div>' +
+                '<div class="brand-text"><span class="brand-name">Garden <span class="brand-accent">Dreams</span></span></div>' +
               '</a>' +
-              '<p>A local fresh flower studio delivering seasonal, hand-arranged bouquets and thoughtful subscriptions — fresh flowers, delivered with a little joy.</p>' +
+              '<p>A garden design and landscaping studio on Alder Lane. We survey, plan, build and care for gardens across the Riverside District — planting grown close to home.</p>' +
               '<div class="social-links">' +
                 '<a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>' +
                 '<a href="#" class="social-link" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="9" x2="12" y2="21"/><path d="M8 12a4 4 0 1 1 8 0c0 4-4 8-8 8"/></svg></a>' +
@@ -29,54 +29,55 @@
               '</div>' +
             '</div>' +
 
-            /* Shop */
+            /* Explore */
             '<div>' +
-              '<h4 class="footer-heading">Quick Links</h4>' +
+              '<h4 class="footer-heading">Explore</h4>' +
               '<ul class="footer-links">' +
                 '<li><a href="' + root + 'index.html">Home</a></li>' +
-                '<li><a href="' + root + 'public/pages/home-2.html">Home 2</a></li>' +
+                '<li><a href="' + root + 'public/pages/about.html">About the studio</a></li>' +
                 '<li><a href="' + root + 'public/pages/services.html">Services</a></li>' +
-                '<li><a href="' + root + 'public/pages/pricing.html">Pricing</a></li>' +
+                '<li><a href="' + root + 'public/pages/projects.html">Projects</a></li>' +
+                '<li><a href="' + root + 'public/pages/pricing.html">Garden care plans</a></li>' +
               '</ul>' +
             '</div>' +
 
-            /* Discover */
+            /* Studio */
             '<div>' +
-              '<h4 class="footer-heading">Company</h4>' +
+              '<h4 class="footer-heading">Studio</h4>' +
               '<ul class="footer-links">' +
-                '<li><a href="' + root + 'public/pages/about.html">About Us</a></li>' +
-                '<li><a href="' + root + 'public/pages/blog.html">Blog</a></li>' +
+                '<li><a href="' + root + 'public/pages/blog.html">Garden journal</a></li>' +
                 '<li><a href="' + root + 'public/pages/FAQ.html">FAQs</a></li>' +
                 '<li><a href="' + root + 'public/pages/contact.html">Contact</a></li>' +
-              '</ul>' +
-            '</div>' +
-
-            /* Account */
-            '<div>' +
-              '<h4 class="footer-heading">Account</h4>' +
-              '<ul class="footer-links">' +
-                '<li><a href="' + root + 'public/auth/login.html">Subscriber Login</a></li>' +
-                '<li><a href="' + root + 'public/auth/signup.html">Create Account</a></li>' +
-                '<li><a href="' + root + 'public/pages/Privacy-policy.html">Privacy Policy</a></li>' +
-                '<li><a href="' + root + 'public/pages/Terms-of-service.html">Terms of Service</a></li>' +
+                '<li><a href="' + root + 'public/auth/login.html">Client login</a></li>' +
               '</ul>' +
             '</div>' +
 
             /* Newsletter */
             '<div class="newsletter-box">' +
-              '<h4 class="footer-heading">Morning Journal</h4>' +
-              '<p>Seasonal bloom previews, flower-care notes and 10% off your first order.</p>' +
+              '<h4 class="footer-heading">Seasonal notes</h4>' +
+              '<p>What to plant, what to cut back and what is coming into season — one short letter a month.</p>' +
               '<form class="newsletter-form" id="footer-newsletter-form" data-validate="newsletter" novalidate>' +
                 '<input type="email" name="email" placeholder="Your email address..." aria-label="Email address" required>' +
-                '<button type="submit" class="btn btn-pink btn-sm">Join</button>' +
+                '<button type="submit" class="btn btn-primary btn-sm">Join</button>' +
               '</form>' +
               '<div class="form-success" data-success-slot style="margin-top: 12px; font-size: 0.8125rem;"></div>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="footer-bottom">' +
+            '<p>&copy; <span id="footer-year">2026</span> Garden Dreams. Garden design &amp; landscaping studio, Alder Lane.</p>' +
+            '<div class="footer-bottom-links">' +
+              '<a href="' + root + 'public/pages/Privacy-policy.html">Privacy Policy</a>' +
+              '<a href="' + root + 'public/pages/Terms-of-service.html">Terms of Service</a>' +
             '</div>' +
           '</div>' +
         '</div>' +
       '</footer>';
 
     slot.outerHTML = html;
+
+    var year = document.getElementById('footer-year');
+    if (year) year.textContent = String(new Date().getFullYear());
   }
 
   buildFooter();

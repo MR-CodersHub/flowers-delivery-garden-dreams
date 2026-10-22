@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing • Garden Dreams</title>
-  <meta name="description" content="Transparent subscription and floral service pricing — weekly and monthly flower plans with two months free on annual billing.">
+  <title>Garden Care Plans • Garden Dreams</title>
+  <meta name="description" content="Garden care plans and one-off landscape work from Garden Dreams — seasonal visits, year-round maintenance and project work, quoted in writing after a site survey.">
 
   <script src="../../src/js/theme.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
 
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
@@ -23,20 +20,18 @@
 
   <div id="site-header-slot"></div>
 
-  <main>
+  <main id="main-content">
 
     <!-- ============================ 1. PAGE HERO ============================ -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow" style="justify-content:center">PLAIN PRICING</p>
-        <h1>Honest prices,<br>no <span class="serif-italic">surprise stems</span></h1>
-        <p>Every plan includes delivery, flower food and the freedom to skip a week. Switch to annual billing and get two months free on everything.</p>
-
-        <div class="billing-toggle" id="billing-toggle" style="margin-top:32px">
-          <span class="billing-pill"></span>
-          <button type="button" class="active" data-period="monthly">Monthly</button>
-          <button type="button" data-period="annual">Annual <em>2 months free</em></button>
-        </div>
+        <p class="eyebrow" style="justify-content:center">Garden care plans</p>
+        <h1>Honest scopes,<br>no <span class="serif-italic">surprise invoices</span></h1>
+        <p>
+          Every plan and every project is quoted in writing after a site survey, with the
+          work and the quantities named. What follows is what we do — the price comes after
+          we have seen the ground.
+        </p>
       </div>
     </section>
 
@@ -44,104 +39,107 @@
     <section class="section-pad">
       <div class="container">
         <div class="center-header">
-          <span class="eyebrow">SUBSCRIPTION PLANS</span>
-          <h2 class="section-heading">CHOOSE YOUR RHYTHM</h2>
-          <p class="section-description">Downgrade, upgrade, pause or skip any time from your dashboard — no phone calls required.</p>
+          <span class="eyebrow">Ongoing care</span>
+          <h2 class="section-heading">Three ways to keep a garden going</h2>
+          <p class="section-description">
+            A single visit, a year of maintenance, or a year of maintenance with the planting
+            refreshed as well. Pause or change plan at any time.
+          </p>
         </div>
 
         <div class="price-grid">
-          <div class="price-card" data-monthly="$38" data-annual="$380" data-monthly-note="Billed monthly • cancel any time" data-annual-note="Billed yearly • two months free">
-            <div class="plan-name">Petit</div>
-            <div class="plan-blurb">A small seasonal bunch for a desk, a bedside table or a quiet kitchen windowsill.</div>
-            <div class="price-amount"><span class="amount">$38</span><span class="period">/ month</span></div>
-            <div class="price-billed">Billed monthly • cancel any time</div>
+          <div class="price-card">
+            <div class="plan-name">Seasonal tidy</div>
+            <div class="plan-blurb">One visit to bring the garden back to standard — useful before a party, a letting or the season turning.</div>
+            <div class="price-amount"><span class="amount">Quote</span><span class="period">per visit</span></div>
+            <div class="price-billed">Quoted after a visit</div>
             <ul class="plan-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>8–10 stems, hand-tied</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered every fortnight</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free city delivery</span></li>
-              <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Vase not included</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Weeding and deadheading</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Cut-back and pruning</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Mulch top-up and feeding</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Irrigation check</span></li>
             </ul>
-            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Petit">Choose Petit</button>
+            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Seasonal tidy">Request a visit</button>
           </div>
 
           <div class="price-card popular">
-            <span class="popular-ribbon">Most popular</span>
-            <div class="plan-name">Maison</div>
-            <div class="plan-blurb">Our signature weekly bunch — the right size for a dining table and a hallway console.</div>
-            <div class="price-amount"><span class="amount">$64</span><span class="period">/ month</span></div>
-            <div class="price-billed">Billed monthly • cancel any time</div>
+            <span class="popular-ribbon">Most chosen</span>
+            <div class="plan-name">Full year care</div>
+            <div class="plan-blurb">All four seasons, planned around the garden — the plan most clients keep, and keep for years.</div>
+            <div class="price-amount"><span class="amount">Quote</span><span class="period">per year</span></div>
+            <div class="price-billed">Quoted after a survey</div>
             <ul class="plan-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>16–20 stems, hand-tied</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered weekly</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free delivery + priority slots</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Skip or pause any week</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Four seasonal visits</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Feeding and mulching</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Pruning and structural cut-back</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Plant replacements and a written report</span></li>
             </ul>
-            <button class="btn btn-pink btn-block js-choose-plan" data-plan="Maison">Choose Maison</button>
+            <button class="btn btn-primary btn-block js-choose-plan" data-plan="Full year care">Enquire about care</button>
           </div>
 
-          <div class="price-card" data-monthly="$112" data-annual="$1,120" data-monthly-note="Billed monthly • cancel any time" data-annual-note="Billed yearly • two months free">
-            <div class="plan-name">Jardin</div>
-            <div class="plan-blurb">A generous arrangement for open-plan homes, reception desks and small offices.</div>
-            <div class="price-amount"><span class="amount">$112</span><span class="period">/ month</span></div>
-            <div class="price-billed">Billed monthly • cancel any time</div>
+          <div class="price-card">
+            <div class="plan-name">Year-round &amp; planting</div>
+            <div class="plan-blurb">Everything in full year care, with the seasonal planting refreshed and containers replanted each year.</div>
+            <div class="price-amount"><span class="amount">Quote</span><span class="period">per year</span></div>
+            <div class="price-billed">Quoted after a survey</div>
             <ul class="plan-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>30+ stems, full arrangement</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Delivered weekly or fortnightly</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Studio vase on first delivery</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Free seasonal upgrade stems</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Everything in full year care</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Seasonal replanting</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Container refresh</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Bulb and seed sowing</span></li>
             </ul>
-            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Jardin">Choose Jardin</button>
+            <button class="btn btn-outline btn-block js-choose-plan" data-plan="Year-round and planting">Discuss planting</button>
           </div>
         </div>
 
-        <p class="result-count" style="text-align:center;margin-top:22px">All prices include tax. Delivery is free inside the city ring road.</p>
+        <p class="result-count" style="text-align:center;margin-top:22px">All quotes include materials and labour separately, and are confirmed in writing before the first visit.</p>
       </div>
     </section>
 
-    <!-- ============================ 3. ONE-OFF SERVICES ============================ -->
+    <!-- ============================ 3. ONE-OFF WORK ============================ -->
     <section class="section-pad section-alt">
       <div class="container">
         <div class="center-header">
-          <span class="eyebrow">NOT A SUBSCRIBER?</span>
-          <h2 class="section-heading">ONE-OFF SERVICES</h2>
-          <p class="section-description">Prefer to order as you go? These are our standard starting prices.</p>
+          <span class="eyebrow">One-off work</span>
+          <h2 class="section-heading">Projects we take on</h2>
+          <p class="section-description">Each one is quoted per site, after we have measured the ground and read the light.</p>
         </div>
 
         <div class="addon-list">
           <div class="addon-row">
             <div class="addon-info">
-              <strong>Seasonal hand-tied bouquet</strong>
-              <span>Medium • 14–16 stems • same-day available</span>
+              <strong>Garden design &amp; planning</strong>
+              <span>Scaled layout, planting schedule and materials list</span>
             </div>
-            <span class="addon-price">from $55</span>
+            <span class="addon-price">Quoted per site</span>
           </div>
           <div class="addon-row">
             <div class="addon-info">
-              <strong>Luxury arrangement in studio vase</strong>
-              <span>Large • 28+ stems • hand-blown glass included</span>
+              <strong>Landscape build</strong>
+              <span>Groundworks, hardscape and planting, handled end to end</span>
             </div>
-            <span class="addon-price">from $120</span>
+            <span class="addon-price">Quoted per site</span>
           </div>
           <div class="addon-row">
             <div class="addon-info">
-              <strong>Wedding &amp; event florals</strong>
-              <span>Ceremony, reception and installation • fixed quote</span>
+              <strong>Planting scheme</strong>
+              <span>Beds and borders replanted from the agreed drawing</span>
             </div>
-            <span class="addon-price">from $850</span>
+            <span class="addon-price">Quoted per site</span>
           </div>
           <div class="addon-row">
             <div class="addon-info">
-              <strong>Corporate weekly display</strong>
-              <span>Reception, meeting rooms and hospitality • invoiced monthly</span>
+              <strong>Hardscape &amp; outdoor living</strong>
+              <span>Paths, terraces, decking, retaining and access</span>
             </div>
-            <span class="addon-price">from $180/wk</span>
+            <span class="addon-price">Quoted per site</span>
           </div>
           <div class="addon-row">
             <div class="addon-info">
-              <strong>Floral workshop seat</strong>
-              <span>Two hours, all materials, glass of something cold</span>
+              <strong>Irrigation &amp; drainage</strong>
+              <span>Survey, design, installation and a handover guide</span>
             </div>
-            <span class="addon-price">$65 / seat</span>
+            <span class="addon-price">Quoted per site</span>
           </div>
         </div>
       </div>
@@ -151,67 +149,69 @@
     <section class="section-pad">
       <div class="container">
         <div class="center-header">
-          <span class="eyebrow">INCLUDED WITH EVERY PLAN</span>
-          <h2 class="section-heading">THE SMALL PRINT, IN PLAIN ENGLISH</h2>
-          <p class="section-description">Nothing here is an upsell — this is simply what every subscriber gets.</p>
+          <span class="eyebrow">Included with every plan</span>
+          <h2 class="section-heading">The small print, in plain English</h2>
+          <p class="section-description">Nothing here is an upsell — this is simply what every care plan includes.</p>
         </div>
 
         <div class="grid-4">
           <div class="pillar-card">
             <div class="pillar-num">01</div>
-            <h3>Free delivery</h3>
-            <p>Inside the city ring road, seven days a week, with photo confirmation.</p>
+            <h3>Written scope</h3>
+            <p>Every visit and every project is described in writing, with what is included and what is not.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">02</div>
-            <h3>Skip any week</h3>
-            <p>Going away? Skip from your dashboard before Sunday — no fee, no guilt.</p>
+            <h3>Named cultivars</h3>
+            <p>If a plant does not suit, we swap it for a named alternative and record the change.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">03</div>
-            <h3>Seasonal swap</h3>
-            <p>Dislike a stem? Mark it once and we will never include it again.</p>
+            <h3>Written report</h3>
+            <p>A short note after each round: what was done, what was noticed, what we recommend next.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">04</div>
-            <h3>Freshness promise</h3>
-            <p>Seven days or we remake the arrangement free of charge.</p>
+            <h3>Pause any time</h3>
+            <p>Seasonal travel or a change of mind — pause the plan from your dashboard, no fee.</p>
           </div>
         </div>
 
         <div class="grid-4" style="margin-top:22px">
           <div class="pillar-card">
             <div class="pillar-num">05</div>
-            <h3>No contracts</h3>
-            <p>Cancel entirely in two clicks. Your final delivery always arrives first.</p>
+            <h3>Plant replacement</h3>
+            <p>Anything that does not take in its first season is replaced on us.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">06</div>
-            <h3>Named grower</h3>
-            <p>Each delivery card tells you which farm your stems were cut from.</p>
+            <h3>Same crew</h3>
+            <p>The people who built the garden are the people who come back to maintain it.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">07</div>
-            <h3>Zero plastic</h3>
-            <p>Kraft wrap, compostable water packs and recycled cardboard only.</p>
+            <h3>Low-waste practice</h3>
+            <p>Green waste chipped and returned to the soil wherever the site allows.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-num">08</div>
-            <h3>Member pricing</h3>
-            <p>10% off weddings, workshops and one-off gifts while subscribed.</p>
+            <h3>Clear scheduling</h3>
+            <p>Visit dates set a season ahead so the work happens in the right window, not at the last minute.</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- ============================ 6. CTA ============================ -->
-    <section class="cta-band">
-      <div class="container">
-        <span class="eyebrow" style="justify-content:center">START TODAY</span>
-        <h2>Your first bunch could<br>arrive tomorrow</h2>
-        <p>Create an account, pick a plan and choose a delivery window — the rest is our job.</p>
-        <div class="cta-actions">
-          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Start a subscription</a>
-          <a href="../../public/pages/contact.html" class="btn btn-green-outline btn-lg">Talk to us first</a>
+
+    <!-- ============================ 5. CTA ============================ -->
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h2>Start with a survey</h2>
+          <p>We visit, measure and look properly. You get the scope and the price in writing before anything is agreed — with no obligation on either side.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a survey</a>
+          <a href="services.html" class="btn btn-ghost btn-lg">See services</a>
         </div>
       </div>
     </section>

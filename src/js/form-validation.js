@@ -121,11 +121,11 @@
     var map = {
       contact: {
         title: 'Message sent — we will reply within one business day.',
-        body: 'Thank you for reaching out. A member of our florist team will email you back shortly. For anything urgent, call the studio on (042) 555-0182.'
+        body: 'Thank you for reaching out. A member of our design team will email you back shortly. For anything urgent, call the studio on +1 (555) 018-4420.'
       },
       newsletter: {
         title: 'You are on the list!',
-        body: 'Welcome to the Morning Journal — your 10% off first-order code is on its way to your inbox.'
+        body: 'Welcome to the Garden Journal — your seasonal notes will arrive in your inbox.'
       },
       login: {
         title: 'Welcome back to Garden Dreams!',
@@ -133,15 +133,15 @@
       },
       signup: {
         title: 'Account created successfully!',
-        body: 'Your Garden Dreams account is ready. Check your inbox to confirm your email and claim your welcome bouquet credit.'
+        body: 'Your Garden Dreams account is ready. Check your inbox to confirm your email and save your first project.'
       },
       notify: {
         title: 'You are on the early-access list!',
-        body: 'We will email you the moment the new studio collection launches — no other spam, we promise.'
+        body: 'We will email you the moment the new studio show garden opens — no other mail, we promise.'
       },
       faq: {
         title: 'Question received!',
-        body: 'Our support florists will answer your question by email within one business day.'
+        body: 'One of our team will answer your question by email within one business day.'
       },
       settings: {
         title: 'Preferences saved!',

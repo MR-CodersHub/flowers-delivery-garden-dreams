@@ -1,10 +1,19 @@
 /**
- * GARDEN DREAMS • Pricing page — billing period toggle
- * Moves the sliding pill and rewrites prices between monthly / annual.
+ * GARDEN DREAMS • Pricing page — billing period toggle + plan selection
+ * The toggle is optional: when it is absent the plan buttons still work.
  */
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.getElementById('billing-toggle');
+
+    /* Highlight plan CTA buttons */
+    document.querySelectorAll('.js-choose-plan').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var plan = btn.getAttribute('data-plan');
+        showToast('"' + plan + '" selected — we will confirm scope and price by email.');
+      });
+    });
+
     if (!toggle) return;
 
     var pill = toggle.querySelector('.billing-pill');
@@ -60,13 +69,5 @@
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(function () { if (activeBtn) movePill(activeBtn); });
     }
-
-    /* Highlight plan CTA buttons */
-    document.querySelectorAll('.js-choose-plan').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var plan = btn.getAttribute('data-plan');
-        showToast('"' + plan + '" selected — redirecting to secure checkout…');
-      });
-    });
   });
 })();

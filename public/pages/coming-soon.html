@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coming Soon • Garden Dreams</title>
-  <meta name="description" content="Something new is growing at Garden Dreams — a new studio collection is launching soon. Join the early-access list for first pick.">
+  <meta name="description" content="Something new is growing at Garden Dreams — a new show garden and studio planting service is opening soon. Join the early list for first pick.">
   <meta name="robots" content="noindex">
 
   <script src="../../src/js/theme.js"></script>
@@ -13,23 +13,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
-
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
   <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
 
-  <main>
+  <div id="site-header-slot"></div>
+
+  <main id="main-content">
 
     <!-- ============================ 1. COUNTDOWN ============================ -->
-    <section class="state-page" style="min-height: 100vh; min-height: 100dvh;">
+    <section class="state-page">
       <div class="state-inner">
         <span class="eyebrow" style="justify-content:center">SOMETHING IS GROWING</span>
-        <h1 style="margin-top:12px">The new Garden Dreams<br>collection opens soon</h1>
-        <p>A rebuilt studio range, twelve new seasonal recipes and a subscription box designed around local growers. Here is exactly how long we have left.</p>
+        <h1 style="margin-top:12px">The new Garden Dreams<br>show garden opens soon</h1>
+        <p>A demonstration garden at the Alder Lane studio, twelve new planting palettes and a planting service built around our partner nurseries. Here is exactly how long we have left.</p>
 
         <div class="countdown">
           <div class="count-box"><span class="count-num" id="cd-days">45</span><span class="count-label">Days</span></div>
@@ -39,13 +38,13 @@
         </div>
 
         <form class="notify-form" data-validate="notify" novalidate>
-          <input type="email" name="email" placeholder="Get notified at launch…" aria-label="Email address" required>
-          <button type="submit" class="btn btn-pink">Notify me</button>
+          <input type="email" name="email" placeholder="Tell me when it opens…" aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary">Notify me</button>
         </form>
 
         <div class="state-actions" style="margin-top:26px;margin-bottom:0">
           <a href="../../index.html" class="btn btn-outline">Visit the current site</a>
-          <a href="../../public/pages/contact.html" class="btn btn-outline">Ask us what is coming</a>
+          <a href="contact.html" class="btn btn-outline">Ask us what is coming</a>
         </div>
       </div>
     </section>
@@ -55,6 +54,8 @@
   <div id="site-footer-slot"></div>
 
   <script src="../../src/js/toast.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
   <script src="../../src/js/form-validation.js"></script>
   <script src="../../src/js/coming-soon.js"></script>
 </body>

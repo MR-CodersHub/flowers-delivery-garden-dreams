@@ -8,10 +8,10 @@
 
   var NAV_LINKS = [
     { label: 'Home',     href: 'index.html',                 match: ['index.html', ''] },
-    { label: 'Home 2',    href: 'public/pages/home-2.html',    match: ['home-2.html'] },
     { label: 'About',    href: 'public/pages/about.html',    match: ['about.html'] },
     { label: 'Services', href: 'public/pages/services.html', match: ['services.html', 'service-details.html'] },
-    { label: 'Blog',     href: 'public/pages/blog.html',     match: ['blog.html', 'blog-details.html'] },
+    { label: 'Projects', href: 'public/pages/projects.html', match: ['projects.html'] },
+    { label: 'Journal',  href: 'public/pages/blog.html',     match: ['blog.html', 'blog-details.html'] },
     { label: 'Contact',  href: 'public/pages/contact.html',  match: ['contact.html'] }
   ];
 
@@ -38,6 +38,8 @@
         '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>',
       bag:
         '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>',
+      arrow:
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>',
       user:
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
       login:
@@ -64,12 +66,14 @@
     }).join('');
 
     var html =
+      '<a class="skip-link" href="#main-content">Skip to main content</a>' +
       '<header class="site-header" id="site-header">' +
         '<div class="nav-container">' +
           '<a href="' + root + 'index.html" class="brand-logo">' +
             '<img src="' + root + 'assets/img/logo.png" alt="Garden Dreams logo" width="30" height="30">' +
             '<div class="brand-text">' +
-              '<span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>' +
+              '<span class="brand-name">Garden <span class="brand-accent">Dreams</span></span>' +
+              '<span class="brand-sub">Garden design &amp; landscaping</span>' +
             '</div>' +
           '</a>' +
 
@@ -108,10 +112,7 @@
 
             '<button id="rtl-toggle" class="rtl-toggle-btn desktop-only-action" aria-label="Toggle right-to-left layout" title="Toggle RTL layout">RTL</button>' +
 
-            '<button id="cart-btn" class="btn-icon cart-btn desktop-only-action" aria-label="View basket">' +
-              ico.bag +
-              '<span class="cart-count">1</span>' +
-            '</button>' +
+            '<a href="' + root + 'public/pages/contact.html" class="btn btn-primary btn-sm nav-cta">Start a project</a>' +
 
             '<div class="profile-menu" id="profile-menu">' +
               '<button class="profile-btn" id="profile-btn" aria-label="Open account menu" aria-expanded="false" aria-haspopup="true">' +
@@ -273,16 +274,14 @@
       });
     }
 
-    /* Cart button: open drawer when present (home), otherwise toast */
-    var cartBtn = document.getElementById('cart-btn');
-    if (cartBtn) {
-      cartBtn.addEventListener('click', function () {
-        var drawer = document.getElementById('cart-drawer-overlay');
-        if (drawer) {
-          drawer.classList.add('open');
-          if (typeof window.renderCart === 'function') window.renderCart();
-        } else {
-          showToast('Your basket is empty — explore our seasonal bouquets to begin.');
+    /* Mobile menu closes when the primary CTA is used */
+    var navCta = document.querySelector('.nav-cta');
+    if (navCta && navLinks) {
+      navCta.addEventListener('click', function () {
+        navLinks.classList.remove('mobile-open');
+        if (mobileToggle) {
+          mobileToggle.classList.remove('active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
         }
       });
     }

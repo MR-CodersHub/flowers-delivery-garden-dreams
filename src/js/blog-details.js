@@ -25,13 +25,13 @@
   }
 
   function notFound() {
-    var main = document.getElementById('article-root');
+    var main = document.getElementById('main-content');
     if (!main) return;
     main.innerHTML =
       '<div class="empty-state">' +
         '<h3>Article not found</h3>' +
         '<p>The journal entry you are looking for may have been moved. Browse the full journal instead.</p>' +
-        '<p style="margin-top:18px"><a class="btn btn-pink" href="blog.html">Back to the journal</a></p>' +
+        '<p style="margin-top:18px"><a class="btn btn-primary" href="blog.html">Back to the journal</a></p>' +
       '</div>';
     document.title = 'Article not found • Garden Dreams';
   }
@@ -72,7 +72,7 @@
     document.getElementById('author-box').innerHTML =
       '<img src="' + post.authorAvatar + '" alt="' + esc(post.author) + '">' +
       '<div><h4>' + esc(post.author) + '</h4><div class="author-role">' + esc(post.authorRole) + '</div>' +
-      '<p>Writes about seasonal floristry, grower relationships and the small details that make cut flowers last. Part of the Garden Dreams studio team since 2019.</p></div>';
+      '<p>' + esc(post.author) + ' is ' + esc(post.authorRole).toLowerCase() + ' at the Garden Dreams studio on Alder Lane, and writes about the practical side of making a garden work through the year. Part of the team since 2019.</p></div>';
 
     /* --- Sidebar categories --- */
     var cats = window.GardenData.postCategories();
@@ -131,7 +131,7 @@
     document.querySelectorAll('.share-row a:not([data-copy-link])').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        showToast('Share sheet opened — spread the blooms!');
+        showToast('Share sheet opened — send this one to someone with a garden.');
       });
     });
   }

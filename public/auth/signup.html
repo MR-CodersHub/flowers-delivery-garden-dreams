@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account • Garden Dreams</title>
-  <meta name="description" content="Create a free Garden Dreams account for member pricing, delivery control and a welcome bouquet credit on your first order.">
+  <meta name="description" content="Create a free Garden Dreams account to keep every proposal, survey and care plan in one place, and to manage your garden projects.">
 
   <script src="../../src/js/theme.js"></script>
 
@@ -12,16 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
-
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
   <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
 
-  <main>
+  <main id="main-content">
 
     <!-- ============================ 1. SIGN UP ============================ -->
     <section class="auth-section">
@@ -37,12 +34,12 @@
           <div class="auth-brand-header">
             <a href="../../index.html" class="auth-brand-logo" title="Back to Garden Dreams Home">
               <img src="../../assets/img/logo.png" alt="Garden Dreams logo" width="46" height="46">
-              <span class="auth-brand-name">Garden <span class="pink-accent">Dreams</span></span>
+              <span class="auth-brand-name">Garden <span class="brand-accent">Dreams</span></span>
             </a>
           </div>
 
           <h1>Create your account</h1>
-          <p class="auth-sub">Already a member? <a href="../../public/auth/login.html">Log in instead</a></p>
+          <p class="auth-sub">Already a member? <a href="login.html">Log in instead</a></p>
 
           <form class="auth-form" data-validate="signup" novalidate>
             <div class="form-group">
@@ -73,15 +70,15 @@
 
             <div class="form-check">
               <input type="checkbox" id="signup-terms" name="terms" required>
-              <label for="signup-terms">I agree to the <a href="../../public/pages/Terms-of-service.html">Terms of Service</a> and <a href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.</label>
+              <label for="signup-terms">I agree to the <a href="../pages/Terms-of-service.html">Terms of Service</a> and <a href="../pages/Privacy-policy.html">Privacy Policy</a>.</label>
             </div>
 
             <div class="form-check">
               <input type="checkbox" id="signup-news" name="news">
-              <label for="signup-news">Send me the Thursday bloom guide and studio offers.</label>
+              <label for="signup-news">Send me the Garden Journal and seasonal studio notes.</label>
             </div>
 
-            <button type="submit" class="btn btn-pink btn-block btn-lg">Create account</button>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Create account</button>
           </form>
 
           <div class="auth-divider">or sign up with</div>

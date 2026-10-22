@@ -12,9 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
-
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
   <link rel="icon" href="../../assets/img/logo.png">
@@ -23,13 +20,13 @@
 
   <div id="site-header-slot"></div>
 
-  <main id="article-root">
+  <main id="main-content">
 
     <!-- ============================ 1. BREADCRUMB HERO ============================ -->
     <section class="page-hero" style="padding-bottom:44px">
       <div class="container">
-        <p class="eyebrow" style="justify-content:center">THE MORNING JOURNAL</p>
-        <h1 style="font-size:clamp(1.9rem,4vw,3rem)">Notes from the<br>florist's <span class="serif-italic">bench</span></h1>
+        <p class="eyebrow" style="justify-content:center">The garden journal</p>
+        <h1 style="font-size:clamp(1.9rem,4vw,3rem)">Notes from the<br><span class="serif-italic">drawing table</span></h1>
       </div>
     </section>
 
@@ -53,11 +50,11 @@
           </div>
 
           <div class="sidebar-widget widget-newsletter">
-            <h3 class="widget-title">Morning Journal</h3>
-            <p>One email each Thursday: what is blooming, how to keep it, and a studio story.</p>
+            <h3 class="widget-title">Seasonal notes</h3>
+            <p>One email each month: what to plant, what to cut back, and a note from the studio.</p>
             <form class="newsletter-form" data-validate="newsletter" novalidate>
               <input type="email" name="email" placeholder="Your email address…" required aria-label="Email address">
-              <button type="submit" class="btn btn-pink btn-sm">Join</button>
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
             </form>
           </div>
         </aside>
@@ -88,14 +85,15 @@
     </section>
 
     <!-- ============================ 5. CTA ============================ -->
-    <section class="cta-band">
-      <div class="container">
-        <span class="eyebrow" style="justify-content:center">FRESH CUT WEEKLY</span>
-        <h2>Want the bloom guide<br>before anyone else?</h2>
-        <p>Subscribers get the seasonal guide, care notes and early access to workshop seats every Thursday morning.</p>
-        <div class="cta-actions">
-          <a href="../../public/auth/signup.html" class="btn btn-pink btn-lg">Create a free account</a>
-          <a href="../../public/pages/blog.html" class="btn btn-green-outline btn-lg">Back to the journal</a>
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h2>One note a month, nothing more</h2>
+          <p>What to plant, what to cut back and what is coming into season — a single short letter from the studio.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a href="../../public/auth/signup.html" class="btn btn-primary btn-lg">Create a free account</a>
+          <a href="blog.html" class="btn btn-ghost btn-lg">Back to the journal</a>
         </div>
       </div>
     </section>

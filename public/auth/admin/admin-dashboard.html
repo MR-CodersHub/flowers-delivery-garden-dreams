@@ -4,16 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard • Garden Dreams</title>
-  <meta name="description" content="Garden Dreams studio admin — orders, deliveries, subscribers and revenue at a glance.">
+  <meta name="description" content="Garden Dreams studio admin — projects, surveys, crew schedules and active care plans at a glance.">
 
   <script src="../../../src/js/theme.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
 
   <link rel="stylesheet" href="../../../src/css/style.css">
   <link rel="stylesheet" href="../../../src/css/components.css">
@@ -33,7 +30,7 @@
       <a href="../../../index.html" class="dash-brand-logo" title="Back to Garden Dreams Home">
         <img src="../../../assets/img/logo.png" alt="Garden Dreams logo" width="36" height="36">
         <div class="dash-brand-text">
-          <span class="brand-name">Garden <span class="pink-accent">Dreams</span></span>
+          <span class="brand-name">Garden <span class="brand-accent">Dreams</span></span>
         </div>
       </a>
 
@@ -44,9 +41,9 @@
     </div>
 
     <div class="dash-nav-right">
-      <a href="../../../index.html" class="dash-storefront-btn" title="View store homepage">
+      <a href="../../../index.html" class="dash-storefront-btn" title="View the main site">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        <span>Storefront</span>
+        <span>Main site</span>
       </a>
 
       <button id="dash-theme-toggle" class="theme-toggle-btn" aria-label="Toggle colour theme" title="Toggle theme">
@@ -61,7 +58,7 @@
           <div class="dash-avatar">MO</div>
           <div class="dash-user-meta">
             <span class="dash-user-name">Maya Okafor</span>
-            <span class="dash-user-role">Studio Lead / Admin</span>
+            <span class="dash-user-role">Founder / Lead Designer</span>
           </div>
           <svg class="dash-user-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
@@ -76,15 +73,15 @@
           </div>
           <div class="dash-dd-divider"></div>
           <a href="#settings" class="dash-dd-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Studio Settings</a>
-          <a href="../../../public/auth/user/user-dashboard.html" class="dash-dd-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Customer Portal</a>
+          <a href="../user/user-dashboard.html" class="dash-dd-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Client Portal</a>
           <div class="dash-dd-divider"></div>
-          <a href="../../../public/auth/login.html" class="dash-dd-item logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Log out</a>
+          <a href="../login.html" class="dash-dd-item logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Log out</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="dash-shell">
+  <main class="dash-shell" id="main-content">
 
     <!-- ============================ SIDEBAR ============================ -->
     <aside class="dash-sidebar" id="dash-sidebar">
@@ -95,21 +92,21 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
           Overview
         </a>
-        <a href="#orders">
+        <a href="#projects">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          Orders
+          Projects
         </a>
         <a href="#services">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 4 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0 0 8 4 4 0 0 0 0 8 4 4 0 0 0 0-8 0 4 0 0 0 0-8z"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
           Services
         </a>
-        <a href="#subscribers">
+        <a href="#clients">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Subscribers
+          Clients
         </a>
-        <a href="#deliveries">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          Deliveries
+        <a href="#schedule">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Crew schedule
         </a>
         <a href="#messages">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -123,7 +120,7 @@
 
 
       <nav class="dash-nav" aria-label="Account">
-        <a href="../../../public/auth/login.html">
+        <a href="../login.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
           Log out
         </a>
@@ -133,30 +130,40 @@
     <!-- ============================ MAIN ============================ -->
     <div class="dash-main">
 
+      <!-- 0. DEMO DATA NOTICE -->
+      <div class="portfolio-note" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="flex:0 0 auto;margin-top:2px">
+          <circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+        </svg>
+        <div>
+          <strong>Preview data.</strong> Project records, client names, crew counts and totals below are sample content for layout review only. Nothing here is a live studio figure — connect the portal to studio records before launch.
+        </div>
+      </div>
+
       <!-- 1. TOP BAR -->
       <div class="dash-topbar" id="overview">
         <div class="dash-title">
           <h1>Studio overview</h1>
-          <p>Tuesday, 6 October 2026 • 12 orders need attention today</p>
+          <p><span id="dash-today">Today</span> • 6 projects need attention today</p>
         </div>
         <div class="dash-top-actions">
           <button class="dash-menu-btn" id="dash-menu-toggle" type="button" aria-label="Open dashboard menu" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
-          <button class="btn btn-outline btn-sm" type="button" data-toast="Daily report exported as CSV.">Export report</button>
-          <button class="btn btn-pink btn-sm" type="button" data-toast="New order form opened — add a customer to continue.">New order</button>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Weekly report exported as CSV.">Export report</button>
+          <button class="btn btn-primary btn-sm" type="button" data-toast="New project form opened — add a survey to continue.">New project</button>
         </div>
       </div>
 
       <!-- 2. WELCOME BANNER -->
       <div class="welcome-banner">
         <div>
-          <h2>Good morning, Maya — the studio is buzzing</h2>
-          <p>18 bunches are conditioned and ready, 12 orders are in processing and the Riverside van leaves at 10:30.</p>
+          <h2>Good morning, Maya — the studio is busy</h2>
+          <p>3 surveys are booked for today, 6 projects are in build and the planting crew starts at 8:30am.</p>
         </div>
         <div class="cta-actions" style="margin:0">
-          <button class="btn btn-pink" type="button" data-toast="Delivery manifest opened for today's route.">View today's route</button>
-          <button class="btn btn-green-outline" type="button" data-toast="Inventory sheet opened — 4 stems flagged low.">Check inventory</button>
+          <button class="btn btn-primary" type="button" data-toast="Crew sheet opened — 4 sites scheduled today.">View today's schedule</button>
+          <button class="btn btn-outline" type="button" data-toast="Plant list opened — 3 batches at the nurseries.">Check plant stock</button>
         </div>
       </div>
 
@@ -164,42 +171,42 @@
       <div class="dash-grid-4" style="margin-bottom:24px">
         <div class="stat-card">
           <div>
-            <span class="stat-label">Revenue this month</span>
-            <div class="stat-value" data-count="24850" data-prefix="$">$0</div>
-            <span class="stat-trend up">+12.4% vs last month</span>
+            <span class="stat-label">Projects in build</span>
+            <div class="stat-value" data-count="14">0</div>
+            <span class="stat-trend up">6 need attention</span>
           </div>
           <div class="stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-        </div>
-
-        <div class="stat-card">
-          <div>
-            <span class="stat-label">Orders in progress</span>
-            <div class="stat-value" data-count="146">0</div>
-            <span class="stat-trend up">12 need attention</span>
-          </div>
-          <div class="stat-icon green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
         </div>
 
         <div class="stat-card">
           <div>
-            <span class="stat-label">Active subscribers</span>
-            <div class="stat-value" data-count="348">0</div>
-            <span class="stat-trend up">+21 this week</span>
+            <span class="stat-label">Active care plans</span>
+            <div class="stat-value" data-count="62">0</div>
+            <span class="stat-trend up">92% client retention</span>
           </div>
-          <div class="stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <div class="stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8"/><path d="M12 14c0-4 3-7 8-7 0 5-3 8-8 8z"/><path d="M12 14C12 10 9 7 4 7c0 5 3 8 8 7z"/></svg>
           </div>
         </div>
 
         <div class="stat-card">
           <div>
-            <span class="stat-label">On-time delivery rate</span>
-            <div class="stat-value" data-count="99.2" data-decimals="1" data-suffix="%">0%</div>
-            <span class="stat-trend down">-0.3% vs last week</span>
+            <span class="stat-label">Surveys booked</span>
+            <div class="stat-value" data-count="27">0</div>
+            <span class="stat-trend up">8 this week</span>
+          </div>
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <span class="stat-label">Visits completed on time</span>
+            <div class="stat-value" data-count="98.5" data-decimals="1" data-suffix="%">0%</div>
+            <span class="stat-trend down">-0.4% vs last week</span>
           </div>
           <div class="stat-icon green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -207,110 +214,110 @@
         </div>
       </div>
 
-      <!-- 4. REVENUE CHART + TODAY'S ROUTE -->
+      <!-- 4. WEEKLY WORKLOAD + TODAY'S SCHEDULE -->
       <div class="dash-grid-2" style="margin-bottom:24px">
         <section class="dash-panel">
           <div class="dash-panel-head">
             <div>
-              <h3>Weekly revenue</h3>
-              <span class="panel-sub">Last 7 days, paid orders only</span>
+              <h3>Weekly workload</h3>
+              <span class="panel-sub">Crew hours booked, last 7 days</span>
             </div>
             <div class="chart-legend">
-              <span><i class="dot-pink"></i> Orders</span>
-              <span><i class="dot-green"></i> Subscriptions</span>
+              <span><i class="dot-pink"></i> Build work</span>
+              <span><i class="dot-green"></i> Care visits</span>
             </div>
           </div>
           <div class="dash-panel-body">
             <div class="chart-bars">
               <div class="chart-col">
-                <div class="chart-bar" data-height="52%"><span class="bar-tip">$2.1k</span></div>
+                <div class="chart-bar" data-height="52%"><span class="bar-tip">18h</span></div>
                 <span class="chart-label">Mon</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar alt" data-height="74%"><span class="bar-tip">$3.4k</span></div>
+                <div class="chart-bar alt" data-height="74%"><span class="bar-tip">26h</span></div>
                 <span class="chart-label">Tue</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar" data-height="46%"><span class="bar-tip">$1.8k</span></div>
+                <div class="chart-bar" data-height="46%"><span class="bar-tip">16h</span></div>
                 <span class="chart-label">Wed</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar alt" data-height="88%"><span class="bar-tip">$4.2k</span></div>
+                <div class="chart-bar alt" data-height="88%"><span class="bar-tip">31h</span></div>
                 <span class="chart-label">Thu</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar" data-height="64%"><span class="bar-tip">$2.9k</span></div>
+                <div class="chart-bar" data-height="64%"><span class="bar-tip">22h</span></div>
                 <span class="chart-label">Fri</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar alt" data-height="96%"><span class="bar-tip">$4.8k</span></div>
+                <div class="chart-bar alt" data-height="96%"><span class="bar-tip">34h</span></div>
                 <span class="chart-label">Sat</span>
               </div>
               <div class="chart-col">
-                <div class="chart-bar" data-height="38%"><span class="bar-tip">$1.5k</span></div>
+                <div class="chart-bar" data-height="38%"><span class="bar-tip">13h</span></div>
                 <span class="chart-label">Sun</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="dash-panel" id="deliveries">
+        <section class="dash-panel" id="schedule">
           <div class="dash-panel-head">
             <div>
-              <h3>Today's route</h3>
-              <span class="panel-sub">Van 1 • Sam driving</span>
+              <h3>Today's schedule</h3>
+              <span class="panel-sub">Crew 1 • Sam on site</span>
             </div>
-            <button class="btn btn-outline btn-sm" type="button" data-toast="Full route manifest opened.">Manifest</button>
+            <button class="btn btn-outline btn-sm" type="button" data-toast="Full crew sheet opened.">Crew sheet</button>
           </div>
           <div class="dash-panel-body">
             <div class="dash-list">
               <div class="dash-list-item">
-                <img class="thumb" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=120&q=80" alt="Seasonal bouquet" loading="lazy">
+                <img class="thumb" src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=120&q=80" alt="Courtyard planting" loading="lazy">
                 <div class="item-main">
                   <strong>#GD-4821 • H. Reyes</strong>
-                  <span>9:15 – Riverside Court 4</span>
+                  <span>9:15 – Courtyard planting, 14 Alder Lane</span>
                 </div>
-                <span class="status-pill processing">processing</span>
+                <span class="status-pill processing">in progress</span>
               </div>
               <div class="dash-list-item">
-                <img class="thumb" src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=120&q=80" alt="Blush bouquet" loading="lazy">
+                <img class="thumb" src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=120&q=80" alt="Border planting" loading="lazy">
                 <div class="item-main">
                   <strong>#GD-4822 • Northline Co.</strong>
-                  <span>10:00 – 88 Harbour St</span>
+                  <span>10:00 – Courtyard redesign, 88 Harbour St</span>
                 </div>
                 <span class="status-pill scheduled">scheduled</span>
               </div>
               <div class="dash-list-item">
-                <img class="thumb" src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&w=120&q=80" alt="Dried arrangement" loading="lazy">
+                <img class="thumb" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=120&q=80" alt="Path and hardscape work" loading="lazy">
                 <div class="item-main">
                   <strong>#GD-4823 • D. Okafor</strong>
-                  <span>11:30 – 12 Larch Way</span>
+                  <span>11:30 – Path &amp; drainage rebuild, 12 Larch Way</span>
                 </div>
                 <span class="status-pill scheduled">scheduled</span>
               </div>
               <div class="dash-list-item">
-                <img class="thumb" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=120&q=80" alt="Table florals" loading="lazy">
+                <img class="thumb" src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=120&q=80" alt="Garden maintenance visit" loading="lazy">
                 <div class="item-main">
                   <strong>#GD-4817 • Amara &amp; Lewis</strong>
-                  <span>Delivered 8:40 • photo sent</span>
+                  <span>Finished 8:40 • report sent</span>
                 </div>
-                <span class="status-pill delivered">delivered</span>
+                <span class="status-pill delivered">complete</span>
               </div>
             </div>
           </div>
         </section>
       </div>
 
-      <!-- 5. ORDERS TABLE -->
-      <section class="dash-panel" id="orders" style="margin-bottom:24px">
+      <!-- 5. PROJECTS TABLE -->
+      <section class="dash-panel" id="projects" style="margin-bottom:24px">
         <div class="dash-panel-head">
           <div>
-            <h3>Recent orders</h3>
+            <h3>Recent projects</h3>
             <span class="panel-sub" id="table-search-note">6 rows shown</span>
           </div>
           <div class="dash-search">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="search" id="table-search" placeholder="Search orders…" aria-label="Search orders">
+            <input type="search" id="table-search" placeholder="Search projects…" aria-label="Search projects">
           </div>
         </div>
         <div class="dash-panel-body flush">
@@ -318,10 +325,10 @@
             <table class="data-table" id="filter-table">
               <thead>
                 <tr>
-                  <th>Order</th>
-                  <th>Customer</th>
+                  <th>Reference</th>
+                  <th>Client</th>
                   <th>Service</th>
-                  <th>Total</th>
+                  <th>Stage</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -330,49 +337,49 @@
                 <tr>
                   <td class="cell-strong">#GD-4821</td>
                   <td>Hannah Reyes</td>
-                  <td>Weekly subscription</td>
-                  <td>$64</td>
-                  <td><span class="status-pill processing">processing</span></td>
+                  <td>Garden design &amp; build</td>
+                  <td>Planting</td>
+                  <td><span class="status-pill processing">in progress</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
                 <tr>
                   <td class="cell-strong">#GD-4822</td>
                   <td>Northline Co.</td>
-                  <td>Corporate display</td>
-                  <td>$180</td>
+                  <td>Commercial landscaping</td>
+                  <td>Groundworks</td>
                   <td><span class="status-pill scheduled">scheduled</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
                 <tr>
                   <td class="cell-strong">#GD-4823</td>
                   <td>Daniel Okafor</td>
-                  <td>Gift bouquet</td>
-                  <td>$85</td>
+                  <td>Hardscape &amp; drainage</td>
+                  <td>Survey</td>
                   <td><span class="status-pill pending">pending</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
                 <tr>
                   <td class="cell-strong">#GD-4817</td>
                   <td>Amara &amp; Lewis</td>
-                  <td>Wedding package</td>
-                  <td>$2,400</td>
-                  <td><span class="status-pill delivered">delivered</span></td>
+                  <td>Full garden redesign</td>
+                  <td>Handover</td>
+                  <td><span class="status-pill delivered">complete</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
                 <tr>
                   <td class="cell-strong">#GD-4814</td>
                   <td>Priya Shah</td>
-                  <td>Workshop seat</td>
-                  <td>$65</td>
-                  <td><span class="status-pill paid">paid</span></td>
+                  <td>Seasonal care plan</td>
+                  <td>Spring visit</td>
+                  <td><span class="status-pill scheduled">scheduled</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
                 <tr>
                   <td class="cell-strong">#GD-4809</td>
                   <td>Jonah Meyer</td>
-                  <td>Fortnightly subscription</td>
-                  <td>$38</td>
-                  <td><span class="status-pill cancelled">cancelled</span></td>
+                  <td>Planting scheme</td>
+                  <td>Proposal</td>
+                  <td><span class="status-pill cancelled">on hold</span></td>
                   <td><button class="btn btn-outline btn-sm js-status" type="button">Advance</button></td>
                 </tr>
               </tbody>
@@ -385,106 +392,106 @@
       <section class="dash-panel" id="services" style="margin-bottom:24px">
         <div class="dash-panel-head">
           <div>
-            <h3>Studio services &amp; catalog</h3>
-            <span class="panel-sub">Active plans, bespoke bookings and workshops</span>
+            <h3>Studio services</h3>
+            <span class="panel-sub">Active offers, one-off works and workshops</span>
           </div>
-          <button class="btn btn-outline btn-sm" type="button" data-toast="Service editor opened — add a new bouquet or package.">+ Add service</button>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Service editor opened — add a new service to continue.">+ Add service</button>
         </div>
         <div class="dash-panel-body">
           <div class="dash-grid-4">
             <div class="service-dash-card">
-              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active tier</span>
-              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Weekly Bouquets</h4>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">16–20 stems • $64 / mo</p>
-              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">142 active subscribers</div>
+              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active offer</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Garden design &amp; build</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Survey to handover • quoted per site</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">14 projects in build</div>
             </div>
             <div class="service-dash-card">
-              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active tier</span>
-              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Corporate Styling</h4>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Vase arrangements • $180 / mo</p>
-              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">24 corporate offices</div>
+              <span class="status-pill delivered" style="margin-bottom:8px; display:inline-block;">Active offer</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Seasonal care plans</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Four visits a year • quoted per site</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">62 active care plans</div>
             </div>
             <div class="service-dash-card">
-              <span class="status-pill scheduled" style="margin-bottom:8px; display:inline-block;">Booking</span>
-              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Weddings &amp; Events</h4>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Custom florals • from $1,500</p>
-              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">8 events this quarter</div>
+              <span class="status-pill scheduled" style="margin-bottom:8px; display:inline-block;">One-off</span>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Irrigation &amp; drainage</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Survey, install, handover</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">9 works this quarter</div>
             </div>
             <div class="service-dash-card">
               <span class="status-pill scheduled" style="margin-bottom:8px; display:inline-block;">Workshop</span>
-              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Seasonal Masterclass</h4>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Hands-on studio • $65 / seat</p>
-              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Next class: 18 Oct (sold out)</div>
+              <h4 style="font-family:var(--font-serif); font-size:1.05rem; margin-bottom:4px;">Garden clinic</h4>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">Hands-on session • by arrangement</p>
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Next session: 18 Oct (full)</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7. SUBSCRIBERS OVERVIEW -->
-      <section class="dash-panel" id="subscribers" style="margin-bottom:24px">
+      <!-- 7. CLIENTS OVERVIEW -->
+      <section class="dash-panel" id="clients" style="margin-bottom:24px">
         <div class="dash-panel-head">
           <div>
-            <h3>Subscriber health &amp; tiers</h3>
-            <span class="panel-sub">142 total members • 96.4% retention rate</span>
+            <h3>Client health &amp; care plans</h3>
+            <span class="panel-sub">62 active clients • 92% garden-care retention</span>
           </div>
-          <button class="btn btn-outline btn-sm" type="button" data-toast="Exported subscriber roster to CSV.">Export roster</button>
+          <button class="btn btn-outline btn-sm" type="button" data-toast="Exported client roster to CSV.">Export roster</button>
         </div>
         <div class="dash-panel-body">
           <div class="dash-grid-3">
             <div class="service-dash-card">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Maison Plan</strong>
-                <span class="status-pill delivered">Weekly</span>
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Year-round &amp; planting</strong>
+                <span class="status-pill delivered">Seasonal</span>
               </div>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">68 active members • $4,352 / mo</p>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">28 active clients • four visits a year</p>
               <div class="meter-track"><span class="meter-fill" data-width="48%"></span></div>
             </div>
             <div class="service-dash-card">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Jardin Plan</strong>
-                <span class="status-pill delivered">Bi-weekly</span>
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Full year care</strong>
+                <span class="status-pill delivered">All year</span>
               </div>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">54 active members • $2,052 / mo</p>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">22 active clients • visits every month</p>
               <div class="meter-track"><span class="meter-fill" data-width="38%"></span></div>
             </div>
             <div class="service-dash-card">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Petit Plan</strong>
-                <span class="status-pill delivered">Monthly</span>
+                <strong style="font-family:var(--font-serif); font-size:1.05rem;">Seasonal tidy</strong>
+                <span class="status-pill delivered">Per season</span>
               </div>
-              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">20 active members • $560 / mo</p>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">12 active clients • two visits a year</p>
               <div class="meter-track"><span class="meter-fill" data-width="14%"></span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 6. STOCK + MESSAGES -->
+      <!-- 6. NURSERY STOCK + MESSAGES -->
       <div class="dash-grid-2" style="margin-bottom:24px">
         <section class="dash-panel">
           <div class="dash-panel-head">
             <div>
-              <h3>Stem stock this week</h3>
+              <h3>Plant stock this week</h3>
               <span class="panel-sub">Against planned usage</span>
             </div>
-            <button class="btn btn-outline btn-sm" type="button" data-toast="Purchase order drafted with 3 partner farms.">Reorder</button>
+            <button class="btn btn-outline btn-sm" type="button" data-toast="Purchase order drafted with 3 partner nurseries.">Reorder</button>
           </div>
           <div class="dash-panel-body">
             <div class="meter-list">
               <div>
-                <div class="meter-head"><strong>Garden roses</strong><span>82% allocated</span></div>
+                <div class="meter-head"><strong>Structural evergreens</strong><span>82% allocated</span></div>
                 <div class="meter-track"><span class="meter-fill" data-width="82%"></span></div>
               </div>
               <div>
-                <div class="meter-head"><strong>Ranunculus</strong><span>64% allocated</span></div>
+                <div class="meter-head"><strong>Long-flowering perennials</strong><span>64% allocated</span></div>
                 <div class="meter-track"><span class="meter-fill" data-width="64%"></span></div>
               </div>
               <div>
-                <div class="meter-head"><strong>Eucalyptus</strong><span>47% allocated</span></div>
+                <div class="meter-head"><strong>Ornamental grasses</strong><span>47% allocated</span></div>
                 <div class="meter-track"><span class="meter-fill" data-width="47%"></span></div>
               </div>
               <div>
-                <div class="meter-head"><strong>Seasonal wildflowers</strong><span>31% allocated</span></div>
+                <div class="meter-head"><strong>Native meadow plugs</strong><span>31% allocated</span></div>
                 <div class="meter-track"><span class="meter-fill" data-width="31%"></span></div>
               </div>
             </div>
@@ -504,21 +511,21 @@
               <div class="dash-list-item">
                 <div class="item-main">
                   <strong>Sofia Marchetti</strong>
-                  <span>Can we add 20 more centrepieces to the June booking?</span>
+                  <span>Can we add a second phase to the courtyard planting?</span>
                 </div>
                 <span class="item-amount">4m</span>
               </div>
               <div class="dash-list-item">
                 <div class="item-main">
                   <strong>Northline Co.</strong>
-                  <span>Please move our weekly slot to Thursday mornings.</span>
+                  <span>Please move our maintenance slot to Thursday mornings.</span>
                 </div>
                 <span class="item-amount">1h</span>
               </div>
               <div class="dash-list-item">
                 <div class="item-main">
                   <strong>Dev Patel</strong>
-                  <span>Skip next week — travelling. Thank you!</span>
+                  <span>Pause the next visit — travelling. Thank you!</span>
                 </div>
                 <span class="item-amount">3h</span>
               </div>
@@ -532,84 +539,84 @@
         <div class="dash-panel-head">
           <div>
             <h3>Studio preferences</h3>
-            <span class="panel-sub">Applies to every order leaving Alder Lane</span>
+            <span class="panel-sub">Applies to every job leaving Alder Lane</span>
           </div>
           <div class="tab-row" data-tab-group=".settings-panels">
             <button type="button" class="active" data-tab="general">General</button>
             <button type="button" data-tab="notifications">Notifications</button>
-            <button type="button" data-tab="delivery">Delivery</button>
+            <button type="button" data-tab="scheduling">Scheduling</button>
           </div>
         </div>
         <div class="dash-panel-body settings-panels">
           <div data-panel="general">
             <div class="switch">
               <div class="switch-copy">
-                <strong>Seasonal substitutions by default</strong>
-                <span>Allow florists to swap unavailable stems without asking each customer.</span>
+                <strong>Propose plant substitutions</strong>
+                <span>Allow the designer to swap an unavailable plant without asking every client.</span>
               </div>
-              <label><input type="checkbox" checked data-on="Seasonal substitutions enabled" data-off="Seasonal substitutions disabled"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" checked data-on="Substitutions enabled" data-off="Substitutions disabled"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Grower cards on every delivery</strong>
-                <span>Print the farm and cut date on the delivery note.</span>
+                <strong>Nursery notes on every job sheet</strong>
+                <span>Print the nursery and batch on the planting schedule.</span>
               </div>
-              <label><input type="checkbox" checked data-on="Grower cards printing" data-off="Grower cards switched off"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" checked data-on="Nursery notes printing" data-off="Nursery notes switched off"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Plastic-free packaging audit</strong>
-                <span>Block dispatch if non-compostable materials are detected.</span>
+                <strong>Site photo audit</strong>
+                <span>Block handover if before and after photos are missing.</span>
               </div>
-              <label><input type="checkbox" checked data-on="Packaging audit enforced" data-off="Packaging audit relaxed"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" checked data-on="Photo audit enforced" data-off="Photo audit relaxed"><span class="track" role="switch"></span></label>
             </div>
           </div>
 
           <div data-panel="notifications" hidden>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Instant order alerts</strong>
-                <span>Notify the studio floor the moment a new order is paid.</span>
+                <strong>Instant job alerts</strong>
+                <span>Notify the studio the moment a new project is accepted.</span>
               </div>
-              <label><input type="checkbox" checked data-on="Instant order alerts on" data-off="Instant order alerts off"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" checked data-on="Instant job alerts on" data-off="Instant job alerts off"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
                 <strong>Failed payment warnings</strong>
-                <span>Email admin when a renewal payment fails twice.</span>
+                <span>Email admin when a care plan payment fails twice.</span>
               </div>
               <label><input type="checkbox" data-on="Payment warnings on" data-off="Payment warnings off"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
                 <strong>Weekly digest every Monday</strong>
-                <span>Revenue, retention and delivery stats in one email.</span>
+                <span>Projects, crew hours and client notes in one email.</span>
               </div>
               <label><input type="checkbox" checked data-on="Weekly digest on" data-off="Weekly digest off"><span class="track" role="switch"></span></label>
             </div>
           </div>
 
-          <div data-panel="delivery" hidden>
+          <div data-panel="scheduling" hidden>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Same-day cutoff at 2pm</strong>
-                <span>Automatically push late orders to the next morning slot.</span>
+                <strong>Weather hold at 2 days</strong>
+                <span>Automatically flag ground conditions before a crew is assigned.</span>
               </div>
-              <label><input type="checkbox" checked data-on="2pm cutoff active" data-off="Cutoff disabled"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" checked data-on="Weather hold active" data-off="Weather hold disabled"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Photo confirmation required</strong>
-                <span>Couriers cannot close a stop without uploading a photo.</span>
+                <strong>Photo proof required</strong>
+                <span>Crew cannot close a site without uploading the finished photos.</span>
               </div>
               <label><input type="checkbox" checked data-on="Photo proof required" data-off="Photo proof optional"><span class="track" role="switch"></span></label>
             </div>
             <div class="switch">
               <div class="switch-copy">
-                <strong>Weekend surcharge</strong>
-                <span>Add $6 to Sunday deliveries outside the city ring.</span>
+                <strong>Weekend working</strong>
+                <span>Allow build work on Saturdays when a client deadline needs it.</span>
               </div>
-              <label><input type="checkbox" data-on="Weekend surcharge on" data-off="Weekend surcharge off"><span class="track" role="switch"></span></label>
+              <label><input type="checkbox" data-on="Weekend working on" data-off="Weekend working off"><span class="track" role="switch"></span></label>
             </div>
           </div>
         </div>
@@ -625,10 +632,10 @@
         </div>
         <div class="dash-panel-body">
           <div class="dash-grid-4">
-            <button class="btn btn-outline btn-block" type="button" data-toast="Subscription plan editor opened.">Edit plans</button>
-            <button class="btn btn-outline btn-block" type="button" data-toast="Delivery zones map opened.">Delivery zones</button>
-            <button class="btn btn-outline btn-block" type="button" data-toast="Blog composer opened — new draft created.">Write article</button>
-            <button class="btn btn-outline btn-block" type="button" data-toast="Team roster opened — 6 florists active.">Manage team</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Care plan editor opened.">Edit care plans</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Partner nursery list opened.">Nursery partners</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Journal composer opened — new draft created.">Write article</button>
+            <button class="btn btn-outline btn-block" type="button" data-toast="Team roster opened — 4 core specialists active.">Manage team</button>
           </div>
         </div>
       </section>

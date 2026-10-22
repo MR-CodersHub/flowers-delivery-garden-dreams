@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log In • Garden Dreams</title>
-  <meta name="description" content="Sign in to your Garden Dreams account to manage deliveries, skip a week, update your flowers and view order history.">
+  <meta name="description" content="Sign in to your Garden Dreams account to manage your garden projects, pause a care plan, review proposals and keep every survey in one place.">
 
   <script src="../../src/js/theme.js"></script>
 
@@ -12,16 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
-
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/components.css">
   <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body data-root="../../">
 
-  <main>
+  <main id="main-content">
 
     <!-- ============================ 1. LOGIN ============================ -->
     <section class="auth-section">
@@ -38,12 +35,12 @@
           <div class="auth-brand-header">
             <a href="../../index.html" class="auth-brand-logo" title="Back to Garden Dreams Home">
               <img src="../../assets/img/logo.png" alt="Garden Dreams logo" width="46" height="46">
-              <span class="auth-brand-name">Garden <span class="pink-accent">Dreams</span></span>
+              <span class="auth-brand-name">Garden <span class="brand-accent">Dreams</span></span>
             </a>
           </div>
 
           <h1>Log in to your account</h1>
-          <p class="auth-sub">New to Garden Dreams? <a href="../../public/auth/signup.html">Create a free account</a></p>
+          <p class="auth-sub">New to Garden Dreams? <a href="signup.html">Create a free account</a></p>
 
           <form class="auth-form" data-validate="login" novalidate>
             <div class="form-group">
@@ -64,10 +61,10 @@
                 <input type="checkbox" id="login-remember" name="remember">
                 <label for="login-remember">Keep me signed in</label>
               </div>
-              <a href="../../public/pages/contact.html">Forgot password?</a>
+              <a href="../pages/contact.html">Forgot password?</a>
             </div>
 
-            <button type="submit" class="btn btn-pink btn-block btn-lg">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Log in</button>
           </form>
 
           <div class="auth-divider">or continue with</div>
@@ -84,7 +81,7 @@
           </div>
 
           <p class="auth-sub" style="text-align:center;margin-top:22px;font-size:.82rem">
-            By logging in you agree to our <a href="../../public/pages/Terms-of-service.html">Terms</a> and <a href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.
+            By logging in you agree to our <a href="../pages/Terms-of-service.html">Terms</a> and <a href="../pages/Privacy-policy.html">Privacy Policy</a>.
           </p>
         </div>
 

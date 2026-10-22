@@ -42,6 +42,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    /* ---------- Today's date (kept current instead of a hard-coded day) ---------- */
+    var todayEl = document.getElementById('dash-today');
+    if (todayEl) {
+      todayEl.textContent = new Date().toLocaleDateString('en-GB', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+      });
+    }
+
     /* ---------- Dashboard mobile sidebar ---------- */
     var toggles = [
       document.getElementById('dash-menu-toggle'),
@@ -264,18 +272,23 @@
       });
     }
 
-    /* ---------- Admin: order status quick change ---------- */
+    /* ---------- Admin: project status quick change ---------- */
     document.querySelectorAll('.js-status').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var pill = btn.closest('tr') ? btn.closest('tr').querySelector('.status-pill') : null;
         if (pill) {
-          var states = ['processing', 'delivered', 'cancelled'];
-          var current = states.findIndex(function (s) { return pill.classList.contains(s); });
+          var states = [
+            { cls: 'scheduled', label: 'scheduled' },
+            { cls: 'processing', label: 'in progress' },
+            { cls: 'delivered', label: 'complete' }
+          ];
+          var allStatusClasses = ['scheduled', 'processing', 'delivered', 'pending', 'paid', 'cancelled'];
+          var current = states.findIndex(function (s) { return pill.classList.contains(s.cls); });
           var next = states[(current + 1) % states.length];
-          states.forEach(function (s) { pill.classList.remove(s); });
-          pill.classList.add(next);
-          pill.textContent = next;
-          showToast('Order status updated to "' + next + '"');
+          allStatusClasses.forEach(function (c) { pill.classList.remove(c); });
+          pill.classList.add(next.cls);
+          pill.textContent = next.label;
+          showToast('Project status updated to "' + next.label + '"');
         }
       });
     });

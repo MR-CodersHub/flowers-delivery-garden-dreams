@@ -1,6 +1,6 @@
 /**
  * GARDEN DREAMS • Service details — dynamic page by ?id=
- * service-details.html?id=seasonal-subscription → loads the matching service.
+ * service-details.html?id=garden-design-planning → loads the matching service.
  */
 (function () {
   function param(name) {
@@ -15,13 +15,13 @@
   var check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 
   function notFound() {
-    var root = document.getElementById('service-detail-root');
+    var root = document.getElementById('main-content');
     if (!root) return;
     root.innerHTML =
       '<div class="empty-state">' +
         '<h3>Service not found</h3>' +
         '<p>That service may have been renamed or retired. Browse everything we offer instead.</p>' +
-        '<p style="margin-top:18px"><a class="btn btn-pink" href="services.html">All services</a></p>' +
+        '<p style="margin-top:18px"><a class="btn btn-primary" href="services.html">All services</a></p>' +
       '</div>';
     document.title = 'Service not found • Garden Dreams';
   }
@@ -40,7 +40,7 @@
     document.getElementById('svc-excerpt').textContent = s.excerpt;
     document.getElementById('svc-price').textContent = s.price;
     document.getElementById('svc-duration').textContent = s.duration;
-    document.getElementById('svc-rating').textContent = s.rating;
+    document.getElementById('svc-highlight').textContent = s.highlight;
     document.getElementById('svc-tag').textContent = s.tag;
     var heroImg = document.getElementById('svc-hero-image');
     if (heroImg) { heroImg.src = s.image; heroImg.alt = s.title; }
@@ -71,7 +71,7 @@
         '<ul class="plan-features">' +
           tier.features.map(function (f) { return '<li>' + check + '<span>' + esc(f) + '</span></li>'; }).join('') +
         '</ul>' +
-        '<button class="btn ' + (tier.popular ? 'btn-pink' : 'btn-outline') + ' btn-block js-enquire" data-plan="' + esc(tier.name) + '">' + esc(tier.cta) + '</button>' +
+        '<button class="btn ' + (tier.popular ? 'btn-primary' : 'btn-outline') + ' btn-block js-enquire" data-plan="' + esc(tier.name) + '">' + esc(tier.cta) + '</button>' +
       '</div>';
     }).join('');
 
@@ -92,7 +92,7 @@
     var related = (s.related || []).map(function (rid) { return window.GardenData.getService(rid); }).filter(Boolean);
     document.getElementById('svc-related').innerHTML = related.map(function (r) {
       return '<a class="info-card" href="service-details.html?id=' + r.id + '">' +
-        '<div class="info-icon">' + (window.ServiceCardIcons[r.icon] || window.ServiceCardIcons.flower) + '</div>' +
+        '<div class="info-icon">' + (window.ServiceCardIcons[r.icon] || window.ServiceCardIcons.leaf) + '</div>' +
         '<div><h3>' + esc(r.title) + '</h3><p>' + esc(r.excerpt.slice(0, 96)) + '…</p>' +
         '<span class="service-card-link" style="margin-top:10px;display:inline-flex">View service ' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>' +
