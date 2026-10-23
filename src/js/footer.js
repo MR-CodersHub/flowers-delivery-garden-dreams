@@ -34,6 +34,7 @@
               '<h4 class="footer-heading">Explore</h4>' +
               '<ul class="footer-links">' +
                 '<li><a href="' + root + 'index.html">Home</a></li>' +
+                '<li><a href="' + root + 'public/pages/home-2.html">Urban Courtyards (Home 2)</a></li>' +
                 '<li><a href="' + root + 'public/pages/about.html">About the studio</a></li>' +
                 '<li><a href="' + root + 'public/pages/services.html">Services</a></li>' +
                 '<li><a href="' + root + 'public/pages/projects.html">Projects</a></li>' +

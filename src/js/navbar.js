@@ -8,10 +8,10 @@
 
   var NAV_LINKS = [
     { label: 'Home',     href: 'index.html',                 match: ['index.html', ''] },
+    { label: 'Home 2',    href: 'public/pages/home-2.html',    match: ['home-2.html'] },
     { label: 'About',    href: 'public/pages/about.html',    match: ['about.html'] },
     { label: 'Services', href: 'public/pages/services.html', match: ['services.html', 'service-details.html'] },
-    { label: 'Projects', href: 'public/pages/projects.html', match: ['projects.html'] },
-    { label: 'Journal',  href: 'public/pages/blog.html',     match: ['blog.html', 'blog-details.html'] },
+    { label: 'Blog',  href: 'public/pages/blog.html',     match: ['blog.html', 'blog-details.html'] },
     { label: 'Contact',  href: 'public/pages/contact.html',  match: ['contact.html'] }
   ];
 
@@ -82,6 +82,15 @@
               linksHtml +
             '</div>' +
             '<div class="mobile-nav-extras">' +
+              '<a href="' + root + 'public/pages/contact.html" class="btn btn-primary mobile-drawer-cta">Start your project</a>' +
+              '<div class="mobile-nav-divider"></div>' +
+              '<div class="mobile-nav-heading">Account &amp; Dashboards</div>' +
+              '<div class="mobile-account-grid">' +
+                '<a href="' + root + 'public/auth/login.html" class="mobile-account-link">' + ico.login + ' Log in</a>' +
+                '<a href="' + root + 'public/auth/signup.html" class="mobile-account-link">' + ico.signup + ' Sign up</a>' +
+                '<a href="' + root + 'public/auth/user/user-dashboard.html" class="mobile-account-link">' + ico.grid + ' User Dashboard</a>' +
+                '<a href="' + root + 'public/auth/admin/admin-dashboard.html" class="mobile-account-link">' + ico.shield + ' Admin Dashboard</a>' +
+              '</div>' +
               '<div class="mobile-nav-divider"></div>' +
               '<div class="mobile-nav-heading">Preferences</div>' +
               '<div class="mobile-nav-actions">' +
@@ -112,9 +121,7 @@
 
             '<button id="rtl-toggle" class="rtl-toggle-btn desktop-only-action" aria-label="Toggle right-to-left layout" title="Toggle RTL layout">RTL</button>' +
 
-            '<a href="' + root + 'public/pages/contact.html" class="btn btn-primary btn-sm nav-cta">Start a project</a>' +
-
-            '<div class="profile-menu" id="profile-menu">' +
+            '<div class="profile-menu desktop-only-action" id="profile-menu">' +
               '<button class="profile-btn" id="profile-btn" aria-label="Open account menu" aria-expanded="false" aria-haspopup="true">' +
                 ico.user +
               '</button>' +
@@ -131,7 +138,9 @@
                 '<a href="' + root + 'public/auth/admin/admin-dashboard.html" role="menuitem">' + ico.shield + ' Admin Dashboard</a>' +
                 '<a href="' + root + 'public/auth/user/user-dashboard.html" role="menuitem">' + ico.grid + ' User Dashboard</a>' +
               '</div>' +
-            '</div>' +
+            '</div>' + 
+            
+            '<a href="' + root + 'public/pages/contact.html" class="btn btn-primary btn-sm nav-cta">Start a project</a>' +
 
             '<button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">' +
               '<span></span><span></span><span></span>' +
@@ -166,7 +175,7 @@
         mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
 
-      navLinks.querySelectorAll('.nav-links-list a').forEach(function (link) {
+      navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
           navLinks.classList.remove('mobile-open');
           mobileToggle.classList.remove('active');

@@ -362,6 +362,16 @@
   transform: translateX(-3px);
 }
 
+@media (max-width: 1080px) {
+  .site-header .desktop-only-action,
+  .site-header .theme-toggle-btn.desktop-only-action,
+  .site-header .rtl-toggle-btn.desktop-only-action,
+  .site-header .profile-menu.desktop-only-action,
+  .site-header .nav-cta {
+    display: none !important;
+  }
+}
+
 /* ==========================================================================
    4. INNER PAGE HERO (banner with breadcrumb)
    ========================================================================== */
