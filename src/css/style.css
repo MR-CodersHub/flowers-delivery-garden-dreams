@@ -678,6 +678,7 @@ ul, ol {
   min-height: min(92vh, 900px);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: calc(var(--header-height) + clamp(2.5rem, 6vw, 4.75rem)) 0 clamp(3rem, 7vw, 5.5rem);
   background: var(--bg-ink) center / cover no-repeat;
   overflow: hidden;
@@ -688,7 +689,7 @@ ul, ol {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(100deg, rgba(8, 14, 10, 0.93) 0%, rgba(8, 14, 10, 0.82) 44%, rgba(8, 14, 10, 0.48) 76%, rgba(8, 14, 10, 0.34) 100%);
+  background: linear-gradient(180deg, rgba(8, 14, 10, 0.82) 0%, rgba(8, 14, 10, 0.68) 50%, rgba(8, 14, 10, 0.82) 100%);
 }
 
 .hero-section::after {
@@ -713,7 +714,9 @@ ul, ol {
 .hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .hero-eyebrow {
@@ -743,6 +746,7 @@ ul, ol {
   color: #FFFFFF;
   margin-bottom: 22px;
   text-wrap: balance;
+  text-align: center;
 }
 
 .hero-title .hero-italic {
@@ -753,14 +757,17 @@ ul, ol {
 .hero-lede {
   font-size: clamp(1rem, 1.25vw, 1.125rem);
   color: rgba(255, 255, 255, 0.86);
-  max-width: 56ch;
+  max-width: 58ch;
   line-height: 1.72;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 36px;
 }
 
@@ -768,9 +775,16 @@ ul, ol {
   display: flex;
   gap: clamp(1.75rem, 4vw, 3.25rem);
   flex-wrap: wrap;
-  margin-top: 52px;
+  justify-content: center;
+  max-width: 640px;
+  margin: 52px auto 0;
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+}
+
+.hero-facts > div {
+  text-align: center;
 }
 
 .hero-fact-num {
@@ -779,6 +793,7 @@ ul, ol {
   font-weight: 700;
   color: #FFFFFF;
   line-height: 1;
+  text-align: center;
 }
 
 .hero-fact-label {
@@ -787,6 +802,7 @@ ul, ol {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.68);
   margin-top: 8px;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -1409,7 +1425,7 @@ ul, ol {
   }
 
   .hero-facts {
-    margin-top: 38px;
+    margin: 38px auto 0;
     padding-top: 24px;
     gap: 28px 34px;
   }
